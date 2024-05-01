@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <title>COMlection-Login</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link href="src/css/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-100">
+    <main class="relative">
+      <!-- Success Dialog Box -->
+      <section
+        class="shadow-lg hidden fixed bottom-2 sm:w-[600px] sm:px-5 left-0 right-0 mx-auto bg-neutral z-50 rounded-lg"
+      >
+        <div class="flex flex-col gap-4 items-center py-10 px-2">
+          <span
+            class="p-2 bg-green-200 w-16 h-16 flex justify-center items-center rounded-full"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 stroke-green-800"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m4.5 12.75 6 6 9-13.5"
+              />
+            </svg>
+          </span>
+          <h1 class="text-2xl text-gray-900 font-mono font-bold">
+            Login successful!!
+          </h1>
+          <p class="text-xl text-gray-600 font-medium text-center">
+            Thanks for choosing COMlection Lorem ipsum dolor sit amet sit amet.
+          </p>
+          <a
+            href="index.html"
+            class="inline-block text-center py-2 px-5 w-full rounded-lg text-white text-xl font-medium hover:bg-indigo-500 active:bg-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 bg-indigo-600"
+          >
+            Go back to store
+          </a>
+        </div>
+      </section>
+      <!-- Shopping Cart Section -->
+      <!-- By deafult hidden -->
+      <section
+        class="w-full hidden sm:w-[500px] h-full fixed right-0 top-0 z-50 bg-neutral overflow-y-auto"
+      >
+        <div class="px-2">
+          <!-- Top  -->
+          <div class="flex items-center justify-between py-4 mx-3 border-b-2">
+            <span class="text-xl text-gray-700 font-bold">Shopping cart</span>
+            <span class="inline-block cursor-pointer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-8 h-8 svgs"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </span>
+          </div>
+          <!-- More cart inserted Here -->
+          <div class="flex flex-col gap-3 px-1">
+            <!-- Cart Items -->
+            <a href="#" class="flex py-2 gap-4 border-b-2">
+              <div
+                class="flex justify-center items-center w-22 h-22 border-2 border-indigo-600 rounded"
+              >
+                <img
+                  class="w-20 h-20"
+                  src="./src/asset/images/home-page-02-product-02.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1">
+                <div class="flex flex-col">
+                  <h1 class="text-xl text-gray-700 font-bold">
+                    Throwback Hip Bag
+                  </h1>
+                  <p class="text-base text-gray-500 font-medium">Salmon</p>
+                  <div class="flex gap-2 items-center mt-5">
+                    <span class="inline-block cursor-pointer">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6 svgs"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="py-[1px] px-5 bg-gray-100 text-black text-center text-xl font-mono"
+                      >2</span
+                    >
+                    <span class="inline-block cursor-pointer">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6 svgs"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-none w-20">
+                <div class="flex flex-col justify-between h-full">
+                  <span class="block text-xl text-gray-900 font-bold"
+                    >$90.00</span
+                  >
+                  <span
+                    class="block text-lg text-indigo-600 font-bold cursor-pointer hover:text-indigo-500 active:text-indigo-700 transition-all duration-200"
+                    >Remove</span
+                  >
+                </div>
+              </div>
+            </a>
+            <a href="#" class="flex py-2 gap-4 border-b-2">
+              <div class="flex-none w-22 border-2 border-indigo-600 rounded">
+                <img
+                  class="w-20 h-20"
+                  src="./src/asset/images/home-page-02-product-02.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1">
+                <div class="flex flex-col">
+                  <h1 class="text-xl text-gray-700 font-bold">
+                    Throwback Hip Bag
+                  </h1>
+                  <p class="text-base text-gray-500 font-medium">Salmon</p>
+                  <div class="flex gap-2 items-center mt-5">
+                    <span class="inline-block cursor-pointer">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6 svgs"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="py-[1px] px-5 bg-gray-100 text-black text-center text-xl font-mono"
+                      >1</span
+                    >
+                    <span class="inline-block cursor-pointer">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6 svgs"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-none w-20">
+                <div class="flex flex-col justify-between h-full">
+                  <span class="block text-xl text-gray-900 font-bold"
+                    >$90.00</span
+                  >
+                  <span
+                    class="block text-lg text-indigo-600 font-bold cursor-pointer hover:text-indigo-500 active:text-indigo-700 transition-all duration-200"
+                    >Remove</span
+                  >
+                </div>
+              </div>
+            </a>
+            <a href="#" class="flex py-2 gap-4 border-b-2">
+              <div class="flex-none w-22 border-2 border-indigo-600 rounded">
+                <img
+                  class="w-20 h-20"
+                  src="./src/asset/images/home-page-02-product-02.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1">
+                <div class="flex flex-col">
+                  <h1 class="text-xl text-gray-700 font-bold">
+                    Throwback Hip Bag
+                  </h1>
+                  <p class="text-base text-gray-500 font-medium">Salmon</p>
+                  <div class="flex gap-2 items-center mt-5">
+                    <span class="inline-block cursor-pointer">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6 svgs"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="py-[1px] px-5 bg-gray-100 text-black text-center text-xl font-mono"
+                      >3</span
+                    >
+                    <span class="inline-block cursor-pointer">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6 svgs"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-none w-20">
+                <div class="flex flex-col justify-between h-full">
+                  <span class="block text-xl text-gray-900 font-bold"
+                    >$90.00</span
+                  >
+                  <span
+                    class="block text-lg text-indigo-600 font-bold cursor-pointer hover:text-indigo-500 active:text-indigo-700 transition-all duration-200"
+                    >Remove</span
+                  >
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="flex flex-col gap-2 mx-2 my-5">
+            <div class="flex justify-between">
+              <span class="text-xl text-gray-700 font-bold">Subtotal</span>
+              <span class="block text-xl text-gray-900 font-bold">$260.00</span>
+            </div>
+            <p class="text-base text-gray-500 font-medium mb-2">
+              Shipping and taxes calculated at checkout.
+            </p>
+            <a
+              class="bg-indigo-600 py-2 w-full rounded-lg text-center text-xl text-white hover:bg-indigo-500 active:bg-indigo-700 transition-all duration-300"
+              href="checkout.html"
+              >Checkout</a
+            >
+            <div class="flex justify-center items-center gap-1">
+              <span class="inline-block text-gray-700 text-lg">or</span>
+              <a
+                class="text-indigo-600 underline underline-offset-1 text-lg font-medium hover:text-indigo-500"
+                href="#"
+              >
+                Continue Shopping
+              </a>
+              <span class="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-4 h-4 svgs"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Search Section -->
+      <!-- Hidden By default -->
+      <section
+        class="container hidden fixed top-1/2 transform -translate-y-1/2 my-auto left-0 right-0 z-50 mx-auto w-full sm:w-[600px] bg-neutral rounded-xl shadow-2xl"
+      >
+        <div class="flex flex-col gap-3">
+          <!-- Top -->
+          <div class="px-2 flex items-center border-b-2 gap-5">
+            <span class="cursor-pointer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="svgs"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+              <span class="sr-only">Search Icon</span>
+            </span>
+            <div class="flex-1">
+              <input
+                class="w-full border-none bg-inherit focus:outline-none focus:ring-0 focus:ring-offset-0 caret-indigo-500"
+                type="text"
+                placeholder="Search anything"
+                name="Seach Field"
+              />
+            </div>
+            <span class="inline-block cursor-pointer py-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-8 h-8 svgs"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </span>
+          </div>
+          <!-- Recent Part-->
+          <div class="overflow-y-scroll pr-1 h-48">
+            <!-- Shown Only when there is no search item -->
+            <div class="w-full h-full flex justify-center items-center">
+              <span class="inline-block text-2xl text-gray-700 font-bold"
+                >No recent search :)</span
+              >
+            </div>
+            <!-- Display only it there is a search Display The seach -->
+            <div class="hidden">
+              <div class="flex flex-col gap-1">
+                <div class="py-2 border-b-2">
+                  <h1 class="ml-4 text-2xl text-gray-700 font-bold">Recent</h1>
+                </div>
+                <!-- Search results are Appended here -->
+                <div>
+                  <a
+                    href="#"
+                    class="flex items-center justify-between border-b-2 py-2"
+                  >
+                    <h1
+                      class="text-lg ml-4 text-gray-600 font-medium font-mono"
+                    >
+                      How To Puchase?
+                    </h1>
+                    <div class="flex gap-2 ml-3">
+                      <span class="inline-block">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-6 h-6 svgs"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                          />
+                        </svg>
+                      </span>
+                      <span class="inline-block cursor-pointer">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-6 h-6 svgs"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18 18 6M6 6l12 12"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="flex flex-col gap-1">
+                <div class="py-2 border-b-2">
+                  <h1 class="ml-4 text-2xl text-gray-700 font-bold">
+                    Favourite
+                  </h1>
+                </div>
+                <a
+                  href="#"
+                  class="flex items-center justify-between border-b-2 py-2"
+                >
+                  <h1 class="text-lg ml-4 text-gray-600 font-medium font-mono">
+                    How to return item.
+                  </h1>
+                  <div class="flex gap-2 ml-3">
+                    <span class="inline-block">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="stroke-0 w-6 h-6 svgs fill-indigo-600"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                    <span class="inline-block cursor-pointer">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6 svgs"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M6 18 18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Bottom -->
+          <div class="flex justify-end border-t-2">
+            <a
+              class="inline-block text-xl mr-6 my-3 font-semibold text-gray-700"
+              href="#"
+              >Search by
+              <span
+                class="text-2xl text-indigo-600 font-extrabold font-mono uppercase"
+                >Ai</span
+              ></a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- Overlay -->
+      <!-- On large screen 1024 Overlay set to Hidden -->
+      <!-- Use Js To Show and Remove -->
+      <div
+        class="absolute hidden lg:hidden top-0 left-0 bg-white backdrop-blur-[1.5px] bg-white/10 w-full h-full z-20"
+      ></div>
+      <!-- Menu Section -->
+      <!-- Hidden By default Show Only after Click -->
+      <section
+        class="absolute hidden lg:hidden top-0 left-0 z-50 shadow-xl h-full w-[350px] bg-neutral px-5 py-10"
+      >
+        <div class="flex flex-col gap-3">
+          <span class="inline-block cursor-pointer py-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-8 h-8 svgs"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+          </span>
+          <!-- Nav Link -->
+          <div class="flex gap-4 py-2">
+            <div
+              class="text-2xl font-semibold cursor-pointer py-2 px-5 border-b-2 border-b-indigo-700 text-indigo-600"
+            >
+              Women
+            </div>
+            <div class="text-2xl font-semibold cursor-pointer py-2 px-5">
+              Men
+            </div>
+          </div>
+          <!-- All links -->
+          <div class="flex flex-col gap-4 mt-3">
+            <!-- Link 1 -->
+            <div class="flex flex-col gap-5">
+              <h1 class="text-2xl text-gray-900 font-bold">Featured</h1>
+              <div class="flex flex-col gap-4">
+                <a class="side-nav-link" href="#">Sleep</a>
+                <a class="side-nav-link" href="#">Swimwear</a>
+                <a class="side-nav-link" href="#">Underwear</a>
+              </div>
+            </div>
+            <!-- Link 2 -->
+            <div class="flex flex-col gap-5">
+              <h1 class="text-2xl text-gray-900 font-bold">Categories</h1>
+              <div class="flex flex-col gap-4">
+                <a class="side-nav-link" href="#">Basic Tees</a>
+                <a class="side-nav-link" href="#">Artwork Tees</a>
+                <a class="side-nav-link" href="#">Bottoms</a>
+                <a class="side-nav-link" href="#">Underwear</a>
+                <a class="side-nav-link" href="#">Accessories</a>
+              </div>
+            </div>
+            <!-- Link 1 -->
+            <div class="flex flex-col gap-5">
+              <h1 class="text-2xl text-gray-900 font-bold">Collection</h1>
+              <div class="flex flex-col gap-4">
+                <a class="side-nav-link" href="#">Everything</a>
+                <a class="side-nav-link" href="#">Core</a>
+                <a class="side-nav-link" href="#">New Arrivals</a>
+                <a class="side-nav-link" href="#">Sales</a>
+              </div>
+            </div>
+            <!-- Link 1 -->
+            <div class="flex flex-col gap-5">
+              <h1 class="text-2xl text-gray-900 font-bold">Brands</h1>
+              <div class="flex flex-col gap-4">
+                <a class="side-nav-link" href="#">Full Nelson</a>
+                <a class="side-nav-link" href="#">My Way</a>
+                <a class="side-nav-link" href="#">Re-Arranged</a>
+                <a class="side-nav-link" href="#">Counterfeit</a>
+                <a class="side-nav-link" href="#">Significant Other</a>
+              </div>
+            </div>
+          </div>
+          <!-- CoMpany And stores -->
+          <div class="flex flex-col gap-2 py-4 border-y-2">
+            <a class="text-gray-950 hover:text-gray-700 side-nav-link" href="#"
+              >Company</a
+            >
+            <a class="text-gray-950 hover:text-gray-700 side-nav-link" href="#"
+              >Stores</a
+            >
+          </div>
+          <!-- CoMpany And stores -->
+          <div class="flex flex-col gap-2 py-4 border-b-2">
+            <a class="text-gray-950 hover:text-gray-700 side-nav-link" href="#"
+              >Create an account</a
+            >
+            <a class="text-gray-950 hover:text-gray-700 side-nav-link" href="#"
+              >Sign in</a
+            >
+          </div>
+          <div>
+            <select
+              class="cursor-pointer py-1 rounded-md bg-neutral text-black border-2 border-indigo-400 placeholder:text-base"
+              name="Countey"
+              id="items"
+            >
+              <option value="CAN">KES</option>
+              <option value="CAN">UGD</option>
+              <option value="CAN">TAZ</option>
+              <option value="CAN">EUR</option>
+              <option value="CAN">CAN</option>
+            </select>
+          </div>
+        </div>
+      </section>
+      <!-- Navigation -->
+      <nav class="flex flex-col">
+        <header
+          class="bg-primary py-2 flex items-center lg:justify-between justify-center lg:px-3"
+        >
+          <select
+            class="hidden cursor-pointer lg:block py-1 rounded-lg bg-primary text-neutral border-2 border-white placeholder:text-base"
+            name="Countey"
+            id="items"
+          >
+            <option value="CAN">KES</option>
+            <option value="CAN">UGD</option>
+            <option value="CAN">TAZ</option>
+            <option value="CAN">EUR</option>
+            <option value="CAN">CAN</option>
+          </select>
+          <a href="#" class="text-neutral text-base font-semibold">
+            Get free delivery on orders over $100
+          </a>
+          <div
+            class="hidden lg:block space-x-4 divide-x-2 divide-white/80 mr-4"
+          >
+            <a
+              class="text-neutral/90 text-lg inline-block hover:underline transition-all hover:underline-offset-2 duration-300"
+              href="login.html"
+              >Create an account</a
+            >
+            <a
+              class="text-neutral/90 text-lg inline-block pl-4 hover:underline transition-all hover:underline-offset-2 duration-300"
+              href="#"
+              >Sign in</a
+            >
+          </div>
+        </header>
+        <!-- Lower Header -->
+        <div
+          class="flex flex-row items-center bg-neutral py-2 px-5 lg:justify-between"
+        >
+          <div class="flex flex-row gap-4 items-center flex-none w-20">
+            <!-- Menu Icon Hidden on 1024px-->
+            <span class="cursor-pointer lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="svgs"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+              <span class="sr-only">Menu Icon</span>
+            </span>
+            <!-- Logo Image Hidden normally Shown On 1024px -->
+            <a
+              href="#"
+              class="flex-1 items-center justify-center hidden lg:flex"
+            >
+              <img
+                class="max-w-full opacity-80 hover:opacity-100 transition-opacity"
+                src="./src/asset/images/logo.jpg"
+                width="60"
+                height="60"
+                alt="Comapny logo"
+              />
+              <span class="font-bold text-xl text-indigo-700">
+                COMlection
+              </span>
+            </a>
+            <!-- Search Icon Hidden On larger Screen 1024 -->
+            <span class="cursor-pointer lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="svgs"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+              <span class="sr-only">Search Icon</span>
+            </span>
+          </div>
+          <!-- Links -->
+          <div class="gap-2 hidden lg:flex">
+            <a class="nav-link nav-link-active" href="#">Home</a>
+            <a class="nav-link" href="#">Men</a>
+            <a class="nav-link" href="#">Women</a>
+            <a class="nav-link" href="#">Store</a>
+            <a class="nav-link" href="#">My Account</a>
+          </div>
+          <!-- Logo Image Hidden on Larger screen -->
+          <a href="#" class="flex-1 flex items-center justify-center lg:hidden">
+            <img
+              class="max-w-full opacity-80 hover:opacity-100 transition-opacity"
+              src="./src/asset/images/logo.jpg"
+              width="60"
+              height="60"
+              alt="Comapny logo"
+            />
+          </a>
+
+          <div class="flex-none w-30 flex justify-between gap-4 items-center">
+            <span class="cursor-pointer hidden lg:block">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="svgs"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+              <span class="sr-only">Search Icon</span>
+            </span>
+            <span class="cursor-pointer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="svgs"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 hidden"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+                />
+              </svg>
+
+              <span class="sr-only">Light Icon</span>
+            </span>
+            <div
+              class="relative flex items-center justify-center cursor-pointer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="svgs mr-1"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                />
+              </svg>
+
+              <span class="sr-only">Cart Icon</span>
+              <span
+                class="absolute -top-[10px] -right-[8px] lining-nums flex text-gray-900 font-medium select-none p-1 w-4 h-4 lg:h-5 lg:w-5 items-center justify-center border border-indigo-600 rounded-full text-xs"
+                >4</span
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Breadcrumbs -->
+      <section class="2xl:container 2xl:mx-auto">
+        <div class="bg-neutral py-3 px-5 mt-1 mb-2">
+          <ul class="flex gap-2 text-center">
+            <li>
+              <a class="" href="index.html">
+                <ion-icon
+                  name="home-outline"
+                  class="svgs text-indigo-600"
+                ></ion-icon>
+                <span class="sr-only">Home Icon</span>
+              </a>
+            </li>
+            <li><span class="text-gray-700">/</span></li>
+            <li>
+              <a class="bread-link bread-active" href="#">customer-reviews</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Customer Reviews Section -->
+      <section class="container mx-auto px-1 sm:px-10 py-5">
+        <div class="flex flex-col gap-4 sm:grid sm:grid-cols-2 sm:gap-14">
+          <!-- Stats -->
+          <div class="flex flex-col gap-4 px-1">
+            <h1 class="text-xl font-bold text-gray-800 md:text-2xl">Customer reviews</h1>
+            <div class="flex gap-3 items-center">
+              <div class="flex gap-1 items-center">
+                <ion-icon
+                  name="star"
+                  class="svgs text-yellow-500 w-6 h-6"
+                ></ion-icon>
+                <ion-icon
+                  name="star"
+                  class="svgs text-yellow-500 w-6 h-6"
+                ></ion-icon>
+                <ion-icon
+                  name="star"
+                  class="svgs text-yellow-500 w-6 h-6"
+                ></ion-icon>
+                <ion-icon
+                  name="star"
+                  class="svgs text-yellow-500 w-6 h-6"
+                ></ion-icon>
+                <ion-icon
+                  name="star-outline"
+                  class="svgs text-yellow-500 w-6 h-6"
+                ></ion-icon>
+              </div>
+              <div class="ml-3">
+                <p href="#" class="text-gray-600 text-base font-medium">
+                  Based on <strong>1624</strong> reviews
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2">
+              <div class="flex gap-3 items-center px-1">
+                <div class="flex-none flex gap-2 items-center">
+                  <span>5</span>
+                  <ion-icon
+                    name="star"
+                    class="svgs text-yellow-500 w-6 h-6"
+                  ></ion-icon>
+                </div>
+                <div class="flex-1 border rounded-lg bg-gray-200">
+                  <span
+                    class="block w-[70%] h-3 bg-yellow-500 rounded-lg"
+                  ></span>
+                </div>
+                <div>
+                  <span>70%</span>
+                </div>
+              </div>
+              <div class="flex gap-3 items-center px-1">
+                <div class="flex-none flex gap-2 items-center">
+                  <span>4</span>
+                  <ion-icon
+                    name="star"
+                    class="svgs text-yellow-500 w-6 h-6"
+                  ></ion-icon>
+                </div>
+                <div class="flex-1 border rounded-lg bg-gray-200">
+                  <span
+                    class="block w-[10%] h-3 bg-yellow-500 rounded-lg"
+                  ></span>
+                </div>
+                <div>
+                  <span>10%</span>
+                </div>
+              </div>
+              <div class="flex gap-3 items-center px-1">
+                <div class="flex-none flex gap-2 items-center">
+                  <span>3</span>
+                  <ion-icon
+                    name="star"
+                    class="svgs text-yellow-500 w-6 h-6"
+                  ></ion-icon>
+                </div>
+                <div class="flex-1 border rounded-lg bg-gray-200">
+                  <span
+                    class="block w-[32%] h-3 bg-yellow-500 rounded-lg"
+                  ></span>
+                </div>
+                <div>
+                  <span>32%</span>
+                </div>
+              </div>
+              <div class="flex gap-3 items-center px-1">
+                <div class="flex-none flex gap-2 items-center">
+                  <span>2</span>
+                  <ion-icon
+                    name="star"
+                    class="svgs text-yellow-500 w-6 h-6"
+                  ></ion-icon>
+                </div>
+                <div class="flex-1 border rounded-lg bg-gray-200">
+                  <span
+                    class="block w-[5%] h-3 bg-yellow-500 rounded-lg"
+                  ></span>
+                </div>
+                <div>
+                  <span>5%</span>
+                </div>
+              </div>
+              <div class="flex gap-3 items-center px-1">
+                <div class="flex-none flex gap-2 items-center">
+                  <span>1</span>
+                  <ion-icon
+                    name="star"
+                    class="svgs text-yellow-500 w-6 h-6"
+                  ></ion-icon>
+                </div>
+                <div class="flex-1 border rounded-lg bg-gray-200">
+                  <span
+                    class="block w-[25%] h-3 bg-yellow-500 rounded-lg"
+                  ></span>
+                </div>
+                <div>
+                  <span>25%</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h1 class="text-xl font-bold my-2 text-gray-800">
+                Share your thoughts
+              </h1>
+              <p class="text-lg font-medium text-gray-600">
+                If you’ve used this product, share your thoughts with other
+                customers
+              </p>
+            </div>
+            <button
+              class="border my-3 border-indigo-600/45 text-xl rounded-md py-2 text-gray-900 hover:border-indigo-600"
+            >
+              Write a Review
+            </button>
+          </div>
+          <!-- Reviews Items -->
+          <div class="flex flex-col gap-4">
+            <div class="flex gap-2 border-b-2 py-5">
+              <div class="flex flex-col gap-3">
+                <div class="flex gap-3 items-center">
+                  <div class="flex-none overflow-hidden rounded-full">
+                    <img
+                      class="object-cover w-16 h-16"
+                      src="./src/asset/img/profile-2.webp"
+                      alt="Product"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h1 class="text-lg font-mono font-medium">Emily Selman</h1>
+                    <date class="text-base font-medium text-gray-600"
+                      >July 16, 2021</date
+                    >
+                    <div class="flex">
+                      <div class="flex gap-1 items-center">
+                        <ion-icon
+                          name="star"
+                          class="svgs text-yellow-500 w-6 h-6"
+                        ></ion-icon>
+                        <ion-icon
+                          name="star"
+                          class="svgs text-yellow-500 w-6 h-6"
+                        ></ion-icon>
+                        <ion-icon
+                          name="star"
+                          class="svgs text-yellow-500 w-6 h-6"
+                        ></ion-icon>
+                        <ion-icon
+                          name="star"
+                          class="svgs text-yellow-500 w-6 h-6"
+                        ></ion-icon>
+                        <ion-icon
+                          name="star-outline"
+                          class="svgs text-yellow-500 w-6 h-6"
+                        ></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="tracking-normal my-1 text-lg text-gray-600">
+                    This icon pack is just what I need for my latest project.
+                    There's an icon for just about anything I could ever need.
+                    Love the playful look!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-2 border-b-2 py-5">
+              <div class="flex flex-col gap-3">
+                <div class="flex gap-3 items-center">
+                  <div class="flex-none overflow-hidden rounded-full">
+                    <img
+                      class="object-cover w-16 h-16"
+                      src="./src/asset/img/profile-2.webp"
+                      alt="Product"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h1 class="text-lg font-mono font-medium">Emily Selman</h1>
+                    <date class="text-base font-medium text-gray-600"
+                      >July 16, 2021</date
+                    >
+                    <div class="flex">
+                      <div class="flex gap-1 items-center">
+                        <ion-icon
+                          name="star"
+                          class="svgs text-yellow-500 w-6 h-6"
+                        ></ion-icon>
+                        <ion-icon
+                          name="star"
+                          class="svgs text-yellow-500 w-6 h-6"
+                        ></ion-icon>
+                        <ion-icon
+                          name="star"
+                          class="svgs text-yellow-500 w-6 h-6"
+                        ></ion-icon>
+                        <ion-icon
+                          name="star"
+                          class="svgs text-yellow-500 w-6 h-6"
+                        ></ion-icon>
+                        <ion-icon
+                          name="star-outline"
+                          class="svgs text-yellow-500 w-6 h-6"
+                        ></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="tracking-normal my-1 text-lg text-gray-600">
+                    This icon pack is just what I need for my latest project.
+                    There's an icon for just about anything I could ever need.
+                    Love the playful look!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-2 py-5">
+              <div class="flex flex-col gap-3">
+                <div class="flex gap-3 items-center">
+                  <div class="flex-none overflow-hidden rounded-full">
+                    <img
+                      class="object-cover w-16 h-16"
+                      src="./src/asset/img/profile-2.webp"
+                      alt="Product"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h1 class="text-lg font-mono font-medium">Emily Selman</h1>
+                    <date class="text-base font-medium text-gray-600"
+                      >July 16, 2021</date
+                    >
+                    <div class="flex">
+                      <div class="flex gap-1 items-center">
+                        <ion-icon
+                          name="star"
+                          class="svgs text-yellow-500 w-6 h-6"
+                        ></ion-icon>
+                        <ion-icon
+                          name="star"
+                          class="svgs text-yellow-500 w-6 h-6"
+                        ></ion-icon>
+                        <ion-icon
+                          name="star"
+                          class="svgs text-yellow-500 w-6 h-6"
+                        ></ion-icon>
+                        <ion-icon
+                          name="star"
+                          class="svgs text-yellow-500 w-6 h-6"
+                        ></ion-icon>
+                        <ion-icon
+                          name="star-outline"
+                          class="svgs text-yellow-500 w-6 h-6"
+                        ></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="tracking-normal my-1 text-lg text-gray-600">
+                    This icon pack is just what I need for my latest project.
+                    There's an icon for just about anything I could ever need.
+                    Love the playful look!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-5 my-5 flex items-center justify-center">
+              <div class="flex gap-2">
+                <div class="flex gap-2 items-center">
+                  <span class="inline-block mr-3 cursor-pointer"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-10 h-10 svgs"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                      />
+                    </svg>
+                  </span>
+                  <div
+                    class="w-8 h-8 rounded-full text-lg flex items-center justify-center bg-indigo-600 text-white"
+                  >
+                    1
+                  </div>
+                  <span
+                    class="w-8 h-8 rounded-full text-lg flex items-center justify-center border border-indigo-600 text-black"
+                    >2</span
+                  >
+                  <span
+                    class="w-8 h-8 rounded-full text-lg flex items-center justify-center border border-indigo-600 text-black"
+                    >3</span
+                  >
+                </div>
+                <div class="text-center text-xl">...</div>
+                <div class="flex gap-2 items-center">
+                  <span
+                    class="w-8 h-8 rounded-full text-lg flex items-center justify-center border border-indigo-600 text-black"
+                    >10</span
+                  >
+                  <span class="inline-block ml-3 cursor-pointer">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-10 h-10 svgs"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+       <!-- Customer Also Bought -->
+       <section class="my-10">
+        <div class="container mx-auto px-4">
+          <div class="mx-2 flex justify-center py-10">
+            <h1 class="text-2xl font-bold">Customer also bought</h1>
+          </div>
+          <!-- Products -->
+          <div
+            class="flex flex-col gap-8 md:grid md:grid-cols-2 lg:grid-cols-3"
+          >
+            <div class="flex flex-col gap-4 mx-2">
+              <div class="shadow-lg relative pb-10 rounded-lg">
+                <img src="./src/asset/img/product-12-2.jpg" alt="Shoe Image" />
+                <div
+                  class="absolute bottom-0 flex items-end justify-end right-0 rounded-lg w-full bg-gradient-to-b from-transparent to-black/80 h-40"
+                >
+                  <span
+                    class="inline-block mr-5 mb-5 text-white text-xl font-bold"
+                    >$140</span
+                  >
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <h2 class="text-xl font-semibold text-gray-800">
+                  Zip Tote Basket
+                </h2>
+                <p class="text-lg font-medium text-gray-600">White and black</p>
+              </div>
+              <a
+                class="bg-indigo-600 py-2 w-full rounded-lg text-center text-xl text-white hover:bg-indigo-500 active:bg-indigo-700 transition-all duration-300"
+                href="#"
+                >Add to bag</a
+              >
+            </div>
+            <div class="flex flex-col gap-4 mx-2">
+              <div class="shadow-lg relative pb-10 rounded-lg">
+                <img src="./src/asset/img/product-3-2.jpg" alt="Shoe Image" />
+                <div
+                  class="absolute bottom-0 flex items-end justify-end right-0 rounded-lg w-full bg-gradient-to-b from-transparent to-black/80 h-40"
+                >
+                  <span
+                    class="inline-block text-white mr-5 mb-5 text-xl font-bold"
+                    >$140</span
+                  >
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <h2 class="text-xl font-semibold text-gray-800">
+                  Zip Tote Basket
+                </h2>
+                <p class="text-lg font-medium text-gray-600">White and black</p>
+              </div>
+              <a
+                class="bg-indigo-600 py-2 w-full rounded-lg text-center text-xl text-white hover:bg-indigo-500 active:bg-indigo-700 transition-all duration-300"
+                href="#"
+                >Add to bag</a
+              >
+            </div>
+            <div class="flex flex-col gap-4 mx-2">
+              <div class="shadow-lg relative pb-10 rounded-lg">
+                <img src="./src/asset/img/product-8-2.jpg" alt="Shoe Image" />
+                <div
+                  class="absolute bottom-0 flex items-end justify-end right-0 rounded-lg w-full bg-gradient-to-b from-transparent to-black/80 h-40"
+                >
+                  <span
+                    class="inline-block text-white mr-5 mb-5 text-xl font-bold"
+                    >$140</span
+                  >
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <h2 class="text-xl font-semibold text-gray-800">
+                  Zip Tote Basket
+                </h2>
+                <p class="text-lg font-medium text-gray-600">White and black</p>
+              </div>
+              <a
+                class="bg-indigo-600 py-2 w-full rounded-lg text-center text-xl text-white hover:bg-indigo-500 active:bg-indigo-700 transition-all duration-300"
+                href="#"
+                >Add to bag</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to action -->
+      <section class="my-10 py-20 bg-white">
+        <div class="container mx-auto">
+          <div
+            class="flex flex-col gap-8 px-5 md:px-10 lg:grid lg:grid-cols-2 xl:gap-16"
+          >
+            <!-- Card 1 -->
+            <div class="bg-slate-100 px-5 py-8 rounded-lg flex flex-col gap-2">
+              <h1 class="text-2xl text-gray-900 font-bold">
+                Sign up for our newsletter
+              </h1>
+              <p class="text-lg text-gray-600">
+                The latest news, articles, and resources, sent to your inbox
+                weekly.
+              </p>
+              <form
+                class="flex flex-col gap-4"
+                action="#"
+                name="Newsletter Form"
+              >
+                <div>
+                  <input
+                    class="peer w-full rounded-lg border border-slate-300 placeholder:text-gray-600 placeholder:text-base focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-indigo-500 focus:ring-offset-indigo-700"
+                    type="email"
+                    name="Email"
+                    placeholder="Enter email"
+                    required
+                  />
+                  <!-- <span class="invisible peer-invalid:visible text-pink-700 -mb-2">Invalid Email!! Please try again</span> -->
+                </div>
+                <input
+                  class="bg-indigo-600 rounded-lg py-2 text-xl cursor-pointer text-white focus:outline-none focus:ring-1 focus:ring-indigo-700 focus:ring-offset-indigo-500 focus:ring-offset-2 active:bg-indigo-800 transition-all duration-200"
+                  type="submit"
+                />
+              </form>
+            </div>
+            <!-- Card 2 -->
+            <div
+              class="rounded-lg bg-indigo-600 py-8 px-5 gap-2 shadow flex flex-col items-center lg:place-content-center"
+            >
+              <h1 class="text-2xl text-white/95 font-bold tracking-wider">
+                Get early access
+              </h1>
+              <p class="text-lg text-white/80 text-center">
+                Did you sign up to the newsletter? If so, use the keyword we
+                sent you to get access.
+              </p>
+              <div class="text-center">
+                <a
+                  class="text-xl text-white font-medium flex items-center hover:text-white/85"
+                  href="#"
+                  ><span>Go now</span>
+                  <!-- Icon -->
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer  -->
+      <footer class="bg-white rounded-t-2xl">
+        <!-- Top Footer -->
+        <div class="container mx-auto">
+          <div class="flex flex-col gap-3 py-5">
+            <div
+              class="flex justify-center border-b-[1px] border-b-gray-200 py-1"
+            >
+              <img
+                class=""
+                src="./src/asset/images/logo.jpg"
+                alt="logo"
+                height="60"
+                width="60"
+              />
+            </div>
+            <!-- Links -->
+            <div class="grid grid-cols-2 gap-3 lg:grid-cols-4">
+              <div class="flex flex-col items-center gap-1">
+                <h1 class="text-2xl text-gray-900 font-semibold">Products</h1>
+                <div class="flex flex-col gap-3 items-center">
+                  <a class="link" href="#">Bags</a>
+                  <a class="link" href="#">Tees</a>
+                  <a class="link" href="#">Objects</a>
+                  <a class="link" href="#">Home Goods</a>
+                  <a class="link" href="#">Accessories</a>
+                  <a class="link" href="#">FAQ</a>
+                </div>
+              </div>
+              <div class="flex flex-col items-center gap-1">
+                <h1 class="text-2xl text-gray-900 font-semibold">Company</h1>
+                <div class="flex flex-col gap-3 items-center">
+                  <a class="link" href="#">Who we are</a>
+                  <a class="link" href="#">Contact</a>
+                  <a class="link" href="#">Shipping</a>
+                  <a class="link" href="#">Returns</a>
+                  <a class="link" href="#">Secure Payment</a>
+                  <a class="link" href="#">Find a Store</a>
+                </div>
+              </div>
+              <div class="flex flex-col items-center gap-1">
+                <h1 class="text-2xl text-gray-900 font-semibold">Company</h1>
+                <div class="flex flex-col gap-3 items-center">
+                  <a class="link" href="#">Who we are</a>
+                  <a class="link" href="#">Contact</a>
+                  <a class="link" href="#">Shipping</a>
+                  <a class="link" href="#">Returns</a>
+                  <a class="link" href="#">Secure Payment</a>
+                  <a class="link" href="#">Find a Store</a>
+                </div>
+              </div>
+              <div class="flex flex-col items-center gap-1">
+                <h1 class="text-2xl text-gray-900 font-semibold">Company</h1>
+                <div class="flex flex-col gap-3 items-center">
+                  <a class="link" href="#">Who we are</a>
+                  <a class="link" href="#">Contact</a>
+                  <a class="link" href="#">Shipping</a>
+                  <a class="link" href="#">Returns</a>
+                  <a class="link" href="#">Secure Payment</a>
+                  <a class="link" href="#">Find a Store</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Footer Bottom -->
+          <div class="flex flex-col gap-2 mt-8 px-5 pb-3">
+            <div
+              class="flex gap-4 flex-col lg:justify-between lg:flex-row items-center flex-wrap"
+            >
+              <span class="text-center font-medium text-base text-gray-500"
+                >© 2021 All Rights Reserved</span
+              >
+              <div class="flex gap-2">
+                <a class="link" href="#">Accessibility</a>
+                <a class="link" href="#">Privacy</a>
+                <a class="link" href="#">Terms</a>
+              </div>
+              <div class="flex">
+                <a class="link flex gap-2" href="#">
+                  <img src="./src/asset/img/pay.png" alt="Footer Logo" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
