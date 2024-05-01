@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
@@ -13,17 +21,17 @@
   </head>
   <body class="bg-gray-100">
     <main class="relative">
-    
       <!-- Shopping Cart Section -->
       <!-- By deafult hidden -->
       <section
+        id="cart"
         class="w-full hidden sm:w-[500px] h-full fixed right-0 top-0 z-50 bg-neutral overflow-y-auto"
       >
         <div class="px-2">
           <!-- Top  -->
           <div class="flex items-center justify-between py-4 mx-3 border-b-2">
             <span class="text-xl text-gray-700 font-bold">Shopping cart</span>
-            <span class="inline-block cursor-pointer">
+            <span title="ctrl + x" id="cart-close" class="inline-block cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -288,7 +296,8 @@
       <!-- Search Section -->
       <!-- Hidden By default -->
       <section
-        class="container hidden fixed top-1/2 transform -translate-y-1/2 my-auto left-0 right-0 z-50 mx-auto w-full sm:w-[600px] bg-neutral rounded-xl shadow-2xl"
+        id="search"
+        class="container hidden fixed top-1/2 transform -translate-y-1/2 my-auto left-0 right-0 z-[100] mx-auto w-full sm:w-[600px] bg-neutral rounded-xl shadow-2xl"
       >
         <div class="flex flex-col gap-3">
           <!-- Top -->
@@ -312,13 +321,14 @@
             </span>
             <div class="flex-1">
               <input
+                id="search-input"
                 class="w-full border-none bg-inherit focus:outline-none focus:ring-0 focus:ring-offset-0 caret-indigo-500"
                 type="text"
                 placeholder="Search anything"
                 name="Seach Field"
               />
             </div>
-            <span class="inline-block cursor-pointer py-2">
+            <span id="search-close" class="inline-block cursor-pointer py-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -338,13 +348,13 @@
           <!-- Recent Part-->
           <div class="overflow-y-scroll pr-1 h-48">
             <!-- Shown Only when there is no search item -->
-            <div class="w-full h-full flex justify-center items-center">
+            <div class="w-full hidden h-full justify-center items-center">
               <span class="inline-block text-2xl text-gray-700 font-bold"
                 >No recent search :)</span
               >
             </div>
             <!-- Display only it there is a search Display The seach -->
-            <div class="hidden">
+            <div class="mt-1">
               <div class="flex flex-col gap-1">
                 <div class="py-2 border-b-2">
                   <h1 class="ml-4 text-2xl text-gray-700 font-bold">Recent</h1>
@@ -464,29 +474,18 @@
       <!-- On large screen 1024 Overlay set to Hidden -->
       <!-- Use Js To Show and Remove -->
       <div
-        class="absolute hidden lg:hidden top-0 left-0 bg-white backdrop-blur-[1.5px] bg-white/10 w-full h-full z-20"
+        id="overlay"
+        class="absolute hidden top-0 left-0 bg-white backdrop-blur-[1.5px] bg-white/10 w-full h-full z-20"
       ></div>
       <!-- Menu Section -->
       <!-- Hidden By default Show Only after Click -->
       <section
+        id="menu"
         class="absolute hidden lg:hidden top-0 left-0 z-50 shadow-xl h-full w-[350px] bg-neutral px-5 py-10"
       >
         <div class="flex flex-col gap-3">
-          <span class="inline-block cursor-pointer py-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-8 h-8 svgs"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18 18 6M6 6l12 12"
-              />
-            </svg>
+          <span id="menu-close" class="inline-block cursor-pointer py-2">
+            <ion-icon name="close-outline" class="w-8 h-8 svgs"></ion-icon>
           </span>
           <!-- Nav Link -->
           <div class="flex gap-4 py-2">
@@ -620,21 +619,8 @@
         >
           <div class="flex flex-row gap-4 items-center flex-none w-20">
             <!-- Menu Icon Hidden on 1024px-->
-            <span class="cursor-pointer lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="svgs"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
+            <span id="menu-button" class="cursor-pointer lg:hidden">
+              <ion-icon name="menu-outline " class="w-8 h-8 svgs"></ion-icon>
               <span class="sr-only">Menu Icon</span>
             </span>
             <!-- Logo Image Hidden normally Shown On 1024px -->
@@ -654,7 +640,7 @@
               </span>
             </a>
             <!-- Search Icon Hidden On larger Screen 1024 -->
-            <span class="cursor-pointer lg:hidden">
+            <span id="search-button" class="cursor-pointer lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -692,7 +678,8 @@
           </a>
 
           <div class="flex-none w-30 flex justify-between gap-4 items-center">
-            <span class="cursor-pointer hidden lg:block">
+            <!-- Search Icon -->
+            <span id="search-button" class="cursor-pointer hidden lg:block">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -709,6 +696,7 @@
               </svg>
               <span class="sr-only">Search Icon</span>
             </span>
+            <!-- Dark Mode Part -->
             <span class="cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -741,7 +729,8 @@
 
               <span class="sr-only">Light Icon</span>
             </span>
-            <div class="flex items-center justify-center cursor-pointer">
+            <!-- Cart Section -->
+            <div id="cart-button" class="flex items-center justify-center cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -2358,5 +2347,6 @@
         },
       });
     </script>
+    <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>
