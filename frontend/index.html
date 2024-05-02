@@ -23,162 +23,11 @@
     <main class="relative">
       <!-- Quick Overview Page  -->
       <section id="quickview-section"
-        class="hidden sm:fixed z-50 bg-neutral sm:shadow-2xl sm:rounded-lg sm:top-1/2 sm:-translate-y-1/2 md:w-[800px] md: backdrop-blur-[1.5px] sm:px-4 sm:left-1/2 sm:-translate-x-1/2"
+        class="hidden sm:fixed z-50 bg-neutral dark:bg-slate-800 sm:shadow-2xl sm:rounded-lg sm:top-1/2 sm:-translate-y-1/2 md:w-[800px] md: backdrop-blur-[1.5px] sm:px-4 sm:left-1/2 sm:-translate-x-1/2"
       >
-        <div id="quickview-container" class="relative">
-          <div class="absolute w-full h-full z-10 right-0 top-0 bg-neutral hidden items-center justify-center">
-            <p class="animate-spin">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-24 h-24 svgs "
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
-                />
-              </svg>
-            </p>
-          </div>
-          <div
-            class="py-4 px-1 relative container mx-auto sm:grid sm:grid-cols-2 sm:gap-4"
-          >
-            <div class="flex flex-col gap-2">
-              <div
-                class="flex items-center justify-between px-2 sm:justify-end"
-              >
-                <a
-                  href="#"
-                  class="text-indigo-600 text-lg font-bold sm:hidden hover:text-indigo-500 active:text-indigo-700"
-                  >View full details</a
-                >
-                <ion-icon id="quickview-close"
-                  name="close-outline"
-                  class="svgs text-indigo-600 cursor-pointer sm:absolute sm:top-4 sm:right-1"
-                ></ion-icon>
-              </div>
-              <div class="p-1">
-                <img
-                  class="rounded-lg"
-                  src="./src/asset/img/product-1-1.jpg"
-                  alt="Product image"
-                />
-              </div>
-            </div>
-            <div class="flex flex-col gap-4">
-              <div class="flex flex-col gap-1">
-                <h1 class="text-xl font-bold text-gray-800">
-                  Lorem ipsum dolor sit.
-                </h1>
-                <span class="text-lg text-gray-600 font-medium">$20.00</span>
-              </div>
-              <div class="flex gap-2">
-                <span class="text-lg text-gray-600 font-medium">4.2</span>
-                <div class="flex gap-1 items-center">
-                  <ion-icon
-                    name="star"
-                    class="svgs text-yellow-500 w-6 h-6"
-                  ></ion-icon>
-                  <ion-icon
-                    name="star"
-                    class="svgs text-yellow-500 w-6 h-6"
-                  ></ion-icon>
-                  <ion-icon
-                    name="star"
-                    class="svgs text-yellow-500 w-6 h-6"
-                  ></ion-icon>
-                  <ion-icon
-                    name="star"
-                    class="svgs text-yellow-500 w-6 h-6"
-                  ></ion-icon>
-                  <ion-icon
-                    name="star-outline"
-                    class="svgs text-yellow-500 w-6 h-6"
-                  ></ion-icon>
-                </div>
-                <div class="hidden sm:block sm:ml-5">
-                  <a
-                    href="#"
-                    class="text-indigo-600 text-lg font-bold hover:text-indigo-500 active:text-indigo-700"
-                    >See all reviews</a
-                  >
-                </div>
-              </div>
-              <div class="flex flex-col gap-2">
-                <h1 class="text-lg text-gray-600 font-medium">Color</h1>
-                <div class="flex gap-3 items-center">
-                  <input
-                    class="w-8 h-8 checked:caret-indigo-700"
-                    type="radio"
-                    name="main-color"
-                    id="main-color"
-                    checked
-                  />
-                  <input
-                    class="w-8 h-8 checked:caret-indigo-700"
-                    type="radio"
-                    name="main-color"
-                    id="main-color"
-                  />
-                </div>
-              </div>
-              <div>
-                <div class="flex flex-col gap-2">
-                  <div class="flex justify-between px-2">
-                    <span class="text-lg text-gray-600 font-medium">Size</span>
-                    <a
-                      href="#"
-                      class="text-indigo-600 text-lg font-bold hover:text-indigo-500 active:text-indigo-700"
-                      >Size guide</a
-                    >
-                  </div>
-                  <div class="flex gap-4 px-2 justify-between sm:justify-start">
-                    <div class="overview-size">
-                      <span class="text-white text-xl font-mono font-bold"
-                        >XXl</span
-                      >
-                    </div>
-                    <div class="overview-size">
-                      <span class="text-white text-xl font-mono font-bold"
-                        >XS</span
-                      >
-                    </div>
-                    <div class="overview-size">
-                      <span class="text-white text-xl font-mono font-bold"
-                        >S</span
-                      >
-                    </div>
-                    <div class="overview-size">
-                      <span class="text-white text-xl font-mono font-bold"
-                        >M</span
-                      >
-                    </div>
-                    <div class="overview-size">
-                      <span class="text-white text-xl font-mono font-bold"
-                        >XL</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="flex px-1 py-4 gap-3 flex-col items-center">
-                <a
-                  class="bg-indigo-600 py-2 w-full rounded-lg text-center text-xl text-white hover:bg-indigo-500 active:bg-indigo-700 transition-all duration-300"
-                  href="#"
-                  >Add to bag</a
-                >
-                <a
-                  href="#"
-                  class="text-indigo-600 hidden sm:block text-lg font-bold hover:text-indigo-500 active:text-indigo-700"
-                  >View full details</a
-                >
-              </div>
-            </div>
-          </div>
+        <div id="quickview-container" class="relative dark:bg-slate-800">
+          <!-- The view Model Will be Appended here -->
+
         </div>
       </section>
       <!-- Shopping Cart Section -->
@@ -461,11 +310,11 @@
       <!-- Hidden By default -->
       <section
         id="search"
-        class="container hidden fixed top-1/2 transform -translate-y-1/2 my-auto left-0 right-0 z-[100] mx-auto w-full sm:w-[600px] bg-neutral rounded-xl shadow-2xl"
+        class="container hidden fixed top-1/2 transform -translate-y-1/2 my-auto left-0 right-0 z-[100] mx-auto w-full sm:w-[600px] bg-neutral dark:bg-slate-800 rounded-xl shadow-2xl"
       >
         <div class="flex flex-col gap-3">
           <!-- Top -->
-          <div class="px-2 flex items-center border-b-2 gap-5">
+          <div class="px-2 flex items-center border-b-2 dark:border-gray-500 gap-5">
             <span class="cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -513,24 +362,24 @@
           <div class="overflow-y-scroll pr-1 h-48">
             <!-- Shown Only when there is no search item -->
             <div class="w-full hidden h-full justify-center items-center">
-              <span class="inline-block text-2xl text-gray-700 font-bold"
+              <span class="inline-block text-2xl text-gray-700 dark:text-gray-200 font-bold"
                 >No recent search :)</span
               >
             </div>
             <!-- Display only it there is a search Display The seach -->
             <div class="mt-1">
               <div class="flex flex-col gap-1">
-                <div class="py-2 border-b-2">
-                  <h1 class="ml-4 text-2xl text-gray-700 font-bold">Recent</h1>
+                <div class="py-2 border-b-2 dark:border-gray-700">
+                  <h1 class="ml-4 text-2xl text-gray-700 dark:text-gray-200 font-bold">Recent</h1>
                 </div>
                 <!-- Search results are Appended here -->
                 <div>
                   <a
                     href="#"
-                    class="flex items-center justify-between border-b-2 py-2"
+                    class="flex items-center justify-between border-b-2 dark:border-gray-700 py-2"
                   >
                     <h1
-                      class="text-lg ml-4 text-gray-600 font-medium font-mono"
+                      class="text-lg ml-4 text-gray-600 dark:text-gray-200 font-medium font-mono"
                     >
                       How To Puchase?
                     </h1>
@@ -572,16 +421,16 @@
                 </div>
               </div>
               <div class="flex flex-col gap-1">
-                <div class="py-2 border-b-2">
-                  <h1 class="ml-4 text-2xl text-gray-700 font-bold">
+                <div class="py-2 border-b-2 dark:border-gray-700">
+                  <h1 class="ml-4 text-2xl text-gray-700 dark:text-gray-200 font-bold">
                     Favourite
                   </h1>
                 </div>
                 <a
                   href="#"
-                  class="flex items-center justify-between border-b-2 py-2"
+                  class="flex items-center justify-between border-b-2 dark:border-gray-700 py-2"
                 >
-                  <h1 class="text-lg ml-4 text-gray-600 font-medium font-mono">
+                  <h1 class="text-lg ml-4 text-gray-600 dark:text-gray-200 font-medium font-mono">
                     How to return item.
                   </h1>
                   <div class="flex gap-2 ml-3">
@@ -621,9 +470,9 @@
             </div>
           </div>
           <!-- Bottom -->
-          <div class="flex justify-end border-t-2">
+          <div class="flex justify-end border-t-2 dark:border-gray-500">
             <a
-              class="inline-block text-xl mr-6 my-3 font-semibold text-gray-700"
+              class="inline-block text-xl mr-6 my-3 font-semibold text-gray-700 dark:text-gray-200"
               href="#"
               >Search by
               <span

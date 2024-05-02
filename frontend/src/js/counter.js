@@ -1,8 +1,7 @@
 const collectionContainer = document.querySelector("#collection-container");
 const quickViewSection = document.querySelector("#quickview-section");
 const overlayModel = document.querySelector("#overlay");
-const quickViewClose = document.querySelector("#quickview-close")
-const quickViewContainer = document.querySelector("#quickview-container")
+const quickViewContainer = document.querySelector("#quickview-container");
 export const state = {
   quickView: {},
 };
@@ -50,7 +49,8 @@ export const AboutCompanyData = () => {
           "text-center",
           "text-base",
           "sm:text-lg",
-          "text-gray-500"
+          "text-gray-500",
+          "dark:text-gray-200"
         );
         span.innerText = item.title;
 
@@ -60,7 +60,8 @@ export const AboutCompanyData = () => {
           "text-center",
           "text-lg",
           "sm:text-xl",
-          "text-gray-900"
+          "text-gray-900",
+          "dark:text-gray-500"
         );
         h1.innerText = item.subtitle;
 
@@ -242,33 +243,33 @@ function quickViewFun(data) {
     const quickItem = data.find((d) => d.id === Number(parent));
     state.quickView = quickItem;
     console.log(state);
-    openQuickModel()
-    
+    openQuickModel();
+    renderSpinner();
+    renderQuickView(quickItem);
   });
 }
 // Open Quick View Model
-function openQuickModel(){
+function openQuickModel() {
   quickViewSection.classList.remove("hidden");
-  overlayModel.classList.remove("hidden")
+  overlayModel.classList.remove("hidden");
 }
-function closeWQuickModel(){
+function closeWQuickModel() {
   quickViewSection.classList.add("hidden");
-  overlayModel.classList.add("hidden")
+  overlayModel.classList.add("hidden");
 }
 // Event Handlers
-quickViewClose.addEventListener("click", closeWQuickModel)
-overlayModel.addEventListener('click', closeWQuickModel)
-document.addEventListener("keydown", (e)=> {
-  if(e.key === "Escape"){
-    closeWQuickModel()
-  }else return
-})
+
+overlayModel.addEventListener("click", closeWQuickModel);
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeWQuickModel();
+  } else return;
+});
 // Load Spinner
 const renderSpinner = () => {
-  setTimeout(() => {
-    quickViewContainer.innerHTML =""
-    const html = `
-  <div class="absolute w-full h-full z-10 right-0 top-0 bg-neutral flex items-center justify-center">
+  // quickViewContainer.innerHTML =""
+  const html = `
+  <div class="absolute w-full h-full z-10 right-0 top-0 bg-neutral dark:bg-slate-800 flex items-center justify-center">
     <p class="animate-spin">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -287,6 +288,156 @@ const renderSpinner = () => {
     </p>
   </div>
   `;
-  }, 2000);
-  quickViewContainer.insertAdjacentHTML("afterbegin", html)
+  quickViewContainer.insertAdjacentHTML("afterbegin", html);
 };
+
+/**
+ * Display The Quick View Data
+ */
+function renderQuickView(data) {
+  setTimeout(() => {
+    quickViewContainer.innerHTML = "";
+
+    console.log(data);
+    const markUp = `
+  <div id="${data.id}"
+    class="py-4 px-1 relative container mx-auto sm:grid sm:grid-cols-2 sm:gap-4"
+  >
+    <div class="flex flex-col gap-2">
+      <div
+        class="flex items-center justify-between px-2 sm:justify-end"
+      >
+        <a
+          href="#"
+          class="text-indigo-600 text-lg font-bold sm:hidden hover:text-indigo-500 active:text-indigo-700"
+          >View full details</a
+        >
+        <ion-icon id="quickview-close"
+          name="close-outline"
+          class="svgs text-indigo-600 cursor-pointer sm:absolute sm:top-4 sm:right-1"
+        ></ion-icon>
+      </div>
+      <div class="p-1">
+        <img
+          class="rounded-lg"
+          src="${data.images[0]}"
+          alt="${data.description}"
+        />
+      </div>
+    </div>
+    <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-1">
+        <h1 class="text-xl font-bold text-gray-800">
+        ${data.title}
+        </h1>
+        <span class="text-lg text-gray-600 font-medium">$${data.price}.00</span>
+      </div>
+      <div class="flex gap-2">
+        <span class="text-lg text-gray-600 font-medium">${data.rating}</span>
+        <div class="flex gap-1 items-center">
+          <ion-icon
+            name="star"
+            class="svgs text-yellow-500 w-6 h-6"
+          ></ion-icon>
+          <ion-icon
+            name="star"
+            class="svgs text-yellow-500 w-6 h-6"
+          ></ion-icon>
+          <ion-icon
+            name="star"
+            class="svgs text-yellow-500 w-6 h-6"
+          ></ion-icon>
+          <ion-icon
+            name="star"
+            class="svgs text-yellow-500 w-6 h-6"
+          ></ion-icon>
+          <ion-icon
+            name="star-outline"
+            class="svgs text-yellow-500 w-6 h-6"
+          ></ion-icon>
+        </div>
+        <div class="hidden sm:block sm:ml-5">
+          <a
+            href="#"
+            class="text-indigo-600 text-lg font-bold hover:text-indigo-500 active:text-indigo-700"
+            >See all reviews</a
+          >
+        </div>
+      </div>
+      <div class="flex flex-col gap-2">
+        <h1 class="text-lg text-gray-600 font-medium">Color</h1>
+        <div class="flex gap-3 items-center">
+          <input
+            class="w-8 h-8 checked:caret-indigo-700"
+            type="radio"
+            name="main-color"
+            id="main-color"
+            checked
+          />
+          <input
+            class="w-8 h-8 checked:caret-indigo-700"
+            type="radio"
+            name="main-color"
+            id="main-color"
+          />
+        </div>
+      </div>
+      <div>
+        <div class="flex flex-col gap-2">
+          <div class="flex justify-between px-2">
+            <span class="text-lg text-gray-600 font-medium">Size</span>
+            <a
+              href="#"
+              class="text-indigo-600 text-lg font-bold hover:text-indigo-500 active:text-indigo-700"
+              >Size guide</a
+            >
+          </div>
+          <div class="flex gap-4 px-2 justify-between sm:justify-start">
+            <div class="overview-size">
+              <span class="text-white text-xl font-mono font-bold"
+                >XXl</span
+              >
+            </div>
+            <div class="overview-size">
+              <span class="text-white text-xl font-mono font-bold"
+                >XS</span
+              >
+            </div>
+            <div class="overview-size">
+              <span class="text-white text-xl font-mono font-bold"
+                >S</span
+              >
+            </div>
+            <div class="overview-size">
+              <span class="text-white text-xl font-mono font-bold"
+                >M</span
+              >
+            </div>
+            <div class="overview-size">
+              <span class="text-white text-xl font-mono font-bold"
+                >XL</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex px-1 py-4 gap-3 flex-col items-center">
+        <a
+          class="bg-indigo-600 py-2 w-full rounded-lg text-center text-xl text-white hover:bg-indigo-500 active:bg-indigo-700 transition-all duration-300"
+          href="#"
+          >Add to bag</a
+        >
+        <a
+          href="#"
+          class="text-indigo-600 hidden sm:block text-lg font-bold hover:text-indigo-500 active:text-indigo-700"
+          >View full details</a
+        >
+      </div>
+    </div>
+  </div>
+  `;
+    quickViewContainer.insertAdjacentHTML("afterbegin", markUp);
+    const quickViewClose = document.querySelector("#quickview-close");
+    quickViewClose.addEventListener("click", closeWQuickModel);
+  }, 2000);
+}
