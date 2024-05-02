@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,6 +21,166 @@
   </head>
   <body class="bg-gray-100 dark:bg-[#121212] dark:text-white">
     <main class="relative">
+      <!-- Quick Overview Page  -->
+      <section id="quickview-section"
+        class="hidden sm:fixed z-50 bg-neutral sm:shadow-2xl sm:rounded-lg sm:top-1/2 sm:-translate-y-1/2 md:w-[800px] md: backdrop-blur-[1.5px] sm:px-4 sm:left-1/2 sm:-translate-x-1/2"
+      >
+        <div id="quickview-container" class="relative">
+          <div class="absolute w-full h-full z-10 right-0 top-0 bg-neutral hidden items-center justify-center">
+            <p class="animate-spin">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-24 h-24 svgs "
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
+                />
+              </svg>
+            </p>
+          </div>
+          <div
+            class="py-4 px-1 relative container mx-auto sm:grid sm:grid-cols-2 sm:gap-4"
+          >
+            <div class="flex flex-col gap-2">
+              <div
+                class="flex items-center justify-between px-2 sm:justify-end"
+              >
+                <a
+                  href="#"
+                  class="text-indigo-600 text-lg font-bold sm:hidden hover:text-indigo-500 active:text-indigo-700"
+                  >View full details</a
+                >
+                <ion-icon id="quickview-close"
+                  name="close-outline"
+                  class="svgs text-indigo-600 cursor-pointer sm:absolute sm:top-4 sm:right-1"
+                ></ion-icon>
+              </div>
+              <div class="p-1">
+                <img
+                  class="rounded-lg"
+                  src="./src/asset/img/product-1-1.jpg"
+                  alt="Product image"
+                />
+              </div>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div class="flex flex-col gap-1">
+                <h1 class="text-xl font-bold text-gray-800">
+                  Lorem ipsum dolor sit.
+                </h1>
+                <span class="text-lg text-gray-600 font-medium">$20.00</span>
+              </div>
+              <div class="flex gap-2">
+                <span class="text-lg text-gray-600 font-medium">4.2</span>
+                <div class="flex gap-1 items-center">
+                  <ion-icon
+                    name="star"
+                    class="svgs text-yellow-500 w-6 h-6"
+                  ></ion-icon>
+                  <ion-icon
+                    name="star"
+                    class="svgs text-yellow-500 w-6 h-6"
+                  ></ion-icon>
+                  <ion-icon
+                    name="star"
+                    class="svgs text-yellow-500 w-6 h-6"
+                  ></ion-icon>
+                  <ion-icon
+                    name="star"
+                    class="svgs text-yellow-500 w-6 h-6"
+                  ></ion-icon>
+                  <ion-icon
+                    name="star-outline"
+                    class="svgs text-yellow-500 w-6 h-6"
+                  ></ion-icon>
+                </div>
+                <div class="hidden sm:block sm:ml-5">
+                  <a
+                    href="#"
+                    class="text-indigo-600 text-lg font-bold hover:text-indigo-500 active:text-indigo-700"
+                    >See all reviews</a
+                  >
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <h1 class="text-lg text-gray-600 font-medium">Color</h1>
+                <div class="flex gap-3 items-center">
+                  <input
+                    class="w-8 h-8 checked:caret-indigo-700"
+                    type="radio"
+                    name="main-color"
+                    id="main-color"
+                    checked
+                  />
+                  <input
+                    class="w-8 h-8 checked:caret-indigo-700"
+                    type="radio"
+                    name="main-color"
+                    id="main-color"
+                  />
+                </div>
+              </div>
+              <div>
+                <div class="flex flex-col gap-2">
+                  <div class="flex justify-between px-2">
+                    <span class="text-lg text-gray-600 font-medium">Size</span>
+                    <a
+                      href="#"
+                      class="text-indigo-600 text-lg font-bold hover:text-indigo-500 active:text-indigo-700"
+                      >Size guide</a
+                    >
+                  </div>
+                  <div class="flex gap-4 px-2 justify-between sm:justify-start">
+                    <div class="overview-size">
+                      <span class="text-white text-xl font-mono font-bold"
+                        >XXl</span
+                      >
+                    </div>
+                    <div class="overview-size">
+                      <span class="text-white text-xl font-mono font-bold"
+                        >XS</span
+                      >
+                    </div>
+                    <div class="overview-size">
+                      <span class="text-white text-xl font-mono font-bold"
+                        >S</span
+                      >
+                    </div>
+                    <div class="overview-size">
+                      <span class="text-white text-xl font-mono font-bold"
+                        >M</span
+                      >
+                    </div>
+                    <div class="overview-size">
+                      <span class="text-white text-xl font-mono font-bold"
+                        >XL</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex px-1 py-4 gap-3 flex-col items-center">
+                <a
+                  class="bg-indigo-600 py-2 w-full rounded-lg text-center text-xl text-white hover:bg-indigo-500 active:bg-indigo-700 transition-all duration-300"
+                  href="#"
+                  >Add to bag</a
+                >
+                <a
+                  href="#"
+                  class="text-indigo-600 hidden sm:block text-lg font-bold hover:text-indigo-500 active:text-indigo-700"
+                  >View full details</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- Shopping Cart Section -->
       <!-- By deafult hidden -->
       <section
@@ -665,10 +825,10 @@
           <!-- Links -->
           <div class="gap-2 hidden lg:flex">
             <a class="nav-link nav-link-active" href="#">Home</a>
-            <a class="nav-link" href="#">Men</a>
-            <a class="nav-link" href="#">Women</a>
-            <a class="nav-link" href="#">Store</a>
-            <a class="nav-link" href="#">My Account</a>
+            <a class="nav-link" href="#categories">Categories</a>
+            <a class="nav-link" href="#discover">Hot Deals</a>
+            <a class="nav-link" href="store.html">Store</a>
+            <a class="nav-link" href="dashboard.html">My Account</a>
           </div>
           <!-- Logo Image Hidden on Larger screen -->
           <a href="#" class="flex-1 flex items-center justify-center lg:hidden">
@@ -701,15 +861,14 @@
               <span class="sr-only">Search Icon</span>
             </span>
             <!-- Dark Mode Part -->
-            <span id="sun" class="cursor-pointer hidden">
+            <span id="sun" class="cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
-                
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="svgs "
+                class="svgs"
               >
                 <path
                   stroke-linecap="round"
@@ -721,19 +880,19 @@
             </span>
             <span id="moon" class="cursor-pointer">
               <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="svgs"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
-              />
-            </svg>
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="svgs"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+                />
+              </svg>
               <span class="sr-only">Moon Icon</span>
             </span>
             <!-- Cart Section -->
@@ -768,32 +927,31 @@
 
       <!-- Hero section -->
       <div class="grid grid-cols-1 gap-2">
+        <!-- Content Add Automatically from json file -->
         <section class="max-w-full">
           <div class="container mx-auto lg:grid lg:grid-cols-2">
             <div
               class="px-5 sm:px-8 flex flex-col gap-3 py-16 xl:place-content-center"
             >
               <h1
+                id="hero-title"
                 class="text-gray-800 text-4xl sm:text-5xl sm:font-extrabold font-bold"
-              >
-                Focus on what matters
-              </h1>
-              <p class="text-gray-600 font-medium text-xl sm:text-2xl mt-3">
-                All the charts, datepickers, and notifications in the world
-                can't beat checking off some items on a paper card.
-              </p>
+              ></h1>
+              <p
+                id="hero-subtitle"
+                class="text-gray-600 font-medium text-xl sm:text-2xl mt-3"
+              ></p>
               <div class="mt-5">
                 <a
-                  class="inline-block py-3 px-6 bg-indigo-600 rounded-lg text-white text-xl transition-all duration-300 hover:bg-indigo-600 active:bg-indigo-600 transform hover:scale-105 focus:ring-1 focus:ring-offset-2 focus:ring-offset-transparent focus:ring-indigo-400"
-                  href="store.html"
-                  >Shop Productivity</a
-                >
+                  id="hero-button"
+                  class="inline-block py-3 px-6 bg-indigo-600 rounded-lg text-white text-xl transition-all duration-300 hover:bg-indigo-700 active:bg-indigo-800 transform hover:scale-105 focus:ring-1 focus:ring-offset-2 focus:ring-offset-transparent focus:ring-indigo-400"
+                ></a>
               </div>
             </div>
             <div class="my-5 lg:my-0">
               <img
+                id="hero-image"
                 class="inline-block max-w-full h-60 sm:h-96 lg:block lg:h-full w-full object-cover"
-                src="./src/asset/images/hero-image.jpg"
                 alt="Hero image"
               />
             </div>
@@ -801,6 +959,17 @@
         </section>
         <!-- Company About -->
         <section class="my-10 lg:row-start-1 lg:my-0 lg:border-b-2">
+          <div class="container mx-auto">
+            <div
+              class="flex flex-col gap-1 lg:grid lg:grid-cols-3 lg:divide-x lg:divide-blue-700"
+              id="company-about-container"
+            >
+              <!-- Company About items will be dynamically added here -->
+            </div>
+          </div>
+        </section>
+        <!-- Company About -->
+        <!-- <section class="my-10 lg:row-start-1 lg:my-0 lg:border-b-2">
           <div class="container mx-auto">
             <div
               class="flex flex-col gap-1 lg:grid lg:grid-cols-3 lg:divide-x lg:divide-blue-700"
@@ -840,10 +1009,10 @@
               </a>
             </div>
           </div>
-        </section>
+        </section> -->
       </div>
       <!-- Popular categories -->
-      <section class="container mx-auto my-10">
+      <section id="categories" class="container mx-auto my-10">
         <!-- Swiper -->
         <div class="flex py-5 px-2">
           <h1 class="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -994,6 +1163,7 @@
               </div>
             </div>
             <div
+              id="collection-container"
               class="flex flex-col gap-5 my-5 sm:mx-5 md:grid md:grid-cols-2 lg:grid-cols-3"
             >
               <!-- Product 1 -->
@@ -1001,9 +1171,11 @@
                 class="flex flex-col gap-2 bg-white shadow-lg overflow-hidden rounded-lg"
               >
                 <div class="group flex flex-col gap-1 overflow-hidden">
-                  <span
-                    class="block relative after:content-['-20%'] after:absolute after:flex after:items-center after:justify-center after:-top-4 after:-left-4 after:w-20 after:text-xl after:text-white after:h-20 after:rounded-full after:bg-indigo-600"
-                  >
+                  <span class="block relative">
+                    <span
+                      class="absolute -top-2 -left-2 w-16 h-16 flex items-center font-mono justify-center text-2xl z-20 text-white dark:text-greay-200 rounded-full bg-indigo-600"
+                      >20</span
+                    >
                     <img
                       class="block group-hover:opacity-80 transition-opacity duration-200 ease-in-out"
                       src="src/asset/img/product-1-1.jpg"
@@ -1014,6 +1186,7 @@
                     >
                       <div class="flex gap-4 justify-between py-3 px-2">
                         <a
+                          id="quickView-button"
                           href="product-overview.html"
                           class="block relative svg-store after:-top-8 after:-left-3 after:content-['View']"
                         >
@@ -1073,104 +1246,50 @@
                       </div>
                     </div>
                   </span>
-                  <div class="flex flex-col px-1">
-                    <span class="text-xl text-gray-500 font-medium"
+                  <div class="flex flex-col px-1 dark:bg-slate-800">
+                    <span
+                      class="text-xl text-gray-500 font-medium dark:text-gray-200"
                       >T-shirt</span
                     >
-                    <span class="mt-3 text-2xl text-gray-900 font-semibold">
-                      Mens Modern T-Shirt
-                    </span>
-                    <div class="flex items-center mt-1 gap-1">
-                      <span class=""
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          class="w-6 h-6 stroke-none fill-yellow-500"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class=""
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          class="w-6 h-6 stroke-none fill-yellow-500"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class=""
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          class="w-6 h-6 stroke-none fill-yellow-500"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class=""
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          class="w-6 h-6 stroke-none fill-yellow-500"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class=""
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          class="w-6 h-6"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                          />
-                        </svg>
-                      </span>
+                    <p
+                      class="mt-3 truncate text-2xl text-gray-900 font-semibold dark:text-slate-200"
+                    >
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Placeat, minus!
+                    </p>
+                    <div class="flex gap-4">
+                      <h1
+                        class="flex items-center mt-1 text-2xl text-gray-600 dark:text-gray-200 font-mono font-bold"
+                      >
+                        4.6
+                      </h1>
+                      <div class="flex items-center gap-1">
+                        <p class="text-3xl text-center text-yellow-500">
+                          &#9733;
+                        </p>
+                        <p class="text-3xl text-center text-yellow-500">
+                          &#9733;
+                        </p>
+                        <p class="text-3xl text-center text-yellow-500">
+                          &#9733;
+                        </p>
+                        <p class="text-3xl text-center text-yellow-500">
+                          &#9733;
+                        </p>
+                        <p class="text-3xl text-center">&#9733;</p>
+                      </div>
                     </div>
+
                     <div
                       class="flex py-2 items-center justify-between mt-5 mb-5"
                     >
                       <div class="flex gap-5 items-center">
-                        <del class="text-xl text-gray-700 mt-2 font-medium"
+                        <del
+                          class="text-xl text-gray-700 mt-2 font-medium dark:text-gray-300"
                           >$101</del
                         >
                         <p
-                          class="text-2xl transform scale-150 font-medium text-indigo-600"
+                          class="text-2xl transform scale-150 font-medium text-indigo-600 dark:text-gray-50"
                         >
                           $99
                         </p>
@@ -1802,7 +1921,7 @@
         </div>
       </section>
       <!-- ore to discover Section -->
-      <section class="my-10">
+      <section id="discover" class="my-10">
         <div
           class="container mx-auto flex flex-col gap-2 md:grid md:grid-cols-2 lg:grid-cols-4"
         >
@@ -2358,5 +2477,6 @@
       });
     </script>
     <script type="module" src="./src/js/main.js"></script>
+    <script type="module" src="./src/js/index.js"></script>
   </body>
 </html>

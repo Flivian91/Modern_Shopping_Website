@@ -1,3 +1,4 @@
+// import { mainFun } from "./counter";
 /**
  * All Varibale
  *  */

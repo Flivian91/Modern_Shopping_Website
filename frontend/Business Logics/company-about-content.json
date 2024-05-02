@@ -1,0 +1,38 @@
+{
+  "companyAbout": {
+    "mobileApp": [
+      {
+        "title": "Download the Mobile App",
+        "subtitle": "Get an exclusive $5 off code for your first purchase in our mobile app!",
+        "link": "#"
+      },
+      {
+        "title": "Unlock Mobile Features",
+        "subtitle": "Access exclusive features and discounts available only in our mobile app!",
+        "link": "#"
+      },
+      {
+        "title": "Stay Connected Anywhere",
+        "subtitle": "Never miss a deal with notifications on our mobile app. Download now!",
+        "link": "#"
+      }
+    ],
+    "webApp": [
+      {
+        "title": "Access Our Web App",
+        "subtitle": "Explore our web app for a seamless shopping experience on desktop!",
+        "link": "store.html"
+      },
+      {
+        "title": "Discover Web-Exclusive Deals",
+        "subtitle": "Check out special discounts and offers available only on our website!",
+        "link": "#discover"
+      },
+      {
+        "title": "Easy Browsing, Easy Shopping",
+        "subtitle": "Navigate through our website effortlessly and find what you need in no time!",
+        "link": "store.html"
+      }
+    ]
+  }
+}
