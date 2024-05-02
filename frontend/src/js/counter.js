@@ -2,6 +2,9 @@ const collectionContainer = document.querySelector("#collection-container");
 const quickViewSection = document.querySelector("#quickview-section");
 const overlayModel = document.querySelector("#overlay");
 const quickViewContainer = document.querySelector("#quickview-container");
+const categoryContainer = document.querySelector("#cartegory-sweep");
+const menContainer = document.querySelector("#men-container");
+const womenContainer = document.querySelector("#women-container");
 export const state = {
   quickView: {},
 };
@@ -39,7 +42,8 @@ export const AboutCompanyData = () => {
           "py-5",
           "border-b-2",
           "border-b-slate-400/30",
-          "lg:border-none"
+          "lg:border-none",
+          "dark:border-b-slate-100/30"
         );
 
         const span = document.createElement("span");
@@ -50,7 +54,7 @@ export const AboutCompanyData = () => {
           "text-base",
           "sm:text-lg",
           "text-gray-500",
-          "dark:text-gray-200"
+          "dark:text-gray-100"
         );
         span.innerText = item.title;
 
@@ -61,7 +65,7 @@ export const AboutCompanyData = () => {
           "text-lg",
           "sm:text-xl",
           "text-gray-900",
-          "dark:text-gray-500"
+          "dark:text-gray-300"
         );
         h1.innerText = item.subtitle;
 
@@ -83,12 +87,12 @@ export async function loadCollection() {
   const res = await fetch("https://dummyjson.com/products");
   const data = await res.json();
   renderCollection(data.products);
+  renderCategories(data.products);
 }
 function renderCollection(data) {
   collectionContainer.innerHTML = "";
   const items = data.filter((item) => item.id > 27);
   items.forEach((data) => {
-    console.log(data);
     const html = `
     <!-- Product 1 -->
     <div id="${data.id}"
@@ -200,7 +204,7 @@ function renderCollection(data) {
           >
             <div class="flex gap-5 items-center">
               <del class="text-lg text-gray-700 mt-2 font-medium dark:text-gray-300"
-                >${data.price}</del
+                >${data.price}.00</del
               >
               <p
                 class="text-xl transform scale-150 font-medium text-indigo-600 dark:text-gray-50"
@@ -211,7 +215,7 @@ function renderCollection(data) {
                   : (
                       data.price -
                       (data.price * data.discountPercentage) / 100
-                    ).toFixed(1)
+                    ).toFixed(2)
               }
               </p>
             </div>
@@ -233,7 +237,6 @@ function renderCollection(data) {
 }
 
 function quickViewFun(data) {
-  console.log(data);
   // const quickViewButton = document.querySelector("#quickview-button");
   collectionContainer.addEventListener("click", (e) => {
     e.preventDefault();
@@ -242,7 +245,6 @@ function quickViewFun(data) {
     const parent = clicked.parentElement.id;
     const quickItem = data.find((d) => d.id === Number(parent));
     state.quickView = quickItem;
-    console.log(state);
     openQuickModel();
     renderSpinner();
     renderQuickView(quickItem);
@@ -297,8 +299,6 @@ const renderSpinner = () => {
 function renderQuickView(data) {
   setTimeout(() => {
     quickViewContainer.innerHTML = "";
-
-    console.log(data);
     const markUp = `
   <div id="${data.id}"
     class="py-4 px-1 relative container mx-auto sm:grid sm:grid-cols-2 sm:gap-4"
@@ -441,3 +441,126 @@ function renderQuickView(data) {
     quickViewClose.addEventListener("click", closeWQuickModel);
   }, 2000);
 }
+
+/**
+ * Display Catetegories
+ */
+function renderCategories(items) {
+  categoryContainer.innerHTML = "";
+  items.forEach((data) => {
+    const markUp = `
+  <div id='${data.id}' class="swiper-slide">
+    <div
+      class="flex group flex-col items-center shadow-xl mx-10 relative overflow-hidden rounded-lg bg-white dark:bg-slate-800 pb-4"
+    >
+    <div class="relative">
+      <img
+        class="mb-3"
+        src="${data.images[0]}"
+        alt="Gepa"
+      />
+      <a href="store.html"
+        class="absolute bottom-3 right-0 py-2 px-5 rounded-tl-lg text-white z-10 text-xl font-medium hover:bg-indigo-500 active:bg-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 bg-indigo-600 transform translate-x-40 group-hover:translate-x-0"
+      >
+        Checkout
+      </a>
+    </div>
+      
+      <span class="text-xl font-mono font-semibold text-indigo-600 dark:text-gray-200"
+        >${data.brand}</span
+      >
+    </div>
+  </div>
+  `;
+    categoryContainer.insertAdjacentHTML("afterbegin", markUp);
+  });
+}
+
+/**
+ * Men`s Display
+ */
+export const renderMenCategory = async function () {
+  const res = await fetch(
+    "https://dummyjson.com/products/category/mens-shirts"
+  );
+  const items = await res.json();
+  
+  // Render HTML
+  // menContainer.innerHTML = ""
+  items.products.forEach(data => {
+    const html = `
+    <a id='${data.id}'
+      class="inline-block pb-3 space-x-1 group overflow-hidden shadow-lg bg-white rounded-md dark:bg-slate-800"
+      href="store.html"
+    >
+      <span class="inline-block relative w-full">
+        <img
+          class="group-hover:opacity-80 object-cover w-full"
+          src="${data.images[0]}"
+          alt="Image 2"
+        />
+        <button
+          class="absolute bottom-0 right-0 py-2 px-5 rounded-tl-lg text-white z-10 text-xl font-medium hover:bg-indigo-500 active:bg-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 bg-indigo-600 transform translate-x-40 group-hover:translate-x-0"
+        >
+          Add to bag
+        </button>
+      </span>
+      <span
+        class="block md:text-center font-medium mt-10 text-xl truncate text-gray-600 dark:text-gray-200"
+        >${data.title.at(0).toUpperCase()}${data.title.slice(1)}</span
+      >
+      <h1
+        class="text-lg mt-2 md:text-center text-gray-900 font-medium dark:text-gray-400"
+      >
+        ${data.description.at(0).toUpperCase()}${data.description.slice(1)}
+      </h1>
+    </a>
+  `
+  menContainer.insertAdjacentHTML("afterbegin", html)
+  })
+ 
+};
+
+/**
+ * Women`s Display
+ */
+export const renderWomenCategory = async function () {
+  const res = await fetch(
+    "https://dummyjson.com/products/category/womens-shoes"
+  );
+  const items = await res.json();
+  
+  // Render HTML
+  // womenContainer.innerHTML = ""
+  items.products.forEach(data => {
+    const html = `
+    <a id='${data.id}'
+      class="inline-block pb-3 space-x-1 group overflow-hidden shadow-lg bg-white rounded-md dark:bg-slate-800"
+      href="store.html"
+    >
+      <span class="inline-block relative w-full">
+        <img
+          class="group-hover:opacity-80 object-cover w-full"
+          src="${data.images[0]}"
+          alt="Image 2"
+        />
+        <button
+          class="absolute bottom-0 right-0 py-2 px-5 rounded-tl-lg text-white z-10 text-xl font-medium hover:bg-indigo-500 active:bg-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 bg-indigo-600 transform translate-x-40 group-hover:translate-x-0"
+        >
+          Add to bag
+        </button>
+      </span>
+      <span
+        class="block md:text-center font-medium mt-10 text-xl truncate text-gray-600 dark:text-gray-200"
+        >${data.title.at(0).toUpperCase()}${data.title.slice(1)}</span
+      >
+      <h1
+        class="text-lg mt-2 md:text-center text-gray-900 font-medium dark:text-gray-400"
+      >
+      ${data.description.at(0).toUpperCase()}${data.description.slice(1)}
+      </h1>
+    </a>
+  `
+  womenContainer.insertAdjacentHTML("afterbegin", html)
+  })
+};

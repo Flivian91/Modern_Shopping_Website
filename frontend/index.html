@@ -19,15 +19,15 @@
     <link href="src/css/output.css" rel="stylesheet" />
     <title>COMlection|web</title>
   </head>
-  <body class="bg-gray-100 dark:bg-[#121212] dark:text-white">
+  <body class="bg-gray-100 dark:bg-darkcolor dark:text-white">
     <main class="relative">
       <!-- Quick Overview Page  -->
-      <section id="quickview-section"
+      <section
+        id="quickview-section"
         class="hidden sm:fixed z-50 bg-neutral dark:bg-slate-800 sm:shadow-2xl sm:rounded-lg sm:top-1/2 sm:-translate-y-1/2 md:w-[800px] md: backdrop-blur-[1.5px] sm:px-4 sm:left-1/2 sm:-translate-x-1/2"
       >
         <div id="quickview-container" class="relative dark:bg-slate-800">
           <!-- The view Model Will be Appended here -->
-
         </div>
       </section>
       <!-- Shopping Cart Section -->
@@ -314,7 +314,9 @@
       >
         <div class="flex flex-col gap-3">
           <!-- Top -->
-          <div class="px-2 flex items-center border-b-2 dark:border-gray-500 gap-5">
+          <div
+            class="px-2 flex items-center border-b-2 dark:border-gray-500 gap-5"
+          >
             <span class="cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -362,7 +364,8 @@
           <div class="overflow-y-scroll pr-1 h-48">
             <!-- Shown Only when there is no search item -->
             <div class="w-full hidden h-full justify-center items-center">
-              <span class="inline-block text-2xl text-gray-700 dark:text-gray-200 font-bold"
+              <span
+                class="inline-block text-2xl text-gray-700 dark:text-gray-200 font-bold"
                 >No recent search :)</span
               >
             </div>
@@ -370,7 +373,11 @@
             <div class="mt-1">
               <div class="flex flex-col gap-1">
                 <div class="py-2 border-b-2 dark:border-gray-700">
-                  <h1 class="ml-4 text-2xl text-gray-700 dark:text-gray-200 font-bold">Recent</h1>
+                  <h1
+                    class="ml-4 text-2xl text-gray-700 dark:text-gray-200 font-bold"
+                  >
+                    Recent
+                  </h1>
                 </div>
                 <!-- Search results are Appended here -->
                 <div>
@@ -422,7 +429,9 @@
               </div>
               <div class="flex flex-col gap-1">
                 <div class="py-2 border-b-2 dark:border-gray-700">
-                  <h1 class="ml-4 text-2xl text-gray-700 dark:text-gray-200 font-bold">
+                  <h1
+                    class="ml-4 text-2xl text-gray-700 dark:text-gray-200 font-bold"
+                  >
                     Favourite
                   </h1>
                 </div>
@@ -430,7 +439,9 @@
                   href="#"
                   class="flex items-center justify-between border-b-2 dark:border-gray-700 py-2"
                 >
-                  <h1 class="text-lg ml-4 text-gray-600 dark:text-gray-200 font-medium font-mono">
+                  <h1
+                    class="text-lg ml-4 text-gray-600 dark:text-gray-200 font-medium font-mono"
+                  >
                     How to return item.
                   </h1>
                   <div class="flex gap-2 ml-3">
@@ -595,10 +606,10 @@
       <!-- Navigation -->
       <nav class="flex flex-col 2xl:container 2xl:mx-auto">
         <header
-          class="bg-primary py-2 flex items-center lg:justify-between justify-center lg:px-3"
+          class="bg-primary py-2 flex items-center dark:bg-darkcolor lg:justify-between justify-center lg:px-3"
         >
           <select
-            class="hidden cursor-pointer lg:block py-1 rounded-lg bg-primary text-neutral border-2 border-white placeholder:text-base"
+            class="hidden cursor-pointer lg:block py-1 rounded-lg bg-primary text-neutral dark:bg-primary border-2 border-white placeholder:text-base"
             name="Countey"
             id="items"
           >
@@ -628,7 +639,7 @@
         </header>
         <!-- Lower Header -->
         <div
-          class="flex flex-row items-center bg-neutral py-2 px-5 lg:justify-between"
+          class="flex flex-row items-center bg-neutral dark:bg-primary py-2 px-5 lg:justify-between"
         >
           <div class="flex flex-row gap-4 items-center flex-none w-20">
             <!-- Menu Icon Hidden on 1024px-->
@@ -674,7 +685,8 @@
           <!-- Links -->
           <div class="gap-2 hidden lg:flex">
             <a class="nav-link nav-link-active" href="#">Home</a>
-            <a class="nav-link" href="#categories">Categories</a>
+            <a class="nav-link" href="#men">Men</a>
+            <a class="nav-link" href="#women">Women</a>
             <a class="nav-link" href="#discover">Hot Deals</a>
             <a class="nav-link" href="store.html">Store</a>
             <a class="nav-link" href="dashboard.html">My Account</a>
@@ -784,11 +796,11 @@
             >
               <h1
                 id="hero-title"
-                class="text-gray-800 text-4xl sm:text-5xl sm:font-extrabold font-bold"
+                class="text-gray-800 dark:text-gray-200 text-4xl sm:text-5xl sm:font-extrabold font-bold"
               ></h1>
               <p
                 id="hero-subtitle"
-                class="text-gray-600 font-medium text-xl sm:text-2xl mt-3"
+                class="text-gray-600 dark:text-gray-400 font-medium text-xl sm:text-2xl mt-3"
               ></p>
               <div class="mt-5">
                 <a
@@ -864,124 +876,34 @@
       <section id="categories" class="container mx-auto my-10">
         <!-- Swiper -->
         <div class="flex py-5 px-2">
-          <h1 class="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h1
+            class="text-2xl md:text-4xl font-bold text-gray-900 dark:text-gray-200 mb-4"
+          >
             <span class="text-indigo-600">Popular</span>
             categories
           </h1>
         </div>
 
         <div class="swiper popularCategories relative cursor-grab">
-          <div class="swiper-wrapper flex items-center">
+          <div id="cartegory-sweep" class="swiper-wrapper flex items-center">
             <div class="swiper-slide">
               <div
                 class="flex group flex-col items-center shadow-xl mx-10 relative overflow-hidden rounded-lg bg-white pb-4"
               >
-                <img
-                  class="mb-3"
-                  src="./src/asset/img/category-2.jpg"
-                  alt="HandBag"
-                />
-                <button
-                  class="absolute bottom-0 right-0 py-2 px-5 rounded-tl-lg text-white z-10 text-xl font-medium hover:bg-indigo-500 active:bg-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 bg-indigo-600 transform translate-x-40 group-hover:translate-x-0"
-                >
-                  Checkout
-                </button>
-                <span class="text-xl font-mono font-semibold text-indigo-600"
-                  >T-shirt</span
-                >
-              </div>
-            </div>
+                <div class="relative">
+                  <img
+                    class="mb-3"
+                    src="./src/asset/img/category-8.jpg"
+                    alt="Gepa"
+                  />
+                  <a
+                    href="store.html"
+                    class="absolute bottom-3 right-0 py-2 px-5 rounded-tl-lg text-white z-10 text-xl font-medium hover:bg-indigo-500 active:bg-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 bg-indigo-600 transform translate-x-40 group-hover:translate-x-0"
+                  >
+                    Checkout
+                  </a>
+                </div>
 
-            <div class="swiper-slide">
-              <div
-                class="flex group flex-col items-center shadow-xl mx-10 relative overflow-hidden rounded-lg bg-white pb-4"
-              >
-                <img
-                  class="mb-3"
-                  src="./src/asset/img/category-4.jpg"
-                  alt="Cap"
-                />
-                <button
-                  class="absolute bottom-0 right-0 py-2 px-5 rounded-tl-lg text-white z-10 text-xl font-medium hover:bg-indigo-500 active:bg-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 bg-indigo-600 transform translate-x-40 group-hover:translate-x-0"
-                >
-                  Checkout
-                </button>
-                <span class="text-xl font-mono font-semibold text-indigo-600"
-                  >T-shirt</span
-                >
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div
-                class="flex group flex-col items-center shadow-xl mx-10 relative overflow-hidden rounded-lg bg-white pb-4"
-              >
-                <img
-                  class="mb-3"
-                  src="./src/asset/img/category-5.jpg"
-                  alt="Shoes"
-                />
-                <button
-                  class="absolute bottom-0 right-0 py-2 px-5 rounded-tl-lg text-white z-10 text-xl font-medium hover:bg-indigo-500 active:bg-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 bg-indigo-600 transform translate-x-40 group-hover:translate-x-0"
-                >
-                  Checkout
-                </button>
-                <span class="text-xl font-mono font-semibold text-indigo-600"
-                  >T-shirt</span
-                >
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div
-                class="flex group flex-col items-center shadow-xl mx-10 relative overflow-hidden rounded-lg bg-white pb-4"
-              >
-                <img
-                  class="mb-3"
-                  src="./src/asset/img/category-6.jpg"
-                  alt="Pillo"
-                />
-                <button
-                  class="absolute bottom-0 right-0 py-2 px-5 rounded-tl-lg text-white z-10 text-xl font-medium hover:bg-indigo-500 active:bg-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 bg-indigo-600 transform translate-x-40 group-hover:translate-x-0"
-                >
-                  Checkout
-                </button>
-                <span class="text-xl font-mono font-semibold text-indigo-600"
-                  >T-shirt</span
-                >
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div
-                class="flex group flex-col items-center shadow-xl mx-10 relative overflow-hidden"
-              >
-                <img
-                  class=""
-                  src="./src/asset/img/category-7.jpg"
-                  alt="Trouser"
-                />
-                <button
-                  class="absolute bottom-0 right-0 py-2 px-5 rounded-tl-lg text-white z-10 text-xl font-medium hover:bg-indigo-500 active:bg-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 bg-indigo-600 transform translate-x-40 group-hover:translate-x-0"
-                >
-                  Checkout
-                </button>
-                <span class="text-xl font-mono font-semibold text-indigo-600"
-                  >T-shirt</span
-                >
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div
-                class="flex group flex-col items-center shadow-xl mx-10 relative overflow-hidden rounded-lg bg-white pb-4"
-              >
-                <img
-                  class="mb-3"
-                  src="./src/asset/img/category-8.jpg"
-                  alt="Gepa"
-                />
-                <button
-                  class="absolute bottom-0 right-0 py-2 px-5 rounded-tl-lg text-white z-10 text-xl font-medium hover:bg-indigo-500 active:bg-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 bg-indigo-600 transform translate-x-40 group-hover:translate-x-0"
-                >
-                  Checkout
-                </button>
                 <span class="text-xl font-mono font-semibold text-indigo-600"
                   >T-shirt</span
                 >
@@ -1000,16 +922,12 @@
       <section class="mx-5 my-10">
         <div class="container mx-auto">
           <div class="flex flex-col gap-3">
-            <div class="flex justify-between py-3">
-              <h1 class="text-3xl font-semibold text-gray-900">
+            <div class="py-3">
+              <h1
+                class="text-3xl font-semibold text-gray-900 dark:text-gray-200"
+              >
                 Treading Products
               </h1>
-              <div>
-                <span></span>
-                <span
-                  ><i class="fa fa-arrow-circle-right" aria-hidden="true"></i
-                ></span>
-              </div>
             </div>
             <div
               id="collection-container"
@@ -1154,388 +1072,10 @@
                   </div>
                 </div>
               </div>
-
-              <div
-                class="flex flex-col gap-2 bg-white shadow-lg overflow-hidden rounded-lg"
-              >
-                <div class="group flex flex-col gap-1 overflow-hidden">
-                  <span
-                    class="block relative after:content-['-16%'] after:absolute after:flex after:items-center after:justify-center after:-top-4 after:-left-4 after:w-20 after:text-xl after:text-white after:h-20 after:rounded-full after:bg-indigo-600"
-                  >
-                    <img
-                      class="block group-hover:opacity-80 transition-opacity duration-200 ease-in-out"
-                      src="src/asset/img/product-10-1.jpg"
-                      alt="Shoes Image"
-                    />
-                    <div
-                      class="absolute top-1/2 transform scale-0 group-hover:scale-100 transition-transform duration-300 -translate-y-1/2 left-1/2 -translate-x-1/2 mx-auto z-10"
-                    >
-                      <div class="flex gap-4 justify-between py-3 px-2">
-                        <a
-                          href="product-overview.html"
-                          class="block relative svg-store after:-top-8 after:-left-3 after:content-['View']"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="w-6 h-6 svgs stroke-white hover:stroke-white"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M7.5 3.75H6A2.25 2.25 0 0 0 3.75 6v1.5M16.5 3.75H18A2.25 2.25 0 0 1 20.25 6v1.5m0 9V18A2.25 2.25 0 0 1 18 20.25h-1.5m-9 0H6A2.25 2.25 0 0 1 3.75 18v-1.5M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                            />
-                          </svg>
-                        </a>
-                        <a
-                          href="#"
-                          class="block svg-store after:content-['Like'] after:-top-5 after:left-14"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="w-6 h-6 svgs stroke-white hover:stroke-white"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
-                            />
-                          </svg>
-                        </a>
-                        <a
-                          href="#"
-                          class="block svg-store after:content-['Cart'] after:-top-5 after:right-0"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="w-6 h-6 svgs stroke-white hover:stroke-white"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-                            />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </span>
-                  <div class="flex flex-col px-1">
-                    <span class="text-xl text-gray-500 font-medium">Shoes</span>
-                    <span class="mt-3 text-2xl text-gray-900 font-semibold">
-                      Women`s Modern Shoes
-                    </span>
-                    <div class="flex items-center mt-1 gap-1">
-                      <span class=""
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          class="w-6 h-6 stroke-none fill-yellow-500"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class=""
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          class="w-6 h-6 stroke-none fill-yellow-500"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class=""
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          class="w-6 h-6 stroke-none fill-yellow-500"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class=""
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          class="w-6 h-6"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class=""
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          class="w-6 h-6"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                          />
-                        </svg>
-                      </span>
-                    </div>
-                    <div
-                      class="flex py-2 items-center justify-between mt-5 mb-5"
-                    >
-                      <div class="flex gap-5 items-center">
-                        <del class="text-xl text-gray-700 mt-2 font-medium"
-                          >$120</del
-                        >
-                        <p
-                          class="text-2xl transform scale-150 font-medium text-indigo-600"
-                        >
-                          $108
-                        </p>
-                      </div>
-                      <div>
-                        <button
-                          class="py-2 px-5 rounded-full text-white z-10 text-xl font-medium hover:bg-indigo-500 active:bg-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 bg-indigo-600 transform"
-                        >
-                          Add to bag
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="flex flex-col gap-2 bg-white shadow-lg overflow-hidden rounded-lg"
-              >
-                <div class="group flex flex-col gap-1 overflow-hidden">
-                  <span
-                    class="block relative after:content-['New'] after:absolute after:flex after:items-center after:justify-center after:-top-4 after:-left-4 after:w-20 after:text-xl after:text-white after:h-20 after:rounded-full after:bg-green-600"
-                  >
-                    <img
-                      class="block group-hover:opacity-80 transition-opacity duration-200 ease-in-out"
-                      src="src/asset/img/product-13-2.jpg"
-                      alt="Shoes Image"
-                    />
-                    <div
-                      class="absolute top-1/2 transform scale-0 group-hover:scale-100 transition-transform duration-300 -translate-y-1/2 left-1/2 -translate-x-1/2 mx-auto z-10"
-                    >
-                      <div class="flex gap-4 justify-between py-3 px-2">
-                        <a
-                          href="product-overview.html"
-                          class="block relative svg-store after:-top-8 after:-left-3 after:content-['View']"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="w-6 h-6 svgs stroke-white hover:stroke-white"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M7.5 3.75H6A2.25 2.25 0 0 0 3.75 6v1.5M16.5 3.75H18A2.25 2.25 0 0 1 20.25 6v1.5m0 9V18A2.25 2.25 0 0 1 18 20.25h-1.5m-9 0H6A2.25 2.25 0 0 1 3.75 18v-1.5M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                            />
-                          </svg>
-                        </a>
-                        <a
-                          href="#"
-                          class="block svg-store after:content-['Like'] after:-top-5 after:left-14"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="w-6 h-6 svgs stroke-white hover:stroke-white"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
-                            />
-                          </svg>
-                        </a>
-                        <a
-                          href="#"
-                          class="block svg-store after:content-['Cart'] after:-top-5 after:right-0"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="w-6 h-6 svgs stroke-white hover:stroke-white"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-                            />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </span>
-                  <div class="flex flex-col px-1">
-                    <span class="text-xl text-gray-500 font-medium"
-                      >Handbag</span
-                    >
-                    <span class="mt-3 text-2xl text-gray-900 font-semibold">
-                      Women`s flexible Handbag
-                    </span>
-                    <div class="flex items-center mt-1 gap-1">
-                      <span class=""
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          class="w-6 h-6 stroke-none fill-yellow-500"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class=""
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          class="w-6 h-6 stroke-none fill-yellow-500"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class=""
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          class="w-6 h-6 stroke-none fill-yellow-500"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class=""
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          class="w-6 h-6 stroke-none fill-yellow-500"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                          />
-                        </svg>
-                      </span>
-                      <span class=""
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          class="w-6 h-6 stroke-none fill-yellow-500"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                          />
-                        </svg>
-                      </span>
-                    </div>
-                    <div
-                      class="flex py-2 items-center justify-between mt-5 mb-5"
-                    >
-                      <div class="flex gap-5 items-center">
-                        <del class="text-xl text-gray-700 mt-2 font-medium"
-                          >$201</del
-                        >
-                        <p
-                          class="text-2xl transform scale-150 font-medium text-indigo-600"
-                        >
-                          $199
-                        </p>
-                      </div>
-                      <div>
-                        <button
-                          class="py-2 px-5 rounded-full text-white z-10 text-xl font-medium hover:bg-indigo-500 active:bg-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 bg-indigo-600 transform"
-                        >
-                          Add to bag
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Product Two and more -->
             </div>
             <div class="px-5 my-5 flex items-center justify-center">
               <a
-                class="text-indigo-600 underline underline-offset-1 flex items-center gap-1 text-2xl hover:text-indigo-500"
+                class="text-indigo-600 underline underline-offset-1 dark:text-blue-700 flex items-center gap-1 text-2xl hover:text-indigo-500"
                 href="store.html"
               >
                 <span>See All</span>
@@ -1560,20 +1100,21 @@
           </div>
         </div>
       </section>
-      <!-- Collection section -->
-      <section class="mx-4 my-10 sm:mx-6">
+      <!-- Men`s Collection section -->
+      <section id="men" class="mx-4 my-10 sm:mx-6">
         <div class="container mx-auto">
           <div class="flex justify-center py-5">
-            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
-              Collection
+            <h1
+              class="text-4xl md:text-6xl font-bold text-gray-900 mb-4 dark:text-gray-200"
+            >
+              Men`s collection
             </h1>
           </div>
-          <div
+          <div id="men-container"
             class="flex flex-col gap-8 md:grid md:grid-cols-2 lg:grid-cols-3"
           >
-            <!-- Product 1 -->
             <a
-              class="inline-block pb-3 space-x-1 group overflow-hidden shadow-lg bg-white rounded-md"
+              class="inline-block pb-3 space-x-1 group overflow-hidden shadow-lg bg-white rounded-md dark:bg-slate-800"
               href="store.html"
             >
               <span class="inline-block relative w-full">
@@ -1589,23 +1130,39 @@
                 </button>
               </span>
               <span
-                class="block md:text-center font-medium mt-10 text-xl text-gray-600"
+                class="block md:text-center font-medium mt-10 text- truncate text-gray-600 dark:text-gray-200"
                 >Desk and Office</span
               >
               <h1
-                class="text-2xl mt-2 md:text-center text-gray-900 font-medium"
+                class="text-2xl mt-2 md:text-center text-gray-900 font-medium dark:text-gray-400"
               >
                 Work from home accessories
               </h1>
             </a>
+          </div>
+        </div>
+      </section>
+      <!-- Womes`s Collection section -->
+      <section id="women" class="mx-4 mt-10 my-10 sm:mx-6">
+        <div class="container mx-auto">
+          <div class="flex justify-center py-5">
+            <h1
+              class="text-4xl md:text-6xl font-bold text-gray-900 mb-4 dark:text-gray-200"
+            >
+              Women`s collection
+            </h1>
+          </div>
+          <div id="women-container"
+            class="flex flex-col gap-8 md:grid md:grid-cols-2 lg:grid-cols-3"
+          >
             <a
-              class="inline-block pb-3 space-x-1 group overflow-hidden shadow-lg bg-white rounded-md"
+              class="inline-block pb-3 space-x-1 group overflow-hidden shadow-lg bg-white rounded-md dark:bg-slate-800"
               href="store.html"
             >
               <span class="inline-block relative w-full">
                 <img
                   class="group-hover:opacity-80 object-cover w-full"
-                  src="./src/asset/img/product-13-1.jpg"
+                  src="./src/asset/img/product-10-1.jpg"
                   alt="Image 2"
                 />
                 <button
@@ -1614,33 +1171,13 @@
                   Add to bag
                 </button>
               </span>
-              <span class="inline-block font-thin mt-10 text-xl text-gray-500"
+              <span
+                class="block md:text-center font-medium mt-10 text-xl text-gray-600 dark:text-gray-200"
                 >Desk and Office</span
               >
-              <h1 class="text-2xl mt-2 text-gray-900 font-medium">
-                Work from home accessories
-              </h1>
-            </a>
-            <a
-              class="inline-block pb-3 space-x-1 group overflow-hidden shadow-lg bg-white rounded-md"
-              href="store.html"
-            >
-              <span class="inline-block relative w-full">
-                <img
-                  class="group-hover:opacity-80 object-cover w-full"
-                  src="./src/asset/img/product-8-2.jpg"
-                  alt="Image 2"
-                />
-                <button
-                  class="absolute bottom-0 right-0 py-2 px-5 rounded-tl-lg text-white z-10 text-xl font-medium hover:bg-indigo-500 active:bg-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 bg-indigo-600 transform translate-x-40 group-hover:translate-x-0"
-                >
-                  Add to bag
-                </button>
-              </span>
-              <span class="inline-block font-thin mt-10 text-xl text-gray-500"
-                >Desk and Office</span
+              <h1
+                class="text-2xl mt-2 md:text-center text-gray-900 font-medium dark:text-gray-400"
               >
-              <h1 class="text-2xl mt-2 text-gray-900 font-medium">
                 Work from home accessories
               </h1>
             </a>

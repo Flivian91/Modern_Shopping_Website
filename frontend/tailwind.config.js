@@ -7,6 +7,7 @@ export default {
       colors: {
         neutral:"#ffffff",
         primary: "#111827",
+        darkcolor: "#121212",
         secondary: {
           light: "#43c6ac",
           lighter: "#69d1bd",

@@ -46,16 +46,21 @@
           </a>
         </div>
       </section>
-      <!-- Shopping Cart Section -->
+<!-- Shopping Cart Section -->
       <!-- By deafult hidden -->
       <section
+        id="cart"
         class="w-full hidden sm:w-[500px] h-full fixed right-0 top-0 z-50 bg-neutral overflow-y-auto"
       >
         <div class="px-2">
           <!-- Top  -->
           <div class="flex items-center justify-between py-4 mx-3 border-b-2">
             <span class="text-xl text-gray-700 font-bold">Shopping cart</span>
-            <span class="inline-block cursor-pointer">
+            <span
+              title="ctrl + x"
+              id="cart-close"
+              class="inline-block cursor-pointer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -109,7 +114,7 @@
                       </svg>
                     </span>
                     <span
-                      class="py-[1px] px-5 bg-gray-100 text-black text-center text-xl font-mono"
+                      class="py-[1px] px-5 bg-white text-gray-950 text-center text-xl font-mono"
                       >2</span
                     >
                     <span class="inline-block cursor-pointer">
@@ -175,7 +180,7 @@
                       </svg>
                     </span>
                     <span
-                      class="py-[1px] px-5 bg-gray-100 text-black text-center text-xl font-mono"
+                      class="py-[1px] px-5 bg-white text-gray-950 text-center text-xl font-mono"
                       >1</span
                     >
                     <span class="inline-block cursor-pointer">
@@ -241,8 +246,8 @@
                       </svg>
                     </span>
                     <span
-                      class="py-[1px] px-5 bg-gray-100 text-black text-center text-xl font-mono"
-                      >3</span
+                      class="py-[1px] px-5 bg-white text-gray-950 text-center text-xl font-mono"
+                      >1</span
                     >
                     <span class="inline-block cursor-pointer">
                       <svg
@@ -320,11 +325,14 @@
       <!-- Search Section -->
       <!-- Hidden By default -->
       <section
-        class="container hidden fixed top-1/2 transform -translate-y-1/2 my-auto left-0 right-0 z-50 mx-auto w-full sm:w-[600px] bg-neutral rounded-xl shadow-2xl"
+        id="search"
+        class="container hidden fixed top-1/2 transform -translate-y-1/2 my-auto left-0 right-0 z-[100] mx-auto w-full sm:w-[600px] bg-neutral dark:bg-slate-800 rounded-xl shadow-2xl"
       >
         <div class="flex flex-col gap-3">
           <!-- Top -->
-          <div class="px-2 flex items-center border-b-2 gap-5">
+          <div
+            class="px-2 flex items-center border-b-2 dark:border-gray-500 gap-5"
+          >
             <span class="cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -344,13 +352,14 @@
             </span>
             <div class="flex-1">
               <input
+                id="search-input"
                 class="w-full border-none bg-inherit focus:outline-none focus:ring-0 focus:ring-offset-0 caret-indigo-500"
                 type="text"
                 placeholder="Search anything"
                 name="Seach Field"
               />
             </div>
-            <span class="inline-block cursor-pointer py-2">
+            <span id="search-close" class="inline-block cursor-pointer py-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -370,25 +379,30 @@
           <!-- Recent Part-->
           <div class="overflow-y-scroll pr-1 h-48">
             <!-- Shown Only when there is no search item -->
-            <div class="w-full h-full flex justify-center items-center">
-              <span class="inline-block text-2xl text-gray-700 font-bold"
+            <div class="w-full hidden h-full justify-center items-center">
+              <span
+                class="inline-block text-2xl text-gray-700 dark:text-gray-200 font-bold"
                 >No recent search :)</span
               >
             </div>
             <!-- Display only it there is a search Display The seach -->
-            <div class="hidden">
+            <div class="mt-1">
               <div class="flex flex-col gap-1">
-                <div class="py-2 border-b-2">
-                  <h1 class="ml-4 text-2xl text-gray-700 font-bold">Recent</h1>
+                <div class="py-2 border-b-2 dark:border-gray-700">
+                  <h1
+                    class="ml-4 text-2xl text-gray-700 dark:text-gray-200 font-bold"
+                  >
+                    Recent
+                  </h1>
                 </div>
                 <!-- Search results are Appended here -->
                 <div>
                   <a
                     href="#"
-                    class="flex items-center justify-between border-b-2 py-2"
+                    class="flex items-center justify-between border-b-2 dark:border-gray-700 py-2"
                   >
                     <h1
-                      class="text-lg ml-4 text-gray-600 font-medium font-mono"
+                      class="text-lg ml-4 text-gray-600 dark:text-gray-200 font-medium font-mono"
                     >
                       How To Puchase?
                     </h1>
@@ -430,16 +444,20 @@
                 </div>
               </div>
               <div class="flex flex-col gap-1">
-                <div class="py-2 border-b-2">
-                  <h1 class="ml-4 text-2xl text-gray-700 font-bold">
+                <div class="py-2 border-b-2 dark:border-gray-700">
+                  <h1
+                    class="ml-4 text-2xl text-gray-700 dark:text-gray-200 font-bold"
+                  >
                     Favourite
                   </h1>
                 </div>
                 <a
                   href="#"
-                  class="flex items-center justify-between border-b-2 py-2"
+                  class="flex items-center justify-between border-b-2 dark:border-gray-700 py-2"
                 >
-                  <h1 class="text-lg ml-4 text-gray-600 font-medium font-mono">
+                  <h1
+                    class="text-lg ml-4 text-gray-600 dark:text-gray-200 font-medium font-mono"
+                  >
                     How to return item.
                   </h1>
                   <div class="flex gap-2 ml-3">
@@ -479,9 +497,9 @@
             </div>
           </div>
           <!-- Bottom -->
-          <div class="flex justify-end border-t-2">
+          <div class="flex justify-end border-t-2 dark:border-gray-500">
             <a
-              class="inline-block text-xl mr-6 my-3 font-semibold text-gray-700"
+              class="inline-block text-xl mr-6 my-3 font-semibold text-gray-700 dark:text-gray-200"
               href="#"
               >Search by
               <span
@@ -496,29 +514,18 @@
       <!-- On large screen 1024 Overlay set to Hidden -->
       <!-- Use Js To Show and Remove -->
       <div
-        class="absolute hidden lg:hidden top-0 left-0 bg-white backdrop-blur-[1.5px] bg-white/10 w-full h-full z-20"
+        id="overlay"
+        class="absolute hidden top-0 left-0 bg-white backdrop-blur-[1.5px] bg-white/10 w-full h-full z-20"
       ></div>
       <!-- Menu Section -->
       <!-- Hidden By default Show Only after Click -->
       <section
+        id="menu"
         class="absolute hidden lg:hidden top-0 left-0 z-50 shadow-xl h-full w-[350px] bg-neutral px-5 py-10"
       >
         <div class="flex flex-col gap-3">
-          <span class="inline-block cursor-pointer py-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-8 h-8 svgs"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18 18 6M6 6l12 12"
-              />
-            </svg>
+          <span id="menu-close" class="inline-block cursor-pointer py-2">
+            <ion-icon name="close-outline" class="w-8 h-8 svgs"></ion-icon>
           </span>
           <!-- Nav Link -->
           <div class="flex gap-4 py-2">
@@ -537,41 +544,41 @@
             <div class="flex flex-col gap-5">
               <h1 class="text-2xl text-gray-900 font-bold">Featured</h1>
               <div class="flex flex-col gap-4">
-                <a class="side-nav-link" href="#">Sleep</a>
-                <a class="side-nav-link" href="#">Swimwear</a>
-                <a class="side-nav-link" href="#">Underwear</a>
+                <a class="side-nav-link" href="store.html">Sleep</a>
+                <a class="side-nav-link" href="store.html">Swimwear</a>
+                <a class="side-nav-link" href="store.html">Underwear</a>
               </div>
             </div>
             <!-- Link 2 -->
             <div class="flex flex-col gap-5">
               <h1 class="text-2xl text-gray-900 font-bold">Categories</h1>
               <div class="flex flex-col gap-4">
-                <a class="side-nav-link" href="#">Basic Tees</a>
-                <a class="side-nav-link" href="#">Artwork Tees</a>
-                <a class="side-nav-link" href="#">Bottoms</a>
-                <a class="side-nav-link" href="#">Underwear</a>
-                <a class="side-nav-link" href="#">Accessories</a>
+                <a class="side-nav-link" href="store.html">Basic Tees</a>
+                <a class="side-nav-link" href="store.html">Artwork Tees</a>
+                <a class="side-nav-link" href="store.html">Bottoms</a>
+                <a class="side-nav-link" href="store.html">Underwear</a>
+                <a class="side-nav-link" href="store.html">Accessories</a>
               </div>
             </div>
             <!-- Link 1 -->
             <div class="flex flex-col gap-5">
               <h1 class="text-2xl text-gray-900 font-bold">Collection</h1>
               <div class="flex flex-col gap-4">
-                <a class="side-nav-link" href="#">Everything</a>
-                <a class="side-nav-link" href="#">Core</a>
-                <a class="side-nav-link" href="#">New Arrivals</a>
-                <a class="side-nav-link" href="#">Sales</a>
+                <a class="side-nav-link" href="store.html">Everything</a>
+                <a class="side-nav-link" href="store.html">Core</a>
+                <a class="side-nav-link" href="store.html">New Arrivals</a>
+                <a class="side-nav-link" href="store.html">Sales</a>
               </div>
             </div>
             <!-- Link 1 -->
             <div class="flex flex-col gap-5">
               <h1 class="text-2xl text-gray-900 font-bold">Brands</h1>
               <div class="flex flex-col gap-4">
-                <a class="side-nav-link" href="#">Full Nelson</a>
-                <a class="side-nav-link" href="#">My Way</a>
-                <a class="side-nav-link" href="#">Re-Arranged</a>
-                <a class="side-nav-link" href="#">Counterfeit</a>
-                <a class="side-nav-link" href="#">Significant Other</a>
+                <a class="side-nav-link" href="store.html">Full Nelson</a>
+                <a class="side-nav-link" href="store.html">My Way</a>
+                <a class="side-nav-link" href="store.html">Re-Arranged</a>
+                <a class="side-nav-link" href="store.html">Counterfeit</a>
+                <a class="side-nav-link" href="store.html">Significant Other</a>
               </div>
             </div>
           </div>
@@ -613,12 +620,12 @@
         </div>
       </section>
       <!-- Navigation -->
-      <nav class="flex flex-col">
+      <nav class="flex flex-col 2xl:container 2xl:mx-auto">
         <header
-          class="bg-primary py-2 flex items-center lg:justify-between justify-center lg:px-3"
+          class="bg-primary py-2 flex items-center dark:bg-darkcolor lg:justify-between justify-center lg:px-3"
         >
           <select
-            class="hidden cursor-pointer lg:block py-1 rounded-lg bg-primary text-neutral border-2 border-white placeholder:text-base"
+            class="hidden cursor-pointer lg:block py-1 rounded-lg bg-primary text-neutral dark:bg-primary border-2 border-white placeholder:text-base"
             name="Countey"
             id="items"
           >
@@ -628,7 +635,7 @@
             <option value="CAN">EUR</option>
             <option value="CAN">CAN</option>
           </select>
-          <a href="#" class="text-neutral text-base font-semibold">
+          <a href="store.html" class="text-neutral text-base font-semibold">
             Get free delivery on orders over $100
           </a>
           <div
@@ -636,37 +643,24 @@
           >
             <a
               class="text-neutral/90 text-lg inline-block hover:underline transition-all hover:underline-offset-2 duration-300"
-              href="login.html"
+              href="account.html"
               >Create an account</a
             >
             <a
               class="text-neutral/90 text-lg inline-block pl-4 hover:underline transition-all hover:underline-offset-2 duration-300"
-              href="account.html"
+              href="login.html"
               >Sign in</a
             >
           </div>
         </header>
         <!-- Lower Header -->
         <div
-          class="flex flex-row items-center bg-neutral py-2 px-5 lg:justify-between"
+          class="flex flex-row items-center bg-neutral dark:bg-primary py-2 px-5 lg:justify-between"
         >
           <div class="flex flex-row gap-4 items-center flex-none w-20">
             <!-- Menu Icon Hidden on 1024px-->
-            <span class="cursor-pointer lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="svgs"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
+            <span id="menu-button" class="cursor-pointer lg:hidden">
+              <ion-icon name="menu-outline " class="w-8 h-8 svgs"></ion-icon>
               <span class="sr-only">Menu Icon</span>
             </span>
             <!-- Logo Image Hidden normally Shown On 1024px -->
@@ -686,7 +680,7 @@
               </span>
             </a>
             <!-- Search Icon Hidden On larger Screen 1024 -->
-            <span class="cursor-pointer lg:hidden">
+            <span id="search-button" class="cursor-pointer lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -707,10 +701,11 @@
           <!-- Links -->
           <div class="gap-2 hidden lg:flex">
             <a class="nav-link nav-link-active" href="#">Home</a>
-            <a class="nav-link" href="#">Men</a>
-            <a class="nav-link" href="#">Women</a>
-            <a class="nav-link" href="#">Store</a>
-            <a class="nav-link" href="#">My Account</a>
+            <a class="nav-link" href="#men">Men</a>
+            <a class="nav-link" href="#women">Women</a>
+            <a class="nav-link" href="#discover">Hot Deals</a>
+            <a class="nav-link" href="store.html">Store</a>
+            <a class="nav-link" href="dashboard.html">My Account</a>
           </div>
           <!-- Logo Image Hidden on Larger screen -->
           <a href="#" class="flex-1 flex items-center justify-center lg:hidden">
@@ -724,7 +719,8 @@
           </a>
 
           <div class="flex-none w-30 flex justify-between gap-4 items-center">
-            <span class="cursor-pointer hidden lg:block">
+            <!-- Search Icon -->
+            <span id="search-button" class="cursor-pointer hidden lg:block">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -741,7 +737,8 @@
               </svg>
               <span class="sr-only">Search Icon</span>
             </span>
-            <span class="cursor-pointer">
+            <!-- Dark Mode Part -->
+            <span id="sun" class="cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -756,13 +753,16 @@
                   d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
                 />
               </svg>
+              <span class="sr-only">Light Icon</span>
+            </span>
+            <span id="moon" class="cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-6 h-6 hidden"
+                class="svgs"
               >
                 <path
                   stroke-linecap="round"
@@ -770,11 +770,12 @@
                   d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
                 />
               </svg>
-
-              <span class="sr-only">Light Icon</span>
+              <span class="sr-only">Moon Icon</span>
             </span>
+            <!-- Cart Section -->
             <div
-              class="relative flex items-center justify-center cursor-pointer"
+              id="cart-button"
+              class="flex items-center justify-center cursor-pointer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -793,13 +794,14 @@
 
               <span class="sr-only">Cart Icon</span>
               <span
-                class="absolute -top-[10px] -right-[8px] lining-nums flex text-gray-900 font-medium select-none p-1 w-4 h-4 lg:h-5 lg:w-5 items-center justify-center border border-indigo-600 rounded-full text-xs"
+                class="lining-nums flex text-gray-900 font-medium select-none p-1 w-7 h-7 items-center justify-center border border-indigo-600 rounded-full text-base"
                 >4</span
               >
             </div>
           </div>
         </div>
       </nav>
+
       <!-- Breadcrumbs -->
       <section class="2xl:container 2xl:mx-auto">
         <div class="bg-neutral py-3 px-5 mt-1 mb-2">
@@ -1105,5 +1107,6 @@
         </div>
       </footer>
     </main>
+    <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>

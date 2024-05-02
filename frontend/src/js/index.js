@@ -1,4 +1,4 @@
-import { HeroSectionData, AboutCompanyData, loadCollection } from "./counter.js";
+import { HeroSectionData, AboutCompanyData, loadCollection, renderMenCategory, renderWomenCategory } from "./counter.js";
 
 function init() {
   // Loads Hero section data
@@ -7,5 +7,9 @@ function init() {
   AboutCompanyData()
   // Load Collection
   loadCollection()
+  // Load mens Data
+  renderMenCategory()
+  // Load Women Collection
+  renderWomenCategory()
 }
 init()
