@@ -15,6 +15,10 @@ const searchInput = document.querySelector("#search-input");
 const cartSection = document.querySelector("#cart");
 const cartButton = document.querySelector("#cart-button");
 const cartClose = document.querySelector("#cart-close");
+// Dark Mode 
+const sunButton = document.querySelector("#sun")
+const moonButton = document.querySelector("#moon")
+
 /**
  * Main Functionality On the Menu Part
  */
@@ -26,6 +30,7 @@ window.addEventListener("keydown", (e) => {
   if (e.key !== "Escape") return;
   closeMenuModel();
   closeSearchModel();
+  closeCartModel()
 });
 /**
  * Open The Model And Overlay function
@@ -84,19 +89,20 @@ function closeSearchModel() {
 /**
  * Cart Functionality part
  */
-cartButton.addEventListener("click", openSearchModel);
+cartButton.addEventListener("click", openCartModel);
 cartClose.addEventListener("click", closeCartModel);
 overlay.addEventListener("click", closeCartModel);
 // Open Model when User click ctrl + K
+let keysClicked = {}
 document.addEventListener("keydown", (e) => {
-  keysPressed[e.key] = true;
-  if (keysPressed["Control"] && keysPressed["o"]) {
+  keysClicked[e.key] = true;
+  if (keysClicked["Control"] && keysClicked["o"]) {
     e.preventDefault();
     openCartModel();
   }
 });
 document.addEventListener("keyup", function (e) {
-  delete keysPressed[e.key];
+  delete keysClicked[e.key];
 });
 /**
  * Open Search Model and Overlay
@@ -112,3 +118,10 @@ function closeCartModel() {
   cartSection.classList.add("hidden");
   overlay.classList.add("hidden");
 }
+
+/**
+ * Dark Mode Functionality
+ */
+moonButton.addEventListener("click", ()=> {
+  console.log("Hello");
+})
