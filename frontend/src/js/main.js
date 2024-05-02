@@ -15,10 +15,11 @@ const searchInput = document.querySelector("#search-input");
 const cartSection = document.querySelector("#cart");
 const cartButton = document.querySelector("#cart-button");
 const cartClose = document.querySelector("#cart-close");
-// Dark Mode 
-const sunButton = document.querySelector("#sun")
-const moonButton = document.querySelector("#moon")
-
+// Dark Mode
+const sunButton = document.querySelector("#sun");
+const moonButton = document.querySelector("#moon");
+const userTheme = localStorage.getItem("theme");
+const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 /**
  * Main Functionality On the Menu Part
  */
@@ -30,7 +31,7 @@ window.addEventListener("keydown", (e) => {
   if (e.key !== "Escape") return;
   closeMenuModel();
   closeSearchModel();
-  closeCartModel()
+  closeCartModel();
 });
 /**
  * Open The Model And Overlay function
@@ -93,7 +94,7 @@ cartButton.addEventListener("click", openCartModel);
 cartClose.addEventListener("click", closeCartModel);
 overlay.addEventListener("click", closeCartModel);
 // Open Model when User click ctrl + K
-let keysClicked = {}
+let keysClicked = {};
 document.addEventListener("keydown", (e) => {
   keysClicked[e.key] = true;
   if (keysClicked["Control"] && keysClicked["o"]) {
@@ -122,6 +123,50 @@ function closeCartModel() {
 /**
  * Dark Mode Functionality
  */
+/**
+ * Icon Toggling
+ */
+const iconToggle = () => {
+  moonButton.classList.toggle("hidden");
+  sunButton.classList.toggle("hidden");
+};
+/**
+ * Inital Theme Check When the window Loads
+ */
+const themCheck = () => {
+  if (userTheme === "dark" || (!userTheme && systemTheme)) {
+    document.documentElement.classList.add("dark");
+    moonButton.classList.add("hidden");
+    return;
+  }
+  sunButton.classList.add("hidden");
+};
+/**
+ * invoke The ThemeCheck On Initial load
+ */
+themCheck()
+
+/**
+ * Manual Theme Switch
+ */
+const themeSwitch = () => {
+  if (document.documentElement.classList.contains("dark")) {
+    document.documentElement.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+    iconToggle();
+    return;
+  } else {
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+    iconToggle();
+  }
+};
+/**
+ * Listen to clicks On the Buttons
+ */
+sunButton.addEventListener("click", ()=> {
+  themeSwitch()
+})
 moonButton.addEventListener("click", ()=> {
-  console.log("Hello");
+  themeSwitch()
 })
