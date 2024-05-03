@@ -1,0 +1,32 @@
+{
+  "reviews": [
+    {
+      "name": "Emily Selman",
+      "date": "July 16, 2021",
+      "rating": 4,
+      "review": "This icon pack is just what I need for my latest project. There's an icon for just about anything I could ever need. Love the playful look!",
+      "image": "./src/asset/img/profile-1.webp"
+    },
+    {
+      "name": "John Doe",
+      "date": "August 5, 2021",
+      "rating": 5,
+      "review": "Absolutely amazing product! The quality is top-notch and the customer service is excellent. I highly recommend it to anyone looking for a reliable solution.",
+      "image": "./src/asset/img/profile-2.webp"
+    },
+    {
+      "name": "Alice Johnson",
+      "date": "September 10, 2021",
+      "rating": 5,
+      "review": "I am extremely satisfied with my purchase. The product exceeded my expectations, and the delivery was super fast. Will definitely be shopping here again!",
+      "image": "./src/asset/img/profile-3.webp"
+    },
+    {
+      "name": "Michael Smith",
+      "date": "October 20, 2021",
+      "rating": 4,
+      "review": "Great product with a wide range of features. It's been a game-changer for my business. The only reason I'm giving it 4 stars is that I wish it had a few more customization options.",
+      "image": "./src/asset/img/profile-4.webp"
+    }    
+  ]
+}

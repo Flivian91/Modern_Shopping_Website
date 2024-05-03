@@ -1,12 +1,10 @@
 import { customerLoadData } from "./counter.js";
 customerLoadData();
 const productContainer = document.querySelector("#product-container");
-const productTabContainer = document.querySelector("#product-tab-container")
-const productTabs = document.querySelectorAll("#product-tab")
-const productContents = document.querySelectorAll("#product-content")
-
-
-
+const productTabContainer = document.querySelector("#product-tab-container");
+const productTabs = document.querySelectorAll("#product-tab");
+const productContents = document.querySelectorAll("#product-content");
+const productReview = document.querySelector("#product-review");
 
 const productViewData = async function () {
   // Default 36
@@ -231,7 +229,7 @@ function loadImages() {
   const imagesContainer = document.querySelector("#images-container");
   imagesContainer.addEventListener("click", (e) => {
     const clicked = e.target.closest("#image");
-    if(!clicked) return
+    if (!clicked) return;
     const imagesrc = clicked.getAttribute("src");
     allImages.forEach((image) => {
       image.classList.remove("active-image");
@@ -245,15 +243,84 @@ document.addEventListener("DOMContentLoaded", productViewData);
 /**
  * Product Tabs Reviews Functionalities
  */
-productTabContainer.addEventListener("click", (e)=> {
-  const clicked = e.target.closest("#product-tab")
-  if(!clicked) return
-  productContents.forEach(cont => {
-    cont.classList.add("hidden")
-  })
-  productTabs.forEach(tab => {
-    tab.classList.remove("active-product-tab")
-  })
-  clicked.classList.add("active-product-tab")
-  document.querySelector(`.product-cont-${clicked.dataset.tab}`).classList.remove("hidden")
-})
+productTabContainer.addEventListener("click", (e) => {
+  const clicked = e.target.closest("#product-tab");
+  if (!clicked) return;
+  productContents.forEach((cont) => {
+    cont.classList.add("hidden");
+  });
+  productTabs.forEach((tab) => {
+    tab.classList.remove("active-product-tab");
+  });
+  clicked.classList.add("active-product-tab");
+  document
+    .querySelector(`.product-cont-${clicked.dataset.tab}`)
+    .classList.remove("hidden");
+});
+
+async function renderProductReview() {
+  const res = await fetch("Business Logics/review.json");
+  const items = await res.json();
+  productReview.innerHTML =""
+  items.reviews.forEach((data) => {
+    const html = `
+    <div class="flex gap-4 border-b-2 dark:border-gray-500">
+      <div
+        class="flex-none w-16 h-16 overflow-hidden rounded-full"
+      >
+        <img
+          class="object-cover w-16 h-16"
+          src="${data.image}"
+          alt="Product"
+        />
+      </div>
+      <div class="flex flex-col gap-3">
+        <div class="flex flex-col gap-1">
+          <h1
+            class="text-lg font-mono font-medium dark:text-gray-200"
+          >
+          ${data.name}
+          </h1>
+          <date
+            class="text-base font-medium text-gray-600 dark:text-gray-400"
+            >${data.date}</date
+          >
+        </div>
+        <div class="flex">
+          <div class="flex gap-1 items-center">
+            <ion-icon
+              name="star"
+              class="svgs text-yellow-500 w-6 h-6"
+            ></ion-icon>
+            <ion-icon
+              name="star"
+              class="svgs text-yellow-500 w-6 h-6"
+            ></ion-icon>
+            <ion-icon
+              name="star"
+              class="svgs text-yellow-500 w-6 h-6"
+            ></ion-icon>
+            <ion-icon
+              name="star"
+              class="svgs text-yellow-500 w-6 h-6"
+            ></ion-icon>
+            <ion-icon
+              name="star-outline"
+              class="svgs text-yellow-500 w-6 h-6"
+            ></ion-icon>
+          </div>
+        </div>
+        <div>
+          <p
+            class="tracking-normal my-4 text-lg text-gray-600 dark:text-gray-400"
+          >
+          ${data.review}
+          </p>
+        </div>
+      </div>
+    </div>
+    `;
+    productReview.insertAdjacentHTML("afterbegin", html)
+  });
+}
+renderProductReview()
