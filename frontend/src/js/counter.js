@@ -5,6 +5,12 @@ const quickViewContainer = document.querySelector("#quickview-container");
 const categoryContainer = document.querySelector("#cartegory-sweep");
 const menContainer = document.querySelector("#men-container");
 const womenContainer = document.querySelector("#women-container");
+const customerContainer = document.querySelector("#customer-container");
+const releasecontainer = document.querySelector("#release-container");
+const dealscontainer = document.querySelector("#deals-container");
+const topSellingcontainer = document.querySelector("#top-selling-container");
+const recomendedcontainer = document.querySelector("#recomended-container");
+const testimonialContainer = document.querySelector("#testimonial-container");
 export const state = {
   quickView: {},
 };
@@ -484,10 +490,10 @@ export const renderMenCategory = async function () {
     "https://dummyjson.com/products/category/mens-shirts"
   );
   const items = await res.json();
-  
+
   // Render HTML
   // menContainer.innerHTML = ""
-  items.products.forEach(data => {
+  items.products.forEach((data) => {
     const html = `
     <a id='${data.id}'
       class="inline-block pb-3 space-x-1 group overflow-hidden shadow-lg bg-white rounded-md dark:bg-slate-800"
@@ -515,10 +521,9 @@ export const renderMenCategory = async function () {
         ${data.description.at(0).toUpperCase()}${data.description.slice(1)}
       </h1>
     </a>
-  `
-  menContainer.insertAdjacentHTML("afterbegin", html)
-  })
- 
+  `;
+    menContainer.insertAdjacentHTML("afterbegin", html);
+  });
 };
 
 /**
@@ -529,10 +534,10 @@ export const renderWomenCategory = async function () {
     "https://dummyjson.com/products/category/womens-shoes"
   );
   const items = await res.json();
-  
+
   // Render HTML
   // womenContainer.innerHTML = ""
-  items.products.forEach(data => {
+  items.products.forEach((data) => {
     const html = `
     <a id='${data.id}'
       class="inline-block pb-3 space-x-1 group overflow-hidden shadow-lg bg-white rounded-md dark:bg-slate-800"
@@ -560,7 +565,143 @@ export const renderWomenCategory = async function () {
       ${data.description.at(0).toUpperCase()}${data.description.slice(1)}
       </h1>
     </a>
-  `
-  womenContainer.insertAdjacentHTML("afterbegin", html)
-  })
+  `;
+    womenContainer.insertAdjacentHTML("afterbegin", html);
+  });
 };
+
+// Customer Also Bought Functionalities
+export const customerLoadData = async function () {
+  const res = await fetch("https://dummyjson.com/products/category/motorcycle");
+  const items = await res.json();
+  console.log(items);
+  items.products.forEach((data) => {
+    const markUp = `
+    <div  class="flex flex-col gap-4 mx-2 ">
+      <div class="shadow-lg relative pb-10 rounded-lg">
+        <img src="${data.images[0]}" alt="Shoe Image" />
+        <div
+          class="absolute bottom-0 flex items-end justify-end right-0 rounded-lg w-full bg-gradient-to-b from-transparent to-black/80 h-40"
+        >
+          <span
+            class="inline-block mr-5 mb-5 text-white text-xl font-bold"
+            >$${data.price}</span
+          >
+        </div>
+      </div>
+      <div class="flex flex-col ">
+        <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200">
+        ${data.title}
+        </h2>
+        <p class="text-lg font-medium text-gray-600 dark:text-gray-400">${data.category}</p>
+      </div>
+      <a
+        class="bg-indigo-600 py-2 w-full rounded-lg text-center text-xl text-white hover:bg-indigo-500 active:bg-indigo-700 transition-all duration-300"
+        href="#"
+        >Add to bag</a
+      >
+    </div>
+    `;
+    customerContainer.insertAdjacentHTML("afterbegin", markUp);
+  });
+};
+// Hot deals Data
+export const hotDealsData = async function () {
+  const res = await fetch(
+    "https://dummyjson.com/products/category/mens-watches"
+  );
+  const items = await res.json();
+  console.log();
+  renderDiscover(items.products, releasecontainer);
+};
+// deals Data
+export const dealsData = async function () {
+  const res = await fetch(
+    "https://dummyjson.com/products/category/mens-shirts"
+  );
+  const items = await res.json();
+  renderDiscover(items.products, dealscontainer);
+};
+// Top Selling
+export const topSellingData = async function () {
+  const res = await fetch("https://dummyjson.com/products/category/motorcycle");
+  const items = await res.json();
+  renderDiscover(items.products, topSellingcontainer);
+};
+// Recommended
+export const recommendedData = async function () {
+  const res = await fetch("https://dummyjson.com/products/category/skincare");
+  const items = await res.json();
+  renderDiscover(items.products, recomendedcontainer);
+};
+function renderDiscover(items, parentEl) {
+  parentEl.innerHTML = "";
+  items.forEach((data) => {
+    const html = `
+  <a href="store.html" class="group overflow-hidden flex items-center shadow-md gap-2 px-2 dark:bg-slate-800 rounded-md  hover:dark:bg-slate-800/80">
+    <img
+      src="${data.images[0]}"
+      class="w-24 h-24 shadow-lg rounded  transform group-hover:scale-105 transition-transform duration-300"
+      alt="Image"
+      hieght="105px"
+      width="105px"
+    />
+    <div class="flex flex-col gap-2">
+      <h1 class="dark:text-gray-200">${data.title
+        .at(0)
+        .toUpperCase()}${data.title.slice(1)}</h1>
+      <div class="flex gap-5 items-center">
+        <del class="text-lg text-gray-500 mt-1 font-medium dark:text-gray-400"
+          >${data.price}.00</del
+        >
+        <p
+          class="text-xl transform scale-110 font-medium text-indigo-600 dark:text-gray-200"
+        >
+        ${
+          data.discountPercentage === 0
+            ? data.price - 1
+            : (
+                data.price -
+                (data.price * data.discountPercentage) / 100
+              ).toFixed(2)
+        }
+        </p>
+      </div>
+    </div>
+  </a>
+  `;
+    parentEl.insertAdjacentHTML("afterbegin", html);
+  });
+}
+
+export async function testimonialData() {
+  const res = await fetch("Business Logics/testimonial.json");
+  const items = await res.json();
+  testimonialContainer.innerHTML = "";
+  items.testimonials.forEach((data) => {
+    const html = `
+    <div
+      class="flex flex-col gap-3 mx-4 md:py-10 md:px-2 md:bg-white md:items-center md:shadow-md md:rounded-md"
+    >
+      <img src="./public/quotation-right-mark-svgrepo-com.svg" alt="" class="w-16 h-16 fill-indigo-600">
+      <p
+        class="mt-5 text-xl text-center text-gray-600 md:text-center md:text-xl"
+      >
+        ${data.quote}
+      </p>
+      <h1
+        class="font-semibold uppercase text-center text-gray-800 text-xl md:text-center md:text-2xl md:text-gray-700"
+      >
+      ${data.name}
+      </h1>
+      <span
+        class="md:text-center text-center font-bold text-indigo-500 uppercase text-xl"
+      >
+      ${data.title}
+      </span>
+    </div>
+      
+  `;
+  testimonialContainer.insertAdjacentHTML("afterbegin", html)
+  });
+}

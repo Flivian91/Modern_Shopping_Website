@@ -11,7 +11,7 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -34,7 +34,7 @@
       <!-- By deafult hidden -->
       <section
         id="cart"
-        class="w-full hidden sm:w-[500px] h-full fixed right-0 top-0 z-50 bg-neutral overflow-y-auto"
+        class="w-full hidden sm:w-[500px] h-full fixed right-0 top-0 z-50 bg-neutral dark:bg-slate-800 overflow-y-auto"
       >
         <div class="px-2">
           <!-- Top  -->
@@ -505,7 +505,7 @@
       <!-- Hidden By default Show Only after Click -->
       <section
         id="menu"
-        class="absolute hidden lg:hidden top-0 left-0 z-50 shadow-xl h-full w-[350px] bg-neutral px-5 py-10"
+        class="absolute hidden lg:hidden top-0 left-0 z-50 shadow-xl h-full w-[350px] bg-neutral dark:bg-slate-800 px-5 py-10"
       >
         <div class="flex flex-col gap-3">
           <span id="menu-close" class="inline-block cursor-pointer py-2">
@@ -514,69 +514,37 @@
           <!-- Nav Link -->
           <div class="flex gap-4 py-2">
             <div
-              class="text-2xl font-semibold cursor-pointer py-2 px-5 border-b-2 border-b-indigo-700 text-indigo-600"
+              class="text-2xl font-semibold cursor-pointer py-2 border-b-2 pr-3 border-b-indigo-700 dark:border-b-gray-500 text-indigo-600 dark:text-gray-100"
             >
-              Women
-            </div>
-            <div class="text-2xl font-semibold cursor-pointer py-2 px-5">
-              Men
+              Popular categories
             </div>
           </div>
           <!-- All links -->
-          <div class="flex flex-col gap-4 mt-3">
-            <!-- Link 1 -->
-            <div class="flex flex-col gap-5">
-              <h1 class="text-2xl text-gray-900 font-bold">Featured</h1>
-              <div class="flex flex-col gap-4">
-                <a class="side-nav-link" href="store.html">Sleep</a>
-                <a class="side-nav-link" href="store.html">Swimwear</a>
-                <a class="side-nav-link" href="store.html">Underwear</a>
-              </div>
-            </div>
-            <!-- Link 2 -->
-            <div class="flex flex-col gap-5">
-              <h1 class="text-2xl text-gray-900 font-bold">Categories</h1>
-              <div class="flex flex-col gap-4">
-                <a class="side-nav-link" href="store.html">Basic Tees</a>
-                <a class="side-nav-link" href="store.html">Artwork Tees</a>
-                <a class="side-nav-link" href="store.html">Bottoms</a>
-                <a class="side-nav-link" href="store.html">Underwear</a>
-                <a class="side-nav-link" href="store.html">Accessories</a>
-              </div>
-            </div>
-            <!-- Link 1 -->
-            <div class="flex flex-col gap-5">
-              <h1 class="text-2xl text-gray-900 font-bold">Collection</h1>
-              <div class="flex flex-col gap-4">
-                <a class="side-nav-link" href="store.html">Everything</a>
-                <a class="side-nav-link" href="store.html">Core</a>
-                <a class="side-nav-link" href="store.html">New Arrivals</a>
-                <a class="side-nav-link" href="store.html">Sales</a>
-              </div>
-            </div>
-            <!-- Link 1 -->
-            <div class="flex flex-col gap-5">
-              <h1 class="text-2xl text-gray-900 font-bold">Brands</h1>
-              <div class="flex flex-col gap-4">
-                <a class="side-nav-link" href="store.html">Full Nelson</a>
-                <a class="side-nav-link" href="store.html">My Way</a>
-                <a class="side-nav-link" href="store.html">Re-Arranged</a>
-                <a class="side-nav-link" href="store.html">Counterfeit</a>
-                <a class="side-nav-link" href="store.html">Significant Other</a>
-              </div>
+          <div class="flex flex-col gap-4 mt-1">
+            <div id="side-menu-container" class="flex flex-col gap-4">
+              <!-- Add all the Popular Categories Using JS -->
             </div>
           </div>
           <!-- CoMpany And stores -->
-          <div class="flex flex-col gap-2 py-4 border-y-2">
-            <a class="text-gray-950 hover:text-gray-700 side-nav-link" href="#"
-              >Company</a
+          <div class="flex flex-col gap-2 py-4 border-y-2 dark:border-gray-700">
+            <a
+              class="text-gray-950 hover:text-gray-700 side-nav-link"
+              href="#men"
+              >Men</a
             >
-            <a class="text-gray-950 hover:text-gray-700 side-nav-link" href="#"
+            <a
+              class="text-gray-950 hover:text-gray-700 side-nav-link"
+              href="#women"
+              >Women</a
+            >
+            <a
+              class="text-gray-950 hover:text-gray-700 side-nav-link"
+              href="store.html"
               >Stores</a
             >
           </div>
           <!-- CoMpany And stores -->
-          <div class="flex flex-col gap-2 py-4 border-b-2">
+          <div class="flex flex-col gap-2 py-4 border-b-2 dark:border-gray-700">
             <a
               class="text-gray-950 hover:text-gray-700 side-nav-link"
               href="account.html"
@@ -644,7 +612,21 @@
           <div class="flex flex-row gap-4 items-center flex-none w-20">
             <!-- Menu Icon Hidden on 1024px-->
             <span id="menu-button" class="cursor-pointer lg:hidden">
-              <ion-icon name="menu-outline " class="w-8 h-8 svgs"></ion-icon>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-8 h-8 svgs"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+                />
+              </svg>
+
               <span class="sr-only">Menu Icon</span>
             </span>
             <!-- Logo Image Hidden normally Shown On 1024px -->
@@ -778,7 +760,7 @@
 
               <span class="sr-only">Cart Icon</span>
               <span
-                class="lining-nums flex text-gray-900 font-medium select-none p-1 w-7 h-7 items-center justify-center border border-indigo-600 rounded-full text-base"
+                class="lining-nums flex text-gray-900 dark:text-gray-200 font-medium select-none p-1 w-7 h-7 items-center justify-center border border-indigo-600 rounded-full text-base"
                 >4</span
               >
             </div>
@@ -1110,7 +1092,8 @@
               Men`s collection
             </h1>
           </div>
-          <div id="men-container"
+          <div
+            id="men-container"
             class="flex flex-col gap-8 md:grid md:grid-cols-2 lg:grid-cols-3"
           >
             <a
@@ -1152,7 +1135,8 @@
               Women`s collection
             </h1>
           </div>
-          <div id="women-container"
+          <div
+            id="women-container"
             class="flex flex-col gap-8 md:grid md:grid-cols-2 lg:grid-cols-3"
           >
             <a
@@ -1229,32 +1213,9 @@
           </div>
           <!-- Products -->
           <div
+            id="customer-container"
             class="flex flex-col gap-8 md:grid md:grid-cols-2 lg:grid-cols-3"
           >
-            <div class="flex flex-col gap-4 mx-2">
-              <div class="shadow-lg relative pb-10 rounded-lg">
-                <img src="./src/asset/img/product-12-2.jpg" alt="Shoe Image" />
-                <div
-                  class="absolute bottom-0 flex items-end justify-end right-0 rounded-lg w-full bg-gradient-to-b from-transparent to-black/80 h-40"
-                >
-                  <span
-                    class="inline-block mr-5 mb-5 text-white text-xl font-bold"
-                    >$140</span
-                  >
-                </div>
-              </div>
-              <div class="flex flex-col">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Zip Tote Basket
-                </h2>
-                <p class="text-lg font-medium text-gray-600">White and black</p>
-              </div>
-              <a
-                class="bg-indigo-600 py-2 w-full rounded-lg text-center text-xl text-white hover:bg-indigo-500 active:bg-indigo-700 transition-all duration-300"
-                href="#"
-                >Add to bag</a
-              >
-            </div>
             <div class="flex flex-col gap-4 mx-2">
               <div class="shadow-lg relative pb-10 rounded-lg">
                 <img src="./src/asset/img/product-3-2.jpg" alt="Shoe Image" />
@@ -1279,320 +1240,60 @@
                 >Add to bag</a
               >
             </div>
-            <div class="flex flex-col gap-4 mx-2">
-              <div class="shadow-lg relative pb-10 rounded-lg">
-                <img src="./src/asset/img/product-8-2.jpg" alt="Shoe Image" />
-                <div
-                  class="absolute bottom-0 flex items-end justify-end right-0 rounded-lg w-full bg-gradient-to-b from-transparent to-black/80 h-40"
-                >
-                  <span
-                    class="inline-block text-white mr-5 mb-5 text-xl font-bold"
-                    >$140</span
-                  >
-                </div>
-              </div>
-              <div class="flex flex-col">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Zip Tote Basket
-                </h2>
-                <p class="text-lg font-medium text-gray-600">White and black</p>
-              </div>
-              <a
-                class="bg-indigo-600 py-2 w-full rounded-lg text-center text-xl text-white hover:bg-indigo-500 active:bg-indigo-700 transition-all duration-300"
-                href="#"
-                >Add to bag</a
-              >
-            </div>
           </div>
         </div>
       </section>
-      <!-- ore to discover Section -->
-      <section id="discover" class="my-10">
+      <!-- More to discover Section -->
+      <section id="discover" class="my-10 px-2">
         <div
           class="container mx-auto flex flex-col gap-2 md:grid md:grid-cols-2 lg:grid-cols-4"
         >
           <div class="flex flex-col gap-3">
             <div class="border-b border-gray-300">
               <h1
-                class="inline-block text-2xl font-bold py-2 border-b-2 border-indigo-600 text-gray-900"
+                class="inline-block text-2xl font-bold py-2 border-b-2 dark:border-gray-700 dark:text-gray-200 border-indigo-600 text-gray-900"
               >
                 Hot releases
               </h1>
             </div>
-            <div class="flex flex-col gap-3">
-              <a href="store.html" class="flex items-center gap-2 px-2">
-                <img
-                  src="./src/asset/img/category-1.jpg"
-                  class="w-24 h-24 shadow-lg rounded"
-                  alt="Image"
-                />
-                <div class="flex flex-col gap-2">
-                  <h1 class="hyphens-auto">Rem ducimus eum, fugit eum...</h1>
-                  <div class="flex gap-5 items-center">
-                    <del class="text-lg text-gray-500 mt-1 font-medium"
-                      >$306.00</del
-                    >
-                    <p
-                      class="text-xl transform scale-110 font-medium text-indigo-600"
-                    >
-                      $299.00
-                    </p>
-                  </div>
-                </div>
-              </a>
-              <a href="store.html" class="flex items-center gap-2 px-2">
-                <img
-                  src="./src/asset/img/category-2.jpg"
-                  class="w-24 h-24 shadow-lg rounded"
-                  alt="Image"
-                />
-                <div class="flex flex-col gap-2">
-                  <h1 class="hyphens-auto">Rem ducimus eum, fugit eum...</h1>
-                  <div class="flex gap-5 items-center">
-                    <del class="text-lg text-gray-500 mt-1 font-medium"
-                      >$306.00</del
-                    >
-                    <p
-                      class="text-xl transform scale-110 font-medium text-indigo-600"
-                    >
-                      $299.00
-                    </p>
-                  </div>
-                </div>
-              </a>
-              <a href="store.html" class="flex items-center gap-2 px-2">
-                <img
-                  src="./src/asset/img/category-3.jpg"
-                  class="w-24 h-24 shadow-lg rounded"
-                  alt="Image"
-                />
-                <div class="flex flex-col gap-2">
-                  <h1 class="hyphens-auto">Rem ducimus eum, fugit eum...</h1>
-                  <div class="flex gap-5 items-center">
-                    <del class="text-lg text-gray-500 mt-1 font-medium"
-                      >$306.00</del
-                    >
-                    <p
-                      class="text-xl transform scale-110 font-medium text-indigo-600"
-                    >
-                      $299.00
-                    </p>
-                  </div>
-                </div>
-              </a>
+            <div id="release-container" class="flex flex-col gap-3">
+              <!-- Data Appended Here -->
             </div>
           </div>
           <div class="flex flex-col gap-3">
             <div class="border-b border-gray-300">
               <h1
-                class="inline-block text-2xl font-bold py-2 border-b-2 border-indigo-600 text-gray-900"
+                class="inline-block text-2xl font-bold py-2 border-b-2 dark:border-gray-700 dark:text-gray-200 border-indigo-600 text-gray-900"
               >
                 Deals and Outlets
               </h1>
             </div>
-            <div class="flex flex-col gap-3">
-              <a href="store.html" class="flex items-center gap-2 px-2">
-                <img
-                  src="./src/asset/img/category-4.jpg"
-                  class="w-24 h-24 shadow-lg rounded"
-                  alt="Image"
-                />
-                <div class="flex flex-col gap-2">
-                  <h1 class="hyphens-auto">Rem ducimus eum, fugit eum...</h1>
-                  <div class="flex gap-5 items-center">
-                    <del class="text-lg text-gray-500 mt-1 font-medium"
-                      >$306.00</del
-                    >
-                    <p
-                      class="text-xl transform scale-110 font-medium text-indigo-600"
-                    >
-                      $299.00
-                    </p>
-                  </div>
-                </div>
-              </a>
-              <a href="store.html" class="flex items-center gap-2 px-2">
-                <img
-                  src="./src/asset/img/category-5.jpg"
-                  class="w-24 h-24 shadow-lg rounded"
-                  alt="Image"
-                />
-                <div class="flex flex-col gap-2">
-                  <h1 class="hyphens-auto">Rem ducimus eum, fugit eum...</h1>
-                  <div class="flex gap-5 items-center">
-                    <del class="text-lg text-gray-500 mt-1 font-medium"
-                      >$306.00</del
-                    >
-                    <p
-                      class="text-xl transform scale-110 font-medium text-indigo-600"
-                    >
-                      $299.00
-                    </p>
-                  </div>
-                </div>
-              </a>
-              <a href="store.html" class="flex items-center gap-2 px-2">
-                <img
-                  src="./src/asset/img/category-6.jpg"
-                  class="w-24 h-24 shadow-lg rounded"
-                  alt="Image"
-                />
-                <div class="flex flex-col gap-2">
-                  <h1 class="hyphens-auto">Rem ducimus eum, fugit eum...</h1>
-                  <div class="flex gap-5 items-center">
-                    <del class="text-lg text-gray-500 mt-1 font-medium"
-                      >$306.00</del
-                    >
-                    <p
-                      class="text-xl transform scale-110 font-medium text-indigo-600"
-                    >
-                      $299.00
-                    </p>
-                  </div>
-                </div>
-              </a>
+            <div id="deals-container" class="flex flex-col gap-3">
+              <!-- Data Appended Here -->
             </div>
           </div>
           <div class="flex flex-col gap-3">
             <div class="border-b border-gray-300">
               <h1
-                class="inline-block text-2xl font-bold py-2 border-b-2 border-indigo-600 text-gray-900"
+                class="inline-block text-2xl font-bold py-2 border-b-2 dark:border-gray-700 dark:text-gray-200 border-indigo-600 text-gray-900"
               >
                 Top selling
               </h1>
             </div>
-            <div class="flex flex-col gap-3">
-              <a href="store.html" class="flex items-center gap-2 px-2">
-                <img
-                  src="./src/asset/img/category-7.jpg"
-                  class="w-24 h-24 shadow-lg rounded"
-                  alt="Image"
-                />
-                <div class="flex flex-col gap-2">
-                  <h1 class="hyphens-auto">Rem ducimus eum, fugit eum...</h1>
-                  <div class="flex gap-5 items-center">
-                    <del class="text-lg text-gray-500 mt-1 font-medium"
-                      >$306.00</del
-                    >
-                    <p
-                      class="text-xl transform scale-110 font-medium text-indigo-600"
-                    >
-                      $299.00
-                    </p>
-                  </div>
-                </div>
-              </a>
-              <a href="store.html" class="flex items-center gap-2 px-2">
-                <img
-                  src="./src/asset/img/category-8.jpg"
-                  class="w-24 h-24 shadow-lg rounded"
-                  alt="Image"
-                />
-                <div class="flex flex-col gap-2">
-                  <h1 class="hyphens-auto">Rem ducimus eum, fugit eum...</h1>
-                  <div class="flex gap-5 items-center">
-                    <del class="text-lg text-gray-500 mt-1 font-medium"
-                      >$306.00</del
-                    >
-                    <p
-                      class="text-xl transform scale-110 font-medium text-indigo-600"
-                    >
-                      $299.00
-                    </p>
-                  </div>
-                </div>
-              </a>
-              <a href="store.html" class="flex items-center gap-2 px-2">
-                <img
-                  src="./src/asset/img/category-5.jpg"
-                  class="w-24 h-24 shadow-lg rounded"
-                  alt="Image"
-                />
-                <div class="flex flex-col gap-2">
-                  <h1 class="hyphens-auto">Rem ducimus eum, fugit eum...</h1>
-                  <div class="flex gap-5 items-center">
-                    <del class="text-lg text-gray-500 mt-1 font-medium"
-                      >$306.00</del
-                    >
-                    <p
-                      class="text-xl transform scale-110 font-medium text-indigo-600"
-                    >
-                      $299.00
-                    </p>
-                  </div>
-                </div>
-              </a>
+            <div id="top-selling-container" class="flex flex-col gap-3">
+              <!-- Data Appended Here -->
             </div>
           </div>
           <div class="flex flex-col gap-3">
             <div class="border-b border-gray-300">
               <h1
-                class="inline-block text-2xl font-bold py-2 border-b-2 border-indigo-600 text-gray-900"
+                class="inline-block text-2xl font-bold py-2 dark:border-gray-700 dark:text-gray-200 border-b-2 border-indigo-600 text-gray-900"
               >
-                Hot releases
+                Recommeded
               </h1>
             </div>
-            <div class="flex flex-col gap-3">
-              <a href="store.html" class="flex items-center gap-2 px-2">
-                <img
-                  src="./src/asset/img/category-1.jpg"
-                  class="w-24 h-24 shadow-lg rounded"
-                  alt="Image"
-                />
-                <div class="flex flex-col gap-2">
-                  <h1 class="hyphens-auto">Rem ducimus eum, fugit eum...</h1>
-                  <div class="flex gap-5 items-center">
-                    <del class="text-lg text-gray-500 mt-1 font-medium"
-                      >$306.00</del
-                    >
-                    <p
-                      class="text-xl transform scale-110 font-medium text-indigo-600"
-                    >
-                      $299.00
-                    </p>
-                  </div>
-                </div>
-              </a>
-              <a href="store.html" class="flex items-center gap-2 px-2">
-                <img
-                  src="./src/asset/img/category-2.jpg"
-                  class="w-24 h-24 shadow-lg rounded"
-                  alt="Image"
-                />
-                <div class="flex flex-col gap-2">
-                  <h1 class="hyphens-auto">Rem ducimus eum, fugit eum...</h1>
-                  <div class="flex gap-5 items-center">
-                    <del class="text-lg text-gray-500 mt-1 font-medium"
-                      >$306.00</del
-                    >
-                    <p
-                      class="text-xl transform scale-110 font-medium text-indigo-600"
-                    >
-                      $299.00
-                    </p>
-                  </div>
-                </div>
-              </a>
-              <a href="store.html" class="flex items-center gap-2 px-2">
-                <img
-                  src="./src/asset/img/category-3.jpg"
-                  class="w-24 h-24 shadow-lg rounded"
-                  alt="Image"
-                />
-                <div class="flex flex-col gap-2">
-                  <h1 class="hyphens-auto">Rem ducimus eum, fugit eum...</h1>
-                  <div class="flex gap-5 items-center">
-                    <del class="text-lg text-gray-500 mt-1 font-medium"
-                      >$306.00</del
-                    >
-                    <p
-                      class="text-xl transform scale-110 font-medium text-indigo-600"
-                    >
-                      $299.00
-                    </p>
-                  </div>
-                </div>
-              </a>
+            <div id="recomended-container" class="flex flex-col gap-3">
+              <!-- Data Appended Here -->
             </div>
           </div>
         </div>
@@ -1602,31 +1303,36 @@
         <div class="container mx-auto">
           <div class="sm:mx-10">
             <div class="flex justify-center py-3">
-              <h1 class="text-4xl font-semibold text-gray-900 mb-4">
+              <h1
+                class="text-4xl font-semibold text-gray-900 mb-4 dark:text-gray-200"
+              >
                 Customer says
               </h1>
             </div>
             <!-- Testimonial -->
-            <div class="flex flex-col lg:grid lg:grid-cols-3 gap-8">
+            <div
+              id="testimonial-container"
+              class="flex flex-col lg:grid lg:grid-cols-3 gap-8"
+            >
               <div
-                class="flex flex-col gap-3 mx-4 md:py-10 md:px-2 md:bg-white md:items-center md:shadow-md md:rounded-md"
+                class="flex flex-col gap-3 mx-4 md:py-10 md:px-2 md:bg-white dark:bg-slate-800 md:items-center md:shadow-md md:rounded-md"
               >
                 <span
                   class="relative text-center after:content-['\201C'] after:w-4 top-0 left-0 after:h-4 after:text-8xl text-indigo-600 font-mono after:absolute"
                 ></span>
                 <p
-                  class="mt-12 text-xl text-center text-gray-600 md:text-center md:text-xl"
+                  class="mt-12 text-xl text-center text-gray-600 md:text-center dark:text-gray-200 md:text-xl"
                 >
                   My order arrived super quickly. The product is even better
                   than I hoped it would be. Very happy customer over here!
                 </p>
                 <h1
-                  class="font-semibold uppercase text-center text-gray-800 text-xl md:text-center md:text-2xl md:text-gray-700"
+                  class="font-semibold uppercase text-center text-gray-800 dark:text-gray-400 text-lg md:text-center md:text-xl md:text-gray-700"
                 >
                   Sarah Peters
                 </h1>
                 <span
-                  class="md:text-center text-center font-bold text-indigo-500 uppercase text-xl"
+                  class="md:text-center text-center font-bold text-indigo-500 uppercase text-lg"
                 >
                   co-founder
                 </span>
@@ -1634,11 +1340,9 @@
               <div
                 class="flex flex-col gap-3 mx-4 md:py-10 md:px-2 md:bg-white md:items-center md:shadow-md md:rounded-md"
               >
-                <span
-                  class="relative text-center after:content-['\201C'] after:w-4 top-0 left-0 after:h-4 after:text-8xl text-indigo-600 font-mono after:absolute"
-                ></span>
+                <img src="./public/quotation-right-mark-svgrepo-com.svg" alt="" class="w-16 h-16 fill-indigo-600">
                 <p
-                  class="mt-12 text-xl text-center text-gray-600 md:text-center md:text-xl"
+                  class="mt-5 text-xl text-center text-gray-600 md:text-center md:text-xl"
                 >
                   My order arrived super quickly. The product is even better
                   than I hoped it would be. Very happy customer over here!

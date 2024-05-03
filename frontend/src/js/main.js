@@ -21,6 +21,8 @@ const sunButton = document.querySelector("#sun");
 const moonButton = document.querySelector("#moon");
 const userTheme = localStorage.getItem("theme");
 const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+// Side bar
+const sideMenuContainer = document.querySelector("#side-menu-container");
 /**
  * Main Functionality On the Menu Part
  */
@@ -145,7 +147,7 @@ const themCheck = () => {
 /**
  * invoke The ThemeCheck On Initial load
  */
-themCheck()
+themCheck();
 
 /**
  * Manual Theme Switch
@@ -165,9 +167,24 @@ const themeSwitch = () => {
 /**
  * Listen to clicks On the Buttons
  */
-sunButton.addEventListener("click", ()=> {
-  themeSwitch()
-})
-moonButton.addEventListener("click", ()=> {
-  themeSwitch()
-})
+sunButton.addEventListener("click", () => {
+  themeSwitch();
+});
+moonButton.addEventListener("click", () => {
+  themeSwitch();
+});
+
+// Loading Categories for Side Menu
+const menuSideData = async function () {
+  const res = await fetch("https://dummyjson.com/products/categories");
+  const items = await res.json();
+  sideMenuContainer.innerHTML = ""
+  items.forEach((data) => {
+    const html = `
+    <a class="side-nav-link" href="store.html">${data.at(0).toUpperCase()}${data.slice(1)}</a>
+    `;
+    sideMenuContainer.insertAdjacentHTML("beforeend", html)
+  });
+};
+menuSideData();
+// Customer Bought Functionalities
