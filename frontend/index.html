@@ -38,8 +38,8 @@
       >
         <div class="px-2">
           <!-- Top  -->
-          <div class="flex items-center justify-between py-4 mx-3 border-b-2">
-            <span class="text-xl text-gray-700 font-bold">Shopping cart</span>
+          <div class="flex items-center justify-between py-4 mx-3 border-b-2 dark:border-gray-500">
+            <span class="text-xl text-gray-700 font-bold dark:text-gray-200 ">Shopping cart</span>
             <span
               title="ctrl + x"
               id="cart-close"
@@ -64,7 +64,7 @@
           <!-- More cart inserted Here -->
           <div class="flex flex-col gap-3 px-1">
             <!-- Cart Items -->
-            <a href="#" class="flex py-2 gap-4 border-b-2">
+            <a href="#" class="flex py-2 gap-4 border-b-2 dark:border-gray-500 ">
               <div
                 class="flex justify-center items-center w-22 h-22 border-2 border-indigo-600 rounded"
               >
@@ -76,10 +76,10 @@
               </div>
               <div class="flex-1">
                 <div class="flex flex-col">
-                  <h1 class="text-xl text-gray-700 font-bold">
+                  <h1 class="text-xl text-gray-700 font-bold dark:text-gray-200 ">
                     Throwback Hip Bag
                   </h1>
-                  <p class="text-base text-gray-500 font-medium">Salmon</p>
+                  <p class="text-base text-gray-500 font-medium dark:text-gray-400 ">Salmon</p>
                   <div class="flex gap-2 items-center mt-5">
                     <span class="inline-block cursor-pointer">
                       <svg
@@ -98,7 +98,7 @@
                       </svg>
                     </span>
                     <span
-                      class="py-[1px] px-5 bg-white text-gray-950 text-center text-xl font-mono"
+                      class="py-[1px] px-5 bg-white dark:bg-gray-600  text-gray-950 text-center text-xl font-mono dark:text-white "
                       >2</span
                     >
                     <span class="inline-block cursor-pointer">
@@ -122,7 +122,7 @@
               </div>
               <div class="flex-none w-20">
                 <div class="flex flex-col justify-between h-full">
-                  <span class="block text-xl text-gray-900 font-bold"
+                  <span class="block text-xl text-gray-900 font-bold dark:text-white"
                     >$90.00</span
                   >
                   <span
@@ -267,10 +267,10 @@
           </div>
           <div class="flex flex-col gap-2 mx-2 my-5">
             <div class="flex justify-between">
-              <span class="text-xl text-gray-700 font-bold">Subtotal</span>
-              <span class="block text-xl text-gray-900 font-bold">$260.00</span>
+              <span class="text-xl text-gray-700 font-bold dark:text-gray-200 ">Subtotal</span>
+              <span class="block text-xl text-gray-900 font-bold dark:text-white ">$260.00</span>
             </div>
-            <p class="text-base text-gray-500 font-medium mb-2">
+            <p class="text-base text-gray-500 font-medium mb-2 dark:text-gray-200 ">
               Shipping and taxes calculated at checkout.
             </p>
             <a
@@ -279,10 +279,10 @@
               >Checkout</a
             >
             <div class="flex justify-center items-center gap-1">
-              <span class="inline-block text-gray-700 text-lg">or</span>
+              <span class="inline-block text-gray-700 text-lg dark:text-gray-200 ">or</span>
               <a
                 class="text-indigo-600 underline underline-offset-1 text-lg font-medium hover:text-indigo-500"
-                href="#"
+                href="store.html"
               >
                 Continue Shopping
               </a>
@@ -572,7 +572,7 @@
         </div>
       </section>
       <!-- Navigation -->
-      <nav class="flex flex-col 2xl:container 2xl:mx-auto">
+      <nav id="nav" class="flex flex-col 2xl:container 2xl:mx-auto">
         <header
           class="bg-primary py-2 flex items-center dark:bg-darkcolor lg:justify-between justify-center lg:px-3"
         >
@@ -632,11 +632,11 @@
             <!-- Logo Image Hidden normally Shown On 1024px -->
             <a
               href="#"
-              class="flex-1 items-center justify-center hidden lg:flex"
+              class="flex-1 gap-2 items-center justify-center hidden lg:flex px-4"
             >
               <img
-                class="max-w-full opacity-80 hover:opacity-100 transition-opacity"
-                src="./src/asset/images/logo.jpg"
+                class="max-w-full opacity-80 hover:opacity-100 transition-opacity transform scale-150"
+                src="./src/asset/img/logo-main.png"
                 width="60"
                 height="60"
                 alt="Comapny logo"
@@ -676,8 +676,8 @@
           <!-- Logo Image Hidden on Larger screen -->
           <a href="#" class="flex-1 flex items-center justify-center lg:hidden">
             <img
-              class="max-w-full opacity-80 hover:opacity-100 transition-opacity"
-              src="./src/asset/images/logo.jpg"
+              class="max-w-full opacity-80 hover:opacity-100 transition-opacity transform scale-150"
+              src="./src/asset/img/logo-main.png"
               width="60"
               height="60"
               alt="Comapny logo"
@@ -801,7 +801,7 @@
           </div>
         </section>
         <!-- Company About -->
-        <section class="my-10 lg:row-start-1 lg:my-0 lg:border-b-2">
+        <section class="my-10 lg:row-start-1 lg:my-0 lg:border-b-2 dark:border-gray-500">
           <div class="container mx-auto">
             <div
               class="flex flex-col gap-1 lg:grid lg:grid-cols-3 lg:divide-x lg:divide-blue-700"
@@ -1209,7 +1209,7 @@
       <section class="my-10">
         <div class="container mx-auto px-4">
           <div class="mx-2 flex justify-center py-10">
-            <h1 class="text-2xl font-bold">Customer also bought</h1>
+            <h1 class="text-2xl font-bold dark:text-gray-200">Customer also bought</h1>
           </div>
           <!-- Products -->
           <div
@@ -1314,100 +1314,45 @@
               id="testimonial-container"
               class="flex flex-col lg:grid lg:grid-cols-3 gap-8"
             >
-              <div
-                class="flex flex-col gap-3 mx-4 md:py-10 md:px-2 md:bg-white dark:bg-slate-800 md:items-center md:shadow-md md:rounded-md"
-              >
-                <span
-                  class="relative text-center after:content-['\201C'] after:w-4 top-0 left-0 after:h-4 after:text-8xl text-indigo-600 font-mono after:absolute"
-                ></span>
-                <p
-                  class="mt-12 text-xl text-center text-gray-600 md:text-center dark:text-gray-200 md:text-xl"
-                >
-                  My order arrived super quickly. The product is even better
-                  than I hoped it would be. Very happy customer over here!
-                </p>
-                <h1
-                  class="font-semibold uppercase text-center text-gray-800 dark:text-gray-400 text-lg md:text-center md:text-xl md:text-gray-700"
-                >
-                  Sarah Peters
-                </h1>
-                <span
-                  class="md:text-center text-center font-bold text-indigo-500 uppercase text-lg"
-                >
-                  co-founder
-                </span>
-              </div>
-              <div
-                class="flex flex-col gap-3 mx-4 md:py-10 md:px-2 md:bg-white md:items-center md:shadow-md md:rounded-md"
-              >
-                <img src="./public/quotation-right-mark-svgrepo-com.svg" alt="" class="w-16 h-16 fill-indigo-600">
-                <p
-                  class="mt-5 text-xl text-center text-gray-600 md:text-center md:text-xl"
-                >
-                  My order arrived super quickly. The product is even better
-                  than I hoped it would be. Very happy customer over here!
-                </p>
-                <h1
-                  class="font-semibold uppercase text-center text-gray-800 text-xl md:text-center md:text-2xl md:text-gray-700"
-                >
-                  Sarah Peters
-                </h1>
-                <span
-                  class="md:text-center text-center font-bold text-indigo-500 uppercase text-xl"
-                >
-                  co-founder
-                </span>
-              </div>
-              <div
-                class="flex flex-col gap-3 mx-4 md:py-10 md:px-2 md:bg-white md:items-center md:shadow-md md:rounded-md"
-              >
-                <span
-                  class="relative text-center after:content-['\201C'] after:w-4 top-0 left-0 after:h-4 after:text-8xl text-indigo-600 font-mono after:absolute"
-                ></span>
-                <p
-                  class="mt-12 text-xl text-center text-gray-600 md:text-center md:text-xl"
-                >
-                  My order arrived super quickly. The product is even better
-                  than I hoped it would be. Very happy customer over here!
-                </p>
-                <h1
-                  class="font-semibold uppercase text-center text-gray-800 text-xl md:text-center md:text-2xl md:text-gray-700"
-                >
-                  Sarah Peters
-                </h1>
-                <span
-                  class="md:text-center text-center font-bold text-indigo-500 uppercase text-xl"
-                >
-                  co-founder
-                </span>
-              </div>
+              <!-- All the testimonials Will be appended Here -->
             </div>
           </div>
         </div>
       </section>
       <!-- Call to action -->
-      <section class="my-10 py-20 bg-white">
+      <section class="my-10 py-20 bg-white dark:bg-darkcolor">
         <div class="container mx-auto">
           <div
             class="flex flex-col gap-8 px-5 md:px-10 lg:grid lg:grid-cols-2 xl:gap-16"
           >
             <!-- Card 1 -->
-            <div class="bg-slate-100 px-5 py-8 rounded-lg flex flex-col gap-2">
-              <h1 class="text-2xl text-gray-900 font-bold">
+            <div
+              class="bg-slate-100 dark:bg-slate-800 px-5 py-8 rounded-lg flex flex-col gap-2"
+            >
+              <h1
+                class="text-2xl text-center text-gray-900 font-bold dark:text-gray-200"
+              >
                 Sign up for our newsletter
               </h1>
-              <p class="text-lg text-gray-600">
+              <p class="text-lg text-gray-600 text-center dark:text-gray-400">
                 The latest news, articles, and resources, sent to your inbox
                 weekly.
               </p>
               <form
                 class="flex flex-col gap-4"
-                action="#"
+                action="https://api.web3forms.com/submit"
                 name="Newsletter Form"
+                method="POST"
               >
                 <div>
+                  <!-- Replace with your Access Key -->
                   <input
-                    class="peer w-full rounded-lg border border-slate-300 placeholder:text-gray-600 placeholder:text-base focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-indigo-500 focus:ring-offset-indigo-700"
+                    type="hidden"
+                    name="access_key"
+                    value="2ca7ccc6-1156-42dc-9f92-93594a22210c"
+                  />
+                  <input
+                    class="peer w-full rounded-md border border-slate-300 dark:border-gray-600 placeholder:text-gray-600 placeholder:text-base focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-indigo-500 focus:ring-offset-indigo-700"
                     type="email"
                     name="Email"
                     placeholder="Enter email"
@@ -1415,6 +1360,11 @@
                   />
                   <!-- <span class="invisible peer-invalid:visible text-pink-700 -mb-2">Invalid Email!! Please try again</span> -->
                 </div>
+                <div class="flex items-center justify-center">
+                  <!-- hCaptcha Spam Protection -->
+                  <div class="h-captcha" data-captcha="true"></div>
+                </div>
+
                 <input
                   class="bg-indigo-600 rounded-lg py-2 text-xl cursor-pointer text-white focus:outline-none focus:ring-1 focus:ring-indigo-700 focus:ring-offset-indigo-500 focus:ring-offset-2 active:bg-indigo-800 transition-all duration-200"
                   type="submit"
@@ -1435,7 +1385,7 @@
               <div class="text-center">
                 <a
                   class="text-xl text-white font-medium flex items-center hover:text-white/85"
-                  href="#"
+                  href="store.html"
                   ><span>Go now</span>
                   <!-- Icon -->
                 </a>
@@ -1445,65 +1395,60 @@
         </div>
       </section>
       <!-- Footer  -->
-      <footer class="bg-white rounded-t-2xl">
+      <footer class="bg-white dark:bg-slate-800 rounded-t-2xl">
         <!-- Top Footer -->
         <div class="container mx-auto">
           <div class="flex flex-col gap-3 py-5">
             <div
-              class="flex justify-center border-b-[1px] border-b-gray-200 py-1"
+              class="flex justify-center border-b-[1px] border-b-gray-200 py-1 dark:border-gray-500"
             >
-              <img
-                class=""
-                src="./src/asset/images/logo.jpg"
-                alt="logo"
-                height="60"
-                width="60"
-              />
+              <a href="#nav">
+                <img
+                  class="transform scale-150"
+                  src="./src/asset/img/logo-main.png"
+                  alt="logo"
+                  height="60"
+                  width="60"
+                />
+              </a>
             </div>
             <!-- Links -->
             <div class="grid grid-cols-2 gap-3 lg:grid-cols-4">
               <div class="flex flex-col items-center gap-1">
-                <h1 class="text-2xl text-gray-900 font-semibold">Products</h1>
+                <h1 class="text-2xl text-gray-900 dark:text-gray-200 font-semibold">Shop</h1>
                 <div class="flex flex-col gap-3 items-center">
-                  <a class="link" href="#">Bags</a>
-                  <a class="link" href="#">Tees</a>
-                  <a class="link" href="#">Objects</a>
-                  <a class="link" href="#">Home Goods</a>
-                  <a class="link" href="#">Accessories</a>
-                  <a class="link" href="#">FAQ</a>
+                  <a class="link" href="store.html">All Products</a>
+                  <a class="link" href="store.html">New Arrivals</a>
+                  <a class="link" href="store.html">Best Sellers</a>
+                  <a class="link" href="store.html">Special Offers</a>
                 </div>
               </div>
               <div class="flex flex-col items-center gap-1">
-                <h1 class="text-2xl text-gray-900 font-semibold">Company</h1>
+                <h1 class="text-2xl text-gray-900 font-semibold dark:text-gray-200">Customer Service</h1>
                 <div class="flex flex-col gap-3 items-center">
-                  <a class="link" href="#">Who we are</a>
-                  <a class="link" href="#">Contact</a>
-                  <a class="link" href="#">Shipping</a>
-                  <a class="link" href="#">Returns</a>
-                  <a class="link" href="#">Secure Payment</a>
-                  <a class="link" href="#">Find a Store</a>
+                  <a class="link" href="store.html">FAQ</a>
+                  <a class="link" href="store.html">Shipping & Delivery</a>
+                  <a class="link" href="store.html">Returns & Exchanges</a>
+                  <a class="link" href="store.html">Terms & Conditions</a>
+                </div>
+              </div>
+              
+              <div class="flex flex-col items-center gap-1">
+                <h1 class="text-2xl text-gray-900 font-semibold dark:text-gray-200">About us</h1>
+                <div class="flex flex-col gap-3 items-center">
+                  <a class="link" href="#">About Our Company</a>
+                  <a class="link" href="#">Our Team</a>
+                  <a class="link" href="#">Careers</a>
+                  <a class="link" href="#">Contact Us</a>
                 </div>
               </div>
               <div class="flex flex-col items-center gap-1">
-                <h1 class="text-2xl text-gray-900 font-semibold">Company</h1>
+                <h1 class="text-2xl text-gray-900 font-semibold dark:text-gray-200">Connect With Us</h1>
                 <div class="flex flex-col gap-3 items-center">
-                  <a class="link" href="#">Who we are</a>
-                  <a class="link" href="#">Contact</a>
-                  <a class="link" href="#">Shipping</a>
-                  <a class="link" href="#">Returns</a>
-                  <a class="link" href="#">Secure Payment</a>
-                  <a class="link" href="#">Find a Store</a>
-                </div>
-              </div>
-              <div class="flex flex-col items-center gap-1">
-                <h1 class="text-2xl text-gray-900 font-semibold">Company</h1>
-                <div class="flex flex-col gap-3 items-center">
-                  <a class="link" href="#">Who we are</a>
-                  <a class="link" href="#">Contact</a>
-                  <a class="link" href="#">Shipping</a>
-                  <a class="link" href="#">Returns</a>
-                  <a class="link" href="#">Secure Payment</a>
-                  <a class="link" href="#">Find a Store</a>
+                  <a class="link" href="#">Facebook</a>
+                  <a class="link" href="#">Instagram</a>
+                  <a class="link" href="#">Twitter</a>
+                  <a class="link" href="#">Whatsapp</a>
                 </div>
               </div>
             </div>
@@ -1513,7 +1458,7 @@
             <div
               class="flex gap-4 flex-col lg:justify-between lg:flex-row items-center flex-wrap"
             >
-              <span class="text-center font-medium text-base text-gray-500"
+              <span class="text-center font-medium text-base text-gray-500 dark:text-gray-300"
                 >© 2021 All Rights Reserved</span
               >
               <div class="flex gap-2">
@@ -1532,6 +1477,8 @@
       </footer>
     </main>
     <!-- Connetct with Swipper js -->
+    <!-- Required for hCaptcha -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Js Script -->
     <script>

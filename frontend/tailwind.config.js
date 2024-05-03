@@ -4,6 +4,16 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      animation: {
+        progressBar: 'progressBar 2s',
+      },
+      keyframes: {
+        progressBar: {
+          '0%': { width: '0%' },
+          // '50%': { width: '50%' },
+          '100%':{ width: '100%' },
+        }
+      },
       colors: {
         neutral:"#ffffff",
         primary: "#111827",

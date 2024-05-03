@@ -362,65 +362,77 @@
           </div>
         </div>
       </section>
-      <footer class="2xl:container mt-10 2xl:mx-auto bg-white rounded-t-2xl">
+      <!-- Footer  -->
+      <footer class="bg-white dark:bg-slate-800 rounded-t-2xl mt-10">
         <!-- Top Footer -->
         <div class="container mx-auto">
           <div class="flex flex-col gap-3 py-5">
             <div
-              class="flex justify-center border-b-[1px] border-b-gray-200 py-1"
+              class="flex justify-center border-b-[1px] border-b-gray-200 py-1 dark:border-gray-500"
             >
-              <img
-                class=""
-                src="./src/asset/images/logo.jpg"
-                alt="logo"
-                height="60"
-                width="60"
-              />
+              <a href="#nav">
+                <img
+                  class="transform scale-150"
+                  src="./src/asset/img/logo-main.png"
+                  alt="logo"
+                  height="60"
+                  width="60"
+                />
+              </a>
             </div>
             <!-- Links -->
             <div class="grid grid-cols-2 gap-3 lg:grid-cols-4">
               <div class="flex flex-col items-center gap-1">
-                <h1 class="text-2xl text-gray-900 font-semibold">Products</h1>
+                <h1
+                  class="text-2xl text-gray-900 dark:text-gray-200 font-semibold"
+                >
+                  Shop
+                </h1>
                 <div class="flex flex-col gap-3 items-center">
-                  <a class="link" href="#">Bags</a>
-                  <a class="link" href="#">Tees</a>
-                  <a class="link" href="#">Objects</a>
-                  <a class="link" href="#">Home Goods</a>
-                  <a class="link" href="#">Accessories</a>
-                  <a class="link" href="#">FAQ</a>
+                  <a class="link" href="store.html">All Products</a>
+                  <a class="link" href="store.html">New Arrivals</a>
+                  <a class="link" href="store.html">Best Sellers</a>
+                  <a class="link" href="store.html">Special Offers</a>
                 </div>
               </div>
               <div class="flex flex-col items-center gap-1">
-                <h1 class="text-2xl text-gray-900 font-semibold">Company</h1>
+                <h1
+                  class="text-2xl text-gray-900 font-semibold dark:text-gray-200"
+                >
+                  Customer Service
+                </h1>
                 <div class="flex flex-col gap-3 items-center">
-                  <a class="link" href="#">Who we are</a>
-                  <a class="link" href="#">Contact</a>
-                  <a class="link" href="#">Shipping</a>
-                  <a class="link" target="_self" href="#">Returns</a>
-                  <a class="link" href="#">Secure Payment</a>
-                  <a class="link" href="#">Find a Store</a>
+                  <a class="link" href="store.html">FAQ</a>
+                  <a class="link" href="store.html">Shipping & Delivery</a>
+                  <a class="link" href="store.html">Returns & Exchanges</a>
+                  <a class="link" href="store.html">Terms & Conditions</a>
+                </div>
+              </div>
+
+              <div class="flex flex-col items-center gap-1">
+                <h1
+                  class="text-2xl text-gray-900 font-semibold dark:text-gray-200"
+                >
+                  About us
+                </h1>
+                <div class="flex flex-col gap-3 items-center">
+                  <a class="link" href="#">About Our Company</a>
+                  <a class="link" href="#">Our Team</a>
+                  <a class="link" href="#">Careers</a>
+                  <a class="link" href="#">Contact Us</a>
                 </div>
               </div>
               <div class="flex flex-col items-center gap-1">
-                <h1 class="text-2xl text-gray-900 font-semibold">Company</h1>
+                <h1
+                  class="text-2xl text-gray-900 font-semibold dark:text-gray-200"
+                >
+                  Connect With Us
+                </h1>
                 <div class="flex flex-col gap-3 items-center">
-                  <a class="link" href="#">Who we are</a>
-                  <a class="link" href="#">Contact</a>
-                  <a class="link" href="#">Shipping</a>
-                  <a class="link" href="#">Returns</a>
-                  <a class="link" href="#">Secure Payment</a>
-                  <a class="link" href="#">Find a Store</a>
-                </div>
-              </div>
-              <div class="flex flex-col items-center gap-1">
-                <h1 class="text-2xl text-gray-900 font-semibold">Company</h1>
-                <div class="flex flex-col gap-3 items-center">
-                  <a class="link" href="#">Who we are</a>
-                  <a class="link" href="#">Contact</a>
-                  <a class="link" href="#">Shipping</a>
-                  <a class="link" href="#">Returns</a>
-                  <a class="link" href="#">Secure Payment</a>
-                  <a class="link" href="#">Find a Store</a>
+                  <a class="link" href="#">Facebook</a>
+                  <a class="link" href="#">Instagram</a>
+                  <a class="link" href="#">Twitter</a>
+                  <a class="link" href="#">Whatsapp</a>
                 </div>
               </div>
             </div>
@@ -430,7 +442,8 @@
             <div
               class="flex gap-4 flex-col lg:justify-between lg:flex-row items-center flex-wrap"
             >
-              <span class="text-center font-medium text-base text-gray-500"
+              <span
+                class="text-center font-medium text-base text-gray-500 dark:text-gray-300"
                 >© 2021 All Rights Reserved</span
               >
               <div class="flex gap-2">
@@ -439,7 +452,7 @@
                 <a class="link" href="#">Terms</a>
               </div>
               <div class="flex">
-                <a class="link flex gap-2" href="#">
+                <a class="link flex gap-2" href="checkout.html">
                   <img src="./src/asset/img/pay.png" alt="Footer Logo" />
                 </a>
               </div>
@@ -448,5 +461,6 @@
         </div>
       </footer>
     </main>
+    <script type="module" src="./src/js/account-management.js"></script>
   </body>
 </html>

@@ -4,7 +4,7 @@
 
 @layer components {
   .link {
-    @apply text-base text-gray-600 font-medium hover:text-gray-800 hover:underline hover:underline-offset-2 transition-all duration-300;
+    @apply text-base text-gray-600 dark:text-gray-400  font-medium hover:text-gray-800 hover:underline hover:underline-offset-2 transition-all duration-300;
   }
   .svgs {
     @apply w-6 h-6 md:w-8 md:h-8 stroke-2 text-indigo-600 hover:text-indigo-700 transition-all transform hover:scale-105 active:scale-100 active:text-indigo-800;
@@ -40,9 +40,12 @@
     @apply w-10 h-10 rounded-lg cursor-pointer active:ring-1 active:ring-indigo-600 active:ring-offset-2 bg-indigo-700 flex justify-center items-center transition-all duration-300 p-2;
   }
   .para-text {
-    @apply text-lg text-gray-600 font-medium;
+    @apply text-lg text-gray-600 font-medium dark:text-gray-400;
   }
   .head-text {
-    @apply text-xl text-gray-900 font-bold;
+    @apply text-xl text-gray-900 font-bold dark:text-gray-200;
+  }
+  .active-dash {
+    @apply shadow-md bg-indigo-600/50
   }
 }

@@ -333,13 +333,13 @@ function renderQuickView(data) {
     </div>
     <div class="flex flex-col gap-4">
       <div class="flex flex-col gap-1">
-        <h1 class="text-xl font-bold text-gray-800">
+        <h1 class="text-xl font-bold text-gray-800 dark:text-gray-200 ">
         ${data.title}
         </h1>
-        <span class="text-lg text-gray-600 font-medium">$${data.price}.00</span>
+        <span class="text-lg text-gray-600 font-medium dark:text-gray-300 ">$${data.price}.00</span>
       </div>
       <div class="flex gap-2">
-        <span class="text-lg text-gray-600 font-medium">${data.rating}</span>
+        <span class="text-lg text-gray-600 font-medium dark:text-gray-300 ">${data.rating}</span>
         <div class="flex gap-1 items-center">
           <ion-icon
             name="star"
@@ -371,7 +371,7 @@ function renderQuickView(data) {
         </div>
       </div>
       <div class="flex flex-col gap-2">
-        <h1 class="text-lg text-gray-600 font-medium">Color</h1>
+        <h1 class="text-lg text-gray-600 font-medium dark:text-gray-200 ">Color</h1>
         <div class="flex gap-3 items-center">
           <input
             class="w-8 h-8 checked:caret-indigo-700"
@@ -391,7 +391,7 @@ function renderQuickView(data) {
       <div>
         <div class="flex flex-col gap-2">
           <div class="flex justify-between px-2">
-            <span class="text-lg text-gray-600 font-medium">Size</span>
+            <span class="text-lg text-gray-600 font-medium dark:text-gray-200 ">Size</span>
             <a
               href="#"
               class="text-indigo-600 text-lg font-bold hover:text-indigo-500 active:text-indigo-700"
@@ -681,16 +681,16 @@ export async function testimonialData() {
   items.testimonials.forEach((data) => {
     const html = `
     <div
-      class="flex flex-col gap-3 mx-4 md:py-10 md:px-2 md:bg-white md:items-center md:shadow-md md:rounded-md"
+      class="flex flex-col gap-3 mx-4 md:py-10 md:px-2 md:bg-white dark:bg-slate-800 items-center md:shadow-md md:rounded-md"
     >
       <img src="./public/quotation-right-mark-svgrepo-com.svg" alt="" class="w-16 h-16 fill-indigo-600">
       <p
-        class="mt-5 text-xl text-center text-gray-600 md:text-center md:text-xl"
+        class="mt-5 text-xl text-center text-gray-600 md:text-center dark:text-gray-200 md:text-xl"
       >
         ${data.quote}
       </p>
       <h1
-        class="font-semibold uppercase text-center text-gray-800 text-xl md:text-center md:text-2xl md:text-gray-700"
+        class="font-semibold uppercase text-center text-gray-800 dark:text-gray-400 text-xl md:text-center md:text-2xl md:text-gray-700"
       >
       ${data.name}
       </h1>
