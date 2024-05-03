@@ -17,6 +17,733 @@
   </head>
   <body class="bg-gray-100">
     <main class="relative space-x-3 2xl:container 2xl:mx-auto">
+      <!-- Shopping Cart Section -->
+      <!-- By deafult hidden -->
+      <section
+        id="cart"
+        class="w-full hidden sm:w-[500px] h-full fixed right-0 top-0 z-50 bg-neutral dark:bg-slate-800 overflow-y-auto"
+      >
+        <div class="px-2">
+          <!-- Top  -->
+          <div
+            class="flex items-center justify-between py-4 mx-3 border-b-2 dark:border-gray-500"
+          >
+            <span class="text-xl text-gray-700 font-bold dark:text-gray-200"
+              >Shopping cart</span
+            >
+            <span
+              title="ctrl + x"
+              id="cart-close"
+              class="inline-block cursor-pointer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-8 h-8 svgs"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </span>
+          </div>
+          <!-- More cart inserted Here -->
+          <div class="flex flex-col gap-3 px-1">
+            <!-- Cart Items -->
+            <a href="#" class="flex py-2 gap-4 border-b-2 dark:border-gray-500">
+              <div
+                class="flex justify-center items-center w-22 h-22 border-2 border-indigo-600 rounded"
+              >
+                <img
+                  class="w-20 h-20"
+                  src="./src/asset/images/home-page-02-product-02.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1">
+                <div class="flex flex-col">
+                  <h1
+                    class="text-xl text-gray-700 font-bold dark:text-gray-200"
+                  >
+                    Throwback Hip Bag
+                  </h1>
+                  <p
+                    class="text-base text-gray-500 font-medium dark:text-gray-400"
+                  >
+                    Salmon
+                  </p>
+                  <div class="flex gap-2 items-center mt-5">
+                    <span class="inline-block cursor-pointer">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6 svgs"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="py-[1px] px-5 bg-white dark:bg-gray-600 text-gray-950 text-center text-xl font-mono dark:text-white"
+                      >2</span
+                    >
+                    <span class="inline-block cursor-pointer">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6 svgs"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-none w-20">
+                <div class="flex flex-col justify-between h-full">
+                  <span
+                    class="block text-xl text-gray-900 font-bold dark:text-white"
+                    >$90.00</span
+                  >
+                  <span
+                    class="block text-lg text-indigo-600 font-bold cursor-pointer hover:text-indigo-500 active:text-indigo-700 transition-all duration-200"
+                    >Remove</span
+                  >
+                </div>
+              </div>
+            </a>
+            <a href="#" class="flex py-2 gap-4 border-b-2">
+              <div class="flex-none w-22 border-2 border-indigo-600 rounded">
+                <img
+                  class="w-20 h-20"
+                  src="./src/asset/images/home-page-02-product-02.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1">
+                <div class="flex flex-col">
+                  <h1 class="text-xl text-gray-700 font-bold">
+                    Throwback Hip Bag
+                  </h1>
+                  <p class="text-base text-gray-500 font-medium">Salmon</p>
+                  <div class="flex gap-2 items-center mt-5">
+                    <span class="inline-block cursor-pointer">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6 svgs"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="py-[1px] px-5 bg-white text-gray-950 text-center text-xl font-mono"
+                      >1</span
+                    >
+                    <span class="inline-block cursor-pointer">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6 svgs"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-none w-20">
+                <div class="flex flex-col justify-between h-full">
+                  <span class="block text-xl text-gray-900 font-bold"
+                    >$90.00</span
+                  >
+                  <span
+                    class="block text-lg text-indigo-600 font-bold cursor-pointer hover:text-indigo-500 active:text-indigo-700 transition-all duration-200"
+                    >Remove</span
+                  >
+                </div>
+              </div>
+            </a>
+            <a href="#" class="flex py-2 gap-4 border-b-2">
+              <div class="flex-none w-22 border-2 border-indigo-600 rounded">
+                <img
+                  class="w-20 h-20"
+                  src="./src/asset/images/home-page-02-product-02.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1">
+                <div class="flex flex-col">
+                  <h1 class="text-xl text-gray-700 font-bold">
+                    Throwback Hip Bag
+                  </h1>
+                  <p class="text-base text-gray-500 font-medium">Salmon</p>
+                  <div class="flex gap-2 items-center mt-5">
+                    <span class="inline-block cursor-pointer">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6 svgs"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="py-[1px] px-5 bg-white text-gray-950 text-center text-xl font-mono"
+                      >1</span
+                    >
+                    <span class="inline-block cursor-pointer">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6 svgs"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-none w-20">
+                <div class="flex flex-col justify-between h-full">
+                  <span class="block text-xl text-gray-900 font-bold"
+                    >$90.00</span
+                  >
+                  <span
+                    class="block text-lg text-indigo-600 font-bold cursor-pointer hover:text-indigo-500 active:text-indigo-700 transition-all duration-200"
+                    >Remove</span
+                  >
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="flex flex-col gap-2 mx-2 my-5">
+            <div class="flex justify-between">
+              <span class="text-xl text-gray-700 font-bold dark:text-gray-200"
+                >Subtotal</span
+              >
+              <span
+                class="block text-xl text-gray-900 font-bold dark:text-white"
+                >$260.00</span
+              >
+            </div>
+            <p
+              class="text-base text-gray-500 font-medium mb-2 dark:text-gray-200"
+            >
+              Shipping and taxes calculated at checkout.
+            </p>
+            <a
+              class="bg-indigo-600 py-2 w-full rounded-lg text-center text-xl text-white hover:bg-indigo-500 active:bg-indigo-700 transition-all duration-300"
+              href="checkout.html"
+              >Checkout</a
+            >
+            <div class="flex justify-center items-center gap-1">
+              <span
+                class="inline-block text-gray-700 text-lg dark:text-gray-200"
+                >or</span
+              >
+              <a
+                class="text-indigo-600 underline underline-offset-1 text-lg font-medium hover:text-indigo-500"
+                href="store.html"
+              >
+                Continue Shopping
+              </a>
+              <span class="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-4 h-4 svgs"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Search Section -->
+      <!-- Hidden By default -->
+      <section
+        id="search"
+        class="container hidden fixed top-1/2 transform -translate-y-1/2 my-auto left-0 right-0 z-[100] mx-auto w-full sm:w-[600px] bg-neutral dark:bg-slate-800 rounded-xl shadow-2xl"
+      >
+        <div class="flex flex-col gap-3">
+          <!-- Top -->
+          <div
+            class="px-2 flex items-center border-b-2 dark:border-gray-500 gap-5"
+          >
+            <span class="cursor-pointer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="svgs"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+              <span class="sr-only">Search Icon</span>
+            </span>
+            <div class="flex-1">
+              <input
+                id="search-input"
+                class="w-full border-none bg-inherit focus:outline-none focus:ring-0 focus:ring-offset-0 caret-indigo-500"
+                type="text"
+                placeholder="Search anything"
+                name="Seach Field"
+              />
+            </div>
+            <span id="search-close" class="inline-block cursor-pointer py-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-8 h-8 svgs"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </span>
+          </div>
+          <!-- Recent Part-->
+          <div class="overflow-y-scroll pr-1 h-48">
+            <!-- Shown Only when there is no search item -->
+            <div class="w-full hidden h-full justify-center items-center">
+              <span
+                class="inline-block text-2xl text-gray-700 dark:text-gray-200 font-bold"
+                >No recent search :)</span
+              >
+            </div>
+            <!-- Display only it there is a search Display The seach -->
+            <div class="mt-1">
+              <div class="flex flex-col gap-1">
+                <div class="py-2 border-b-2 dark:border-gray-700">
+                  <h1
+                    class="ml-4 text-2xl text-gray-700 dark:text-gray-200 font-bold"
+                  >
+                    Recent
+                  </h1>
+                </div>
+                <!-- Search results are Appended here -->
+                <div>
+                  <a
+                    href="#"
+                    class="flex items-center justify-between border-b-2 dark:border-gray-700 py-2"
+                  >
+                    <h1
+                      class="text-lg ml-4 text-gray-600 dark:text-gray-200 font-medium font-mono"
+                    >
+                      How To Puchase?
+                    </h1>
+                    <div class="flex gap-2 ml-3">
+                      <span class="inline-block">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-6 h-6 svgs"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                          />
+                        </svg>
+                      </span>
+                      <span class="inline-block cursor-pointer">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-6 h-6 svgs"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18 18 6M6 6l12 12"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="flex flex-col gap-1">
+                <div class="py-2 border-b-2 dark:border-gray-700">
+                  <h1
+                    class="ml-4 text-2xl text-gray-700 dark:text-gray-200 font-bold"
+                  >
+                    Favourite
+                  </h1>
+                </div>
+                <a
+                  href="#"
+                  class="flex items-center justify-between border-b-2 dark:border-gray-700 py-2"
+                >
+                  <h1
+                    class="text-lg ml-4 text-gray-600 dark:text-gray-200 font-medium font-mono"
+                  >
+                    How to return item.
+                  </h1>
+                  <div class="flex gap-2 ml-3">
+                    <span class="inline-block">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="stroke-0 w-6 h-6 svgs fill-indigo-600"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                    <span class="inline-block cursor-pointer">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6 svgs"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M6 18 18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Bottom -->
+          <div class="flex justify-end border-t-2 dark:border-gray-500">
+            <a
+              class="inline-block text-xl mr-6 my-3 font-semibold text-gray-700 dark:text-gray-200"
+              href="#"
+              >Search by
+              <span
+                class="text-2xl text-indigo-600 font-extrabold font-mono uppercase"
+                >Ai</span
+              ></a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- Overlay -->
+      <!-- On large screen 1024 Overlay set to Hidden -->
+      <!-- Use Js To Show and Remove -->
+      <div
+        id="overlay"
+        class="absolute hidden top-0 left-0 bg-white backdrop-blur-[1.5px] bg-white/10 w-full h-full z-20"
+      ></div>
+      <!-- Menu Section -->
+      <!-- Hidden By default Show Only after Click -->
+      <section
+        id="menu"
+        class="absolute hidden lg:hidden top-0 left-0 z-50 shadow-xl h-full w-[350px] bg-neutral dark:bg-slate-800 px-5 py-10"
+      >
+        <div class="flex flex-col gap-3">
+          <span id="menu-close" class="inline-block cursor-pointer py-2">
+            <ion-icon name="close-outline" class="w-8 h-8 svgs"></ion-icon>
+          </span>
+          <!-- Nav Link -->
+          <div class="flex gap-4 py-2">
+            <div
+              class="text-2xl font-semibold cursor-pointer py-2 border-b-2 pr-3 border-b-indigo-700 dark:border-b-gray-500 text-indigo-600 dark:text-gray-100"
+            >
+              Popular categories
+            </div>
+          </div>
+          <!-- All links -->
+          <div class="flex flex-col gap-4 mt-1">
+            <div id="side-menu-container" class="flex flex-col gap-4">
+              <!-- Add all the Popular Categories Using JS -->
+            </div>
+          </div>
+          <!-- CoMpany And stores -->
+          <div class="flex flex-col gap-2 py-4 border-y-2 dark:border-gray-700">
+            <a
+              class="text-gray-950 hover:text-gray-700 side-nav-link"
+              href="#men"
+              >Men</a
+            >
+            <a
+              class="text-gray-950 hover:text-gray-700 side-nav-link"
+              href="#women"
+              >Women</a
+            >
+            <a
+              class="text-gray-950 hover:text-gray-700 side-nav-link"
+              href="store.html"
+              >Stores</a
+            >
+          </div>
+          <!-- CoMpany And stores -->
+          <div class="flex flex-col gap-2 py-4 border-b-2 dark:border-gray-700">
+            <a
+              class="text-gray-950 hover:text-gray-700 side-nav-link"
+              href="account.html"
+              >Create an account</a
+            >
+            <a
+              class="text-gray-950 hover:text-gray-700 side-nav-link"
+              href="login.html"
+              >Sign in</a
+            >
+          </div>
+          <div>
+            <select
+              class="cursor-pointer py-1 rounded-md bg-neutral text-black border-2 border-indigo-400 placeholder:text-base"
+              name="Countey"
+              id="items"
+            >
+              <option value="CAN">KES</option>
+              <option value="CAN">UGD</option>
+              <option value="CAN">TAZ</option>
+              <option value="CAN">EUR</option>
+              <option value="CAN">CAN</option>
+            </select>
+          </div>
+        </div>
+      </section>
+      <!-- Navigation -->
+      <nav id="nav" class="flex flex-col 2xl:container 2xl:mx-auto">
+        <!-- Lower Header -->
+        <div
+          class="flex flex-row items-center bg-neutral dark:bg-primary py-2 px-5 lg:justify-between"
+        >
+          <div class="flex flex-row gap-4 items-center flex-none w-20">
+            <!-- Menu Icon Hidden on 1024px-->
+            <span id="menu-button" class="cursor-pointer lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-8 h-8 svgs"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+                />
+              </svg>
+
+              <span class="sr-only">Menu Icon</span>
+            </span>
+            <!-- Logo Image Hidden normally Shown On 1024px -->
+            <a
+              href="#"
+              class="flex-1 gap-2 items-center justify-center hidden lg:flex px-4"
+            >
+              <img
+                class="max-w-full opacity-80 hover:opacity-100 transition-opacity transform scale-150"
+                src="./src/asset/img/logo-main.png"
+                width="60"
+                height="60"
+                alt="Comapny logo"
+              />
+              <span class="font-bold text-xl text-indigo-700">
+                COMlection
+              </span>
+            </a>
+            <!-- Search Icon Hidden On larger Screen 1024 -->
+            <span id="search-button" class="cursor-pointer lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="svgs"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+              <span class="sr-only">Search Icon</span>
+            </span>
+          </div>
+          <!-- Links -->
+          <div class="gap-2 hidden lg:flex">
+            <a class="nav-link nav-link-active" href="#">Home</a>
+            <a class="nav-link" href="#men">Men</a>
+            <a class="nav-link" href="#women">Women</a>
+            <a class="nav-link" href="#discover">Hot Deals</a>
+            <a class="nav-link" href="store.html">Store</a>
+            <a class="nav-link" href="dashboard.html">My Account</a>
+          </div>
+          <!-- Logo Image Hidden on Larger screen -->
+          <a href="#" class="flex-1 flex items-center justify-center lg:hidden">
+            <img
+              class="max-w-full opacity-80 hover:opacity-100 transition-opacity transform scale-150"
+              src="./src/asset/img/logo-main.png"
+              width="60"
+              height="60"
+              alt="Comapny logo"
+            />
+          </a>
+
+          <div class="flex-none w-30 flex justify-between gap-4 items-center">
+            <!-- Search Icon -->
+            <span id="search-button" class="cursor-pointer hidden lg:block">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="svgs"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+              <span class="sr-only">Search Icon</span>
+            </span>
+            <!-- Dark Mode Part -->
+            <span id="sun" class="cursor-pointer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="svgs"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                />
+              </svg>
+              <span class="sr-only">Light Icon</span>
+            </span>
+            <span id="moon" class="cursor-pointer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="svgs"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+                />
+              </svg>
+              <span class="sr-only">Moon Icon</span>
+            </span>
+            <!-- Cart Section -->
+            <div
+              id="cart-button"
+              class="flex items-center justify-center cursor-pointer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="svgs mr-1"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                />
+              </svg>
+
+              <span class="sr-only">Cart Icon</span>
+              <span
+                class="lining-nums flex text-gray-900 dark:text-gray-200 font-medium select-none p-1 w-7 h-7 items-center justify-center border border-indigo-600 rounded-full text-base"
+                >4</span
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+
       <!-- DashBoard Section -->
       <section class="2xl:container 2xl:mx-auto">
         <div class="flex flex-col gap-3 px-1">
@@ -24,7 +751,7 @@
           <div
             class="w-full relative bg-indigo-600/90 py-3 px-2 flex gap-2 items-center"
           >
-            <span class="para-text text-white"
+            <span class="para-text text-white dark:text-gray-200"
               >Welcome back, <strong>Flivian</strong>🙋</span
             >
           </div>
@@ -32,34 +759,44 @@
           <div
             class="flex flex-col sm:grid md:grid-cols-[300px_1fr] sm:gap-5 sm:px-5"
           >
-            <div class="shadow-2xl rounded-md bg-white">
-              <div class="flex flex-col px-1 mt-10 gap-2">
+            <div class="shadow-2xl rounded-md bg-white dark:bg-slate-800">
+              <div id="update-container" class="flex flex-col px-1 mt-10 gap-2">
                 <!-- Item 1 -->
                 <div
-                  class="flex items-center gap-3 py-2 px-2 rounded-md cursor-pointer bg-indigo-500/20"
+                  id="update"
+                  data-update="1"
+                  class="active-dash flex items-center gap-3 py-2 px-2 rounded-md cursor-pointer hover:bg-indigo-500/20 active:bg-indigo-500/40"
                 >
                   <ion-icon name="person-outline" class="svgs"></ion-icon>
                   <span class="head-text">Update Information</span>
                 </div>
                 <div
+                  id="update"
+                  data-update="2"
                   class="flex items-center gap-3 py-2 px-2 hover:bg-indigo-500/20 active:bg-indigo-500/40 rounded-md cursor-pointer"
                 >
                   <ion-icon name="call-outline" class="svgs"></ion-icon>
                   <span class="head-text">Edit Phone Number</span>
                 </div>
                 <div
+                  id="update"
+                  data-update="3"
                   class="flex items-center gap-3 py-2 px-2 rounded-md cursor-pointer hover:bg-indigo-500/20 active:bg-indigo-500/40"
                 >
                   <ion-icon name="key-outline" class="svgs"></ion-icon>
                   <span class="head-text">Change password</span>
                 </div>
                 <div
+                  id="update"
+                  data-update="4"
                   class="flex items-center gap-3 py-2 px-2 rounded-md cursor-pointer hover:bg-indigo-500/20 active:bg-indigo-500/40"
                 >
                   <ion-icon name="eye-outline" class="svgs"></ion-icon>
                   <span class="head-text">Close account</span>
                 </div>
                 <div
+                  id="update"
+                  data-update="4"
                   class="flex items-center gap-3 py-2 px-2 rounded-md cursor-pointer hover:bg-indigo-500/20 active:bg-indigo-500/40"
                 >
                   <ion-icon name="save-outline" class="svgs"></ion-icon>
@@ -68,15 +805,17 @@
               </div>
             </div>
 
-            <div class="bg-white sm:shadow-2xl px-2 py-5 sm:rounded-md">
+            <div
+              class="bg-white dark:bg-slate-800 sm:shadow-2xl px-2 py-5 sm:rounded-md"
+            >
               <!-- Update Personal Details -->
-              <div class="dash-1">
+              <div id="update-content" class="update-1">
                 <div class="border-b py-2 mb-3">
                   <h1 class="head-text text-2xl">Update Personal details</h1>
                 </div>
                 <!-- Update Account details -->
                 <section
-                  class="container mx-auto lg:w-[650px] bg-neutral border rounded-md border-gray-200 sm:px-3 py-2"
+                  class="container mx-auto lg:w-[650px] bg-neutral dark:bg-slate-800 border rounded-md border-gray-200 sm:px-3 py-2"
                 >
                   <div class="flex flex-col gap-3">
                     <!-- User Information -->
@@ -184,13 +923,13 @@
               </div>
 
               <!-- Update Phone Number -->
-              <div class="dash-2 hidden">
+              <div id="update-content" class="update-2 hidden">
                 <div class="border-b py-2 mb-3">
                   <h1 class="head-text text-2xl">Update Phone Number</h1>
                 </div>
                 <!-- Update Account details -->
                 <section
-                  class="container mx-auto lg:w-[650px] bg-neutral border rounded-md border-gray-200 sm:px-3 py-2"
+                  class="container mx-auto lg:w-[650px] bg-neutral dark:bg-slate-800 border rounded-md border-gray-200 sm:px-3 py-2"
                 >
                   <div class="flex flex-col gap-3">
                     <!-- Phone Number  Information -->
@@ -226,13 +965,13 @@
                 </section>
               </div>
               <!-- change password-->
-              <div class="dash-3 hidden">
+              <div id="update-content" class="update-3 hidden">
                 <div class="border-b py-2 mb-3">
                   <h1 class="head-text text-2xl">Change Password</h1>
                 </div>
                 <!-- change password -->
                 <section
-                  class="container mx-auto lg:w-[650px] bg-neutral border rounded-md border-gray-200 sm:px-3 py-2"
+                  class="container mx-auto lg:w-[650px] bg-neutral dark:bg-slate-800 border rounded-md border-gray-200 sm:px-3 py-2"
                 >
                   <div class="flex flex-col gap-3">
                     <!-- Change Password -->
@@ -289,22 +1028,22 @@
                   </div>
                 </section>
               </div>
-              <!-- Update Phone Number -->
-              <div class="dash-4 hidden">
+              <!-- Delete Account and Close Account -->
+              <div id="update-content" class="update-4 hidden">
                 <div class="border-b py-2 mb-3">
-                  <h1 class="head-text text-2xl text-red-600">Danger zone</h1>
+                  <h1 class="font-extrabold text-center text-2xl text-red-600">Danger zone</h1>
                 </div>
                 <!-- Update Account details -->
                 <section
-                  class="container mx-auto lg:w-[650px] bg-neutral border rounded-md border-gray-200 sm:px-3 py-2"
+                  class="container mx-auto lg:w-[650px] bg-neutral dark:bg-slate-800 border rounded-md border-gray-200 sm:px-3 py-2"
                 >
                   <div
                     class="w-full my-1 py-2 px-2 flex flex-col gap-3 items-center"
                   >
-                    <h1 class="text-xl lg:text-2xl font-bold text-gray-800">
+                    <h1 class="text-xl lg:text-2xl font-bold text-gray-800 dark:text-white">
                       We hate to see you go.😪
                     </h1>
-                    <p class="text-center">
+                    <p class="text-center dark:text-gray-200">
                       Before you delete your account, we would want you to know
                       that this action will delete your data across all
                       COMlection platforms. If that's what you want, please
@@ -461,6 +1200,7 @@
         </div>
       </footer>
     </main>
+    <script type="module" src="./src/js/main.js"></script>
     <script type="module" src="./src/js/account-management.js"></script>
   </body>
 </html>

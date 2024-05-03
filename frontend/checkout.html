@@ -7,10 +7,12 @@
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link href="src/css/output.css" rel="stylesheet" />
   </head>
-  <body class="bg-gray-100">
-    <main class="relative">
+  <body class="bg-gray-100 dark:bg-darkcolor">
+    <main class="relative dark:bg-darkcolor">
       <!-- Success Dialog Box -->
-      <section class="shadow-lg hidden fixed bottom-2 sm:w-[600px] sm:px-5 left-0 right-0 mx-auto bg-neutral z-50 rounded-lg">
+      <section
+        class="shadow-lg hidden fixed bottom-2 sm:w-[600px] sm:px-5 left-0 right-0 mx-auto bg-neutral z-50 rounded-lg"
+      >
         <div class="flex flex-col gap-4 items-center py-10 px-2">
           <span
             class="p-2 bg-green-200 w-16 h-16 flex justify-center items-center rounded-full"
@@ -30,29 +32,43 @@
               />
             </svg>
           </span>
-          <h1 class="text-2xl text-gray-900 font-mono font-bold">
+          <h1
+            class="text-2xl text-gray-900 font-mono font-bold dark:text-gray-200"
+          >
             Payment successful!!
           </h1>
-          <p class="text-xl text-gray-600 font-medium text-center">
+          <p
+            class="text-xl text-gray-600 font-medium text-center dark:text-gray-200"
+          >
             Thanks for choosing COMlection Lorem ipsum dolor sit amet sit amet.
           </p>
-          <a href="index.html"
-          class="inline-block text-center py-2 px-5 w-full rounded-lg text-white text-xl font-medium hover:bg-indigo-500 active:bg-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 bg-indigo-600"
-        >
-          Go back to store
-        </a>
+          <a
+            href="index.html"
+            class="inline-block text-center py-2 px-5 w-full rounded-lg text-white text-xl font-medium hover:bg-indigo-500 active:bg-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 bg-indigo-600"
+          >
+            Go back to store
+          </a>
         </div>
       </section>
       <!-- Shopping Cart Section -->
       <!-- By deafult hidden -->
       <section
-        class="w-full hidden sm:w-[500px] h-full fixed right-0 top-0 z-50 bg-neutral overflow-y-auto"
+        id="cart"
+        class="w-full hidden sm:w-[500px] h-full fixed right-0 top-0 z-50 bg-neutral dark:bg-slate-800 overflow-y-auto"
       >
         <div class="px-2">
           <!-- Top  -->
-          <div class="flex items-center justify-between py-4 mx-3 border-b-2">
-            <span class="text-xl text-gray-700 font-bold">Shopping cart</span>
-            <span class="inline-block cursor-pointer">
+          <div
+            class="flex items-center justify-between py-4 mx-3 border-b-2 dark:border-gray-500"
+          >
+            <span class="text-xl text-gray-700 font-bold dark:text-gray-200"
+              >Shopping cart</span
+            >
+            <span
+              title="ctrl + x"
+              id="cart-close"
+              class="inline-block cursor-pointer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -72,7 +88,7 @@
           <!-- More cart inserted Here -->
           <div class="flex flex-col gap-3 px-1">
             <!-- Cart Items -->
-            <a href="#" class="flex py-2 gap-4 border-b-2">
+            <a href="#" class="flex py-2 gap-4 border-b-2 dark:border-gray-500">
               <div
                 class="flex justify-center items-center w-22 h-22 border-2 border-indigo-600 rounded"
               >
@@ -84,10 +100,16 @@
               </div>
               <div class="flex-1">
                 <div class="flex flex-col">
-                  <h1 class="text-xl text-gray-700 font-bold">
+                  <h1
+                    class="text-xl text-gray-700 font-bold dark:text-gray-200"
+                  >
                     Throwback Hip Bag
                   </h1>
-                  <p class="text-base text-gray-500 font-medium">Salmon</p>
+                  <p
+                    class="text-base text-gray-500 font-medium dark:text-gray-400"
+                  >
+                    Salmon
+                  </p>
                   <div class="flex gap-2 items-center mt-5">
                     <span class="inline-block cursor-pointer">
                       <svg
@@ -106,7 +128,7 @@
                       </svg>
                     </span>
                     <span
-                      class="py-[1px] px-5 bg-gray-100 text-black text-center text-xl font-mono"
+                      class="py-[1px] px-5 bg-white dark:bg-gray-600 text-gray-950 text-center text-xl font-mono dark:text-white"
                       >2</span
                     >
                     <span class="inline-block cursor-pointer">
@@ -130,7 +152,8 @@
               </div>
               <div class="flex-none w-20">
                 <div class="flex flex-col justify-between h-full">
-                  <span class="block text-xl text-gray-900 font-bold"
+                  <span
+                    class="block text-xl text-gray-900 font-bold dark:text-white"
                     >$90.00</span
                   >
                   <span
@@ -172,7 +195,7 @@
                       </svg>
                     </span>
                     <span
-                      class="py-[1px] px-5 bg-gray-100 text-black text-center text-xl font-mono"
+                      class="py-[1px] px-5 bg-white text-gray-950 text-center text-xl font-mono"
                       >1</span
                     >
                     <span class="inline-block cursor-pointer">
@@ -238,8 +261,8 @@
                       </svg>
                     </span>
                     <span
-                      class="py-[1px] px-5 bg-gray-100 text-black text-center text-xl font-mono"
-                      >3</span
+                      class="py-[1px] px-5 bg-white text-gray-950 text-center text-xl font-mono"
+                      >1</span
                     >
                     <span class="inline-block cursor-pointer">
                       <svg
@@ -275,10 +298,17 @@
           </div>
           <div class="flex flex-col gap-2 mx-2 my-5">
             <div class="flex justify-between">
-              <span class="text-xl text-gray-700 font-bold">Subtotal</span>
-              <span class="block text-xl text-gray-900 font-bold">$260.00</span>
+              <span class="text-xl text-gray-700 font-bold dark:text-gray-200"
+                >Subtotal</span
+              >
+              <span
+                class="block text-xl text-gray-900 font-bold dark:text-white"
+                >$260.00</span
+              >
             </div>
-            <p class="text-base text-gray-500 font-medium mb-2">
+            <p
+              class="text-base text-gray-500 font-medium mb-2 dark:text-gray-200"
+            >
               Shipping and taxes calculated at checkout.
             </p>
             <a
@@ -287,10 +317,13 @@
               >Checkout</a
             >
             <div class="flex justify-center items-center gap-1">
-              <span class="inline-block text-gray-700 text-lg">or</span>
+              <span
+                class="inline-block text-gray-700 text-lg dark:text-gray-200"
+                >or</span
+              >
               <a
                 class="text-indigo-600 underline underline-offset-1 text-lg font-medium hover:text-indigo-500"
-                href="#"
+                href="store.html"
               >
                 Continue Shopping
               </a>
@@ -317,11 +350,14 @@
       <!-- Search Section -->
       <!-- Hidden By default -->
       <section
-        class="container hidden fixed top-1/2 transform -translate-y-1/2 my-auto left-0 right-0 z-50 mx-auto w-full sm:w-[600px] bg-neutral rounded-xl shadow-2xl"
+        id="search"
+        class="container hidden fixed top-1/2 transform -translate-y-1/2 my-auto left-0 right-0 z-[100] mx-auto w-full sm:w-[600px] bg-neutral dark:bg-slate-800 rounded-xl shadow-2xl"
       >
         <div class="flex flex-col gap-3">
           <!-- Top -->
-          <div class="px-2 flex items-center border-b-2 gap-5">
+          <div
+            class="px-2 flex items-center border-b-2 dark:border-gray-500 gap-5"
+          >
             <span class="cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -341,13 +377,14 @@
             </span>
             <div class="flex-1">
               <input
+                id="search-input"
                 class="w-full border-none bg-inherit focus:outline-none focus:ring-0 focus:ring-offset-0 caret-indigo-500"
                 type="text"
                 placeholder="Search anything"
                 name="Seach Field"
               />
             </div>
-            <span class="inline-block cursor-pointer py-2">
+            <span id="search-close" class="inline-block cursor-pointer py-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -367,25 +404,30 @@
           <!-- Recent Part-->
           <div class="overflow-y-scroll pr-1 h-48">
             <!-- Shown Only when there is no search item -->
-            <div class="w-full h-full flex justify-center items-center">
-              <span class="inline-block text-2xl text-gray-700 font-bold"
+            <div class="w-full hidden h-full justify-center items-center">
+              <span
+                class="inline-block text-2xl text-gray-700 dark:text-gray-200 font-bold"
                 >No recent search :)</span
               >
             </div>
             <!-- Display only it there is a search Display The seach -->
-            <div class="hidden">
+            <div class="mt-1">
               <div class="flex flex-col gap-1">
-                <div class="py-2 border-b-2">
-                  <h1 class="ml-4 text-2xl text-gray-700 font-bold">Recent</h1>
+                <div class="py-2 border-b-2 dark:border-gray-700">
+                  <h1
+                    class="ml-4 text-2xl text-gray-700 dark:text-gray-200 font-bold"
+                  >
+                    Recent
+                  </h1>
                 </div>
                 <!-- Search results are Appended here -->
                 <div>
                   <a
                     href="#"
-                    class="flex items-center justify-between border-b-2 py-2"
+                    class="flex items-center justify-between border-b-2 dark:border-gray-700 py-2"
                   >
                     <h1
-                      class="text-lg ml-4 text-gray-600 font-medium font-mono"
+                      class="text-lg ml-4 text-gray-600 dark:text-gray-200 font-medium font-mono"
                     >
                       How To Puchase?
                     </h1>
@@ -427,16 +469,20 @@
                 </div>
               </div>
               <div class="flex flex-col gap-1">
-                <div class="py-2 border-b-2">
-                  <h1 class="ml-4 text-2xl text-gray-700 font-bold">
+                <div class="py-2 border-b-2 dark:border-gray-700">
+                  <h1
+                    class="ml-4 text-2xl text-gray-700 dark:text-gray-200 font-bold"
+                  >
                     Favourite
                   </h1>
                 </div>
                 <a
                   href="#"
-                  class="flex items-center justify-between border-b-2 py-2"
+                  class="flex items-center justify-between border-b-2 dark:border-gray-700 py-2"
                 >
-                  <h1 class="text-lg ml-4 text-gray-600 font-medium font-mono">
+                  <h1
+                    class="text-lg ml-4 text-gray-600 dark:text-gray-200 font-medium font-mono"
+                  >
                     How to return item.
                   </h1>
                   <div class="flex gap-2 ml-3">
@@ -476,9 +522,9 @@
             </div>
           </div>
           <!-- Bottom -->
-          <div class="flex justify-end border-t-2">
+          <div class="flex justify-end border-t-2 dark:border-gray-500">
             <a
-              class="inline-block text-xl mr-6 my-3 font-semibold text-gray-700"
+              class="inline-block text-xl mr-6 my-3 font-semibold text-gray-700 dark:text-gray-200"
               href="#"
               >Search by
               <span
@@ -493,100 +539,61 @@
       <!-- On large screen 1024 Overlay set to Hidden -->
       <!-- Use Js To Show and Remove -->
       <div
-        class="absolute hidden lg:hidden top-0 left-0 bg-white backdrop-blur-[1.5px] bg-white/10 w-full h-full z-20"
+        id="overlay"
+        class="absolute hidden top-0 left-0 bg-white backdrop-blur-[1.5px] bg-white/10 w-full h-full z-20"
       ></div>
       <!-- Menu Section -->
       <!-- Hidden By default Show Only after Click -->
       <section
-        class="absolute hidden lg:hidden top-0 left-0 z-50 shadow-xl h-full w-[350px] bg-neutral px-5 py-10"
+        id="menu"
+        class="absolute hidden lg:hidden top-0 left-0 z-50 shadow-xl h-full w-[350px] bg-neutral dark:bg-slate-800 px-5 py-10"
       >
         <div class="flex flex-col gap-3">
-          <span class="inline-block cursor-pointer py-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-8 h-8 svgs"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18 18 6M6 6l12 12"
-              />
-            </svg>
+          <span id="menu-close" class="inline-block cursor-pointer py-2">
+            <ion-icon name="close-outline" class="w-8 h-8 svgs"></ion-icon>
           </span>
           <!-- Nav Link -->
           <div class="flex gap-4 py-2">
             <div
-              class="text-2xl font-semibold cursor-pointer py-2 px-5 border-b-2 border-b-indigo-700 text-indigo-600"
+              class="text-2xl font-semibold cursor-pointer py-2 border-b-2 pr-3 border-b-indigo-700 dark:border-b-gray-500 text-indigo-600 dark:text-gray-100"
             >
-              Women
-            </div>
-            <div class="text-2xl font-semibold cursor-pointer py-2 px-5">
-              Men
+              Popular categories
             </div>
           </div>
           <!-- All links -->
-          <div class="flex flex-col gap-4 mt-3">
-            <!-- Link 1 -->
-            <div class="flex flex-col gap-5">
-              <h1 class="text-2xl text-gray-900 font-bold">Featured</h1>
-              <div class="flex flex-col gap-4">
-                <a class="side-nav-link" href="#">Sleep</a>
-                <a class="side-nav-link" href="#">Swimwear</a>
-                <a class="side-nav-link" href="#">Underwear</a>
-              </div>
-            </div>
-            <!-- Link 2 -->
-            <div class="flex flex-col gap-5">
-              <h1 class="text-2xl text-gray-900 font-bold">Categories</h1>
-              <div class="flex flex-col gap-4">
-                <a class="side-nav-link" href="#">Basic Tees</a>
-                <a class="side-nav-link" href="#">Artwork Tees</a>
-                <a class="side-nav-link" href="#">Bottoms</a>
-                <a class="side-nav-link" href="#">Underwear</a>
-                <a class="side-nav-link" href="#">Accessories</a>
-              </div>
-            </div>
-            <!-- Link 1 -->
-            <div class="flex flex-col gap-5">
-              <h1 class="text-2xl text-gray-900 font-bold">Collection</h1>
-              <div class="flex flex-col gap-4">
-                <a class="side-nav-link" href="#">Everything</a>
-                <a class="side-nav-link" href="#">Core</a>
-                <a class="side-nav-link" href="#">New Arrivals</a>
-                <a class="side-nav-link" href="#">Sales</a>
-              </div>
-            </div>
-            <!-- Link 1 -->
-            <div class="flex flex-col gap-5">
-              <h1 class="text-2xl text-gray-900 font-bold">Brands</h1>
-              <div class="flex flex-col gap-4">
-                <a class="side-nav-link" href="#">Full Nelson</a>
-                <a class="side-nav-link" href="#">My Way</a>
-                <a class="side-nav-link" href="#">Re-Arranged</a>
-                <a class="side-nav-link" href="#">Counterfeit</a>
-                <a class="side-nav-link" href="#">Significant Other</a>
-              </div>
+          <div class="flex flex-col gap-4 mt-1">
+            <div id="side-menu-container" class="flex flex-col gap-4">
+              <!-- Add all the Popular Categories Using JS -->
             </div>
           </div>
           <!-- CoMpany And stores -->
-          <div class="flex flex-col gap-2 py-4 border-y-2">
-            <a class="text-gray-950 hover:text-gray-700 side-nav-link" href="#"
-              >Company</a
+          <div class="flex flex-col gap-2 py-4 border-y-2 dark:border-gray-700">
+            <a
+              class="text-gray-950 hover:text-gray-700 side-nav-link"
+              href="#men"
+              >Men</a
             >
-            <a class="text-gray-950 hover:text-gray-700 side-nav-link" href="#"
+            <a
+              class="text-gray-950 hover:text-gray-700 side-nav-link"
+              href="#women"
+              >Women</a
+            >
+            <a
+              class="text-gray-950 hover:text-gray-700 side-nav-link"
+              href="store.html"
               >Stores</a
             >
           </div>
           <!-- CoMpany And stores -->
-          <div class="flex flex-col gap-2 py-4 border-b-2">
-            <a class="text-gray-950 hover:text-gray-700 side-nav-link" href="#"
+          <div class="flex flex-col gap-2 py-4 border-b-2 dark:border-gray-700">
+            <a
+              class="text-gray-950 hover:text-gray-700 side-nav-link"
+              href="account.html"
               >Create an account</a
             >
-            <a class="text-gray-950 hover:text-gray-700 side-nav-link" href="#"
+            <a
+              class="text-gray-950 hover:text-gray-700 side-nav-link"
+              href="login.html"
               >Sign in</a
             >
           </div>
@@ -606,12 +613,12 @@
         </div>
       </section>
       <!-- Navigation -->
-      <nav class="flex flex-col">
+      <nav id="nav" class="flex flex-col 2xl:container 2xl:mx-auto">
         <header
-          class="bg-primary py-2 flex items-center lg:justify-between justify-center lg:px-3"
+          class="bg-primary py-2 flex items-center dark:bg-darkcolor lg:justify-between justify-center lg:px-3"
         >
           <select
-            class="hidden cursor-pointer lg:block py-1 rounded-lg bg-primary text-neutral border-2 border-white placeholder:text-base"
+            class="hidden cursor-pointer lg:block py-1 rounded-lg bg-primary text-neutral dark:bg-primary border-2 border-white placeholder:text-base"
             name="Countey"
             id="items"
           >
@@ -621,7 +628,7 @@
             <option value="CAN">EUR</option>
             <option value="CAN">CAN</option>
           </select>
-          <a href="#" class="text-neutral text-base font-semibold">
+          <a href="store.html" class="text-neutral text-base font-semibold">
             Get free delivery on orders over $100
           </a>
           <div
@@ -629,47 +636,48 @@
           >
             <a
               class="text-neutral/90 text-lg inline-block hover:underline transition-all hover:underline-offset-2 duration-300"
-              href="#"
+              href="account.html"
               >Create an account</a
             >
             <a
               class="text-neutral/90 text-lg inline-block pl-4 hover:underline transition-all hover:underline-offset-2 duration-300"
-              href="#"
+              href="login.html"
               >Sign in</a
             >
           </div>
         </header>
         <!-- Lower Header -->
         <div
-          class="flex flex-row items-center bg-neutral py-2 px-5 lg:justify-between"
+          class="flex flex-row items-center bg-neutral dark:bg-primary py-2 px-5 lg:justify-between"
         >
           <div class="flex flex-row gap-4 items-center flex-none w-20">
             <!-- Menu Icon Hidden on 1024px-->
-            <span class="cursor-pointer lg:hidden">
+            <span id="menu-button" class="cursor-pointer lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="svgs"
+                class="w-8 h-8 svgs"
               >
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
                 />
               </svg>
+
               <span class="sr-only">Menu Icon</span>
             </span>
             <!-- Logo Image Hidden normally Shown On 1024px -->
             <a
               href="#"
-              class="flex-1 items-center justify-center hidden lg:flex"
+              class="flex-1 gap-2 items-center justify-center hidden lg:flex px-4"
             >
               <img
-                class="max-w-full opacity-80 hover:opacity-100 transition-opacity"
-                src="./src/asset/images/logo.jpg"
+                class="max-w-full opacity-80 hover:opacity-100 transition-opacity transform scale-150"
+                src="./src/asset/img/logo-main.png"
                 width="60"
                 height="60"
                 alt="Comapny logo"
@@ -679,7 +687,7 @@
               </span>
             </a>
             <!-- Search Icon Hidden On larger Screen 1024 -->
-            <span class="cursor-pointer lg:hidden">
+            <span id="search-button" class="cursor-pointer lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -700,16 +708,17 @@
           <!-- Links -->
           <div class="gap-2 hidden lg:flex">
             <a class="nav-link nav-link-active" href="#">Home</a>
-            <a class="nav-link" href="#">Men</a>
-            <a class="nav-link" href="#">Women</a>
-            <a class="nav-link" href="#">Store</a>
-            <a class="nav-link" href="#">My Account</a>
+            <a class="nav-link" href="#men">Men</a>
+            <a class="nav-link" href="#women">Women</a>
+            <a class="nav-link" href="#discover">Hot Deals</a>
+            <a class="nav-link" href="store.html">Store</a>
+            <a class="nav-link" href="dashboard.html">My Account</a>
           </div>
           <!-- Logo Image Hidden on Larger screen -->
           <a href="#" class="flex-1 flex items-center justify-center lg:hidden">
             <img
-              class="max-w-full opacity-80 hover:opacity-100 transition-opacity"
-              src="./src/asset/images/logo.jpg"
+              class="max-w-full opacity-80 hover:opacity-100 transition-opacity transform scale-150"
+              src="./src/asset/img/logo-main.png"
               width="60"
               height="60"
               alt="Comapny logo"
@@ -717,7 +726,8 @@
           </a>
 
           <div class="flex-none w-30 flex justify-between gap-4 items-center">
-            <span class="cursor-pointer hidden lg:block">
+            <!-- Search Icon -->
+            <span id="search-button" class="cursor-pointer hidden lg:block">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -734,7 +744,8 @@
               </svg>
               <span class="sr-only">Search Icon</span>
             </span>
-            <span class="cursor-pointer">
+            <!-- Dark Mode Part -->
+            <span id="sun" class="cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -749,13 +760,16 @@
                   d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
                 />
               </svg>
+              <span class="sr-only">Light Icon</span>
+            </span>
+            <span id="moon" class="cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-6 h-6 hidden"
+                class="svgs"
               >
                 <path
                   stroke-linecap="round"
@@ -763,11 +777,12 @@
                   d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
                 />
               </svg>
-
-              <span class="sr-only">Light Icon</span>
+              <span class="sr-only">Moon Icon</span>
             </span>
+            <!-- Cart Section -->
             <div
-              class="relative flex items-center justify-center cursor-pointer"
+              id="cart-button"
+              class="flex items-center justify-center cursor-pointer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -786,7 +801,7 @@
 
               <span class="sr-only">Cart Icon</span>
               <span
-                class="absolute -top-[10px] -right-[8px] lining-nums flex text-gray-900 font-medium select-none p-1 w-4 h-4 lg:h-5 lg:w-5 items-center justify-center border border-indigo-600 rounded-full text-xs"
+                class="lining-nums flex text-gray-900 dark:text-gray-200 font-medium select-none p-1 w-7 h-7 items-center justify-center border border-indigo-600 rounded-full text-base"
                 >4</span
               >
             </div>
@@ -795,7 +810,7 @@
       </nav>
       <!-- Breadcrumbs -->
       <section class="2xl:container 2xl:mx-auto">
-        <div class="bg-neutral py-3 px-5 mt-1 mb-2">
+        <div class="bg-neutral dark:bg-darkcolor py-3 px-5 mt-1 mb-2">
           <ul class="flex gap-2 text-center">
             <li>
               <a class="" href="index.html">
@@ -816,15 +831,15 @@
                 <span class="sr-only">Home Icon</span>
               </a>
             </li>
-            <li><span>/</span></li>
+            <li><span class="dark:text-gray-200">/</span></li>
             <li>
               <a
-                class="bread-link text-gray-600/80 hover:text-gray-600 active:text-gray-700"
+                class="bread-link text-gray-600/80 hover:text-gray-600 active:text-gray-700 dark:text-gray-400"
                 href="index.html"
                 >Cart</a
               >
             </li>
-            <li><span>/</span></li>
+            <li><span class="dark:text-gray-200">/</span></li>
             <li><a class="bread-link bread-active" href="#">Checkout</a></li>
           </ul>
         </div>
@@ -833,7 +848,9 @@
       <!-- CheckOut Section -->
       <section class="container mx-auto">
         <div class="w-full my-3 py-2 px-2 lg:-mb-5 lg:px-10">
-          <h1 class="text-3xl lg:text-3xl font-bold font-mono text-gray-800">
+          <h1
+            class="text-3xl lg:text-3xl font-bold font-mono text-gray-800 dark:text-gray-200"
+          >
             Checkout Forms
           </h1>
         </div>
@@ -846,8 +863,8 @@
             class="flex flex-col gap-3 py-5 px-0"
           >
             <!-- Contant info -->
-            <div class="flex flex-col gap-3 px-2 py-5 border-b">
-              <h1 class="text-2xl font-bold text-gray-700">
+            <div class="flex flex-col gap-3 px-2 py-5 border-b dark:border-gray-500">
+              <h1 class="text-2xl font-bold text-gray-700 dark:text-gray-200">
                 Contact information
               </h1>
               <div class="flex flex-col gap-2">
@@ -864,8 +881,8 @@
             </div>
 
             <!-- Shipping information -->
-            <div class="flex flex-col gap-5 px-2 py-10 border-b">
-              <h1 class="text-2xl font-bold text-gray-700">
+            <div class="flex flex-col gap-5 px-2 py-10 border-b dark:border-gray-500">
+              <h1 class="text-2xl font-bold text-gray-700 dark:text-gray-200">
                 Shiping information
               </h1>
               <div class="flex flex-col gap-2">
@@ -960,12 +977,16 @@
               </div>
             </div>
             <!-- Delivery Mothod -->
-            <div class="flex flex-col gap-4 px-2 py-10 border-b">
-              <h1 class="text-2xl font-bold text-gray-700">Delivery method</h1>
+            <div class="flex flex-col gap-4 px-2 py-10 border-b dark:border-gray-500">
+              <h1 class="text-2xl font-bold text-gray-700 dark:text-gray-200">
+                Delivery method
+              </h1>
               <!-- Cards -->
-              <div class="flex flex-col gap-3">
+              <div id="delivery-container" class="flex flex-col gap-3">
                 <!-- Card 1 -->
-                <div class="card--active-check py-3 rounded-lg space-x-2 px-2">
+                <div id="delivery-card"
+                  class="card--active-check "
+                >
                   <div class="flex justify-between items-center px-2">
                     <span class="check-label">Standard</span>
                     <span class="cursor-pointer">
@@ -987,15 +1008,18 @@
                     </span>
                   </div>
                   <div class="">
-                    <p class="text-base text-gray-600">4–10 business days</p>
+                    <p class="text-base text-gray-600 dark:text-gray-400">
+                      4–10 business days
+                    </p>
                   </div>
-                  <span class="block mt-5 text-xl text-gray-800 font-bold"
+                  <span
+                    class="block mt-5 text-xl text-gray-800 font-bold dark:text-gray-200"
                     >$5.00</span
                   >
                 </div>
                 <!-- Card 2 -->
-                <div
-                  class="border border-gray-400 py-3 rounded-lg space-x-2 px-2 shadow-lg"
+                <div id="delivery-card"
+                  class="card-original"
                 >
                   <div class="flex justify-between px-2 items-center">
                     <span class="check-label">Express</span>
@@ -1018,9 +1042,12 @@
                     </span>
                   </div>
                   <div class="">
-                    <p class="text-base text-gray-600">2–5 business days</p>
+                    <p class="text-base text-gray-600 dark:text-gray-400">
+                      2–5 business days
+                    </p>
                   </div>
-                  <span class="block mt-5 text-xl text-gray-800 font-bold"
+                  <span
+                    class="block mt-5 text-xl text-gray-800 font-bold dark:text-gray-200"
                     >$16.00</span
                   >
                 </div>
@@ -1029,10 +1056,12 @@
             <!-- Select Mode of Payment -->
             <div class="flex flex-col gap-3">
               <!-- Payment Modes -->
-              <div class="flex flex-col gap-3 px-2 py-10 border-b">
-                <h1 class="text-2xl font-bold text-gray-700">Payment</h1>
-                <div class="lg:flex gap-3 items-center">
-                  <div class="flex gap-2 items-center">
+              <div class="flex flex-col gap-3 px-2 py-10 border-b dark:border-gray-500">
+                <h1 class="text-2xl font-bold text-gray-700 dark:text-gray-200">
+                  Payment
+                </h1>
+                <div id="payment-container"  class="lg:flex gap-3 items-center">
+                  <div id="payment-tab" data-mode="1" class="flex gap-2 items-center">
                     <input
                       type="radio"
                       id="card-check"
@@ -1044,7 +1073,7 @@
                       >Credit Card</label
                     >
                   </div>
-                  <div class="flex gap-2 items-center">
+                  <div id="payment-tab" data-mode="2" class="flex gap-2 items-center">
                     <input
                       type="radio"
                       id="mpesa-check"
@@ -1053,7 +1082,7 @@
                     />
                     <label for="mpesa-check" class="check-label">M-pesa</label>
                   </div>
-                  <div class="flex gap-2 items-center">
+                  <div id="payment-tab" data-mode="3" class="flex gap-2 items-center">
                     <input
                       type="radio"
                       id="paypal-check"
@@ -1066,8 +1095,8 @@
               </div>
               <!-- Payment Area -->
               <div>
-                <!-- Credit Card 1 -->
-                <div class="flex flex-col gap-3 px-2 py-5 border-b">
+                <!-- Credit Card  -->
+                <div id="payment-content" class="payment-1 flex flex-col gap-3 px-2 py-5 border-b">
                   <div class="flex flex-col gap-2">
                     <label for="card-num-check" class="check-label"
                       >Card number</label
@@ -1116,7 +1145,7 @@
                   </div>
                 </div>
                 <!--Mpesa  -->
-                <div class="hidden">
+                <div id="payment-content"  class="payment-2 hidden">
                   <div class="flex flex-col gap-3 px-2 py-5 border-b">
                     <div class="flex flex-col gap-2">
                       <label for="mpesa-num-check" class="check-label"
@@ -1133,7 +1162,7 @@
                   </div>
                 </div>
                 <!-- Paypal -->
-                <div class="hidden">
+                <div id="payment-content"  class="payment-3 hidden">
                   <div class="flex flex-col gap-3 px-2 py-5 border-b">
                     <div class="flex flex-col gap-2">
                       <label for="paypal-email-check" class="check-label"
@@ -1150,10 +1179,10 @@
                   </div>
                 </div>
               </div>
-              <div class="flex items-center justify-center border-b pb-3">
+              <div class="flex items-center justify-center border-b dark:border-gray-500 pb-3">
                 <button
                   type="submit"
-                  class="py-2 px-5 rounded-lg text-white text-xl font-medium hover:bg-indigo-500 active:bg-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 bg-indigo-600"
+                  class="py-2 px-5  rounded-lg text-white text-xl font-medium hover:bg-indigo-500 active:bg-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 bg-indigo-600"
                 >
                   Save and proceed
                 </button>
@@ -1163,17 +1192,18 @@
           <!-- Items On the cart -->
           <div class="lg:mt-10">
             <div
-              class="bg-neutral border border-indigo-500/30 mx-2 l rounded-lg lg:none lg:border-none lg:bg-transparent"
+              class="bg-neutral border dark:bg-slate-800 border-indigo-500/30 mx-2 l rounded-lg lg:none lg:border-none lg:bg-transparent"
             >
               <div class="px-2">
                 <!-- Top  -->
                 <div class="py-5 mx-3 border-b-2 lg:border-none">
-                  <span class="text-xl text-gray-700 font-bold"
+                  <span
+                    class="text-xl text-gray-700 font-bold dark:text-gray-200"
                     >Order Summary</span
                   >
                 </div>
                 <div
-                  class="lg:bg-neutral lg:border lg:border-indigo-500/30 lg:rounded-lg"
+                  class="lg:bg-neutral dark:bg-slate-800 lg:border lg:border-indigo-500/30 lg:rounded-lg"
                 >
                   <!-- More cart inserted Here -->
                   <div class="flex flex-col gap-3 px-1">
@@ -1391,32 +1421,42 @@
                   </div>
                   <div class="flex flex-col gap-2 mx-2 my-5">
                     <div class="flex justify-between">
-                      <span class="text-xl text-gray-700 font-medium"
+                      <span
+                        class="text-xl text-gray-700 font-medium dark:text-gray-200"
                         >Subtotal</span
                       >
-                      <span class="block text-xl text-gray-900 font-medium"
+                      <span
+                        class="block text-xl text-gray-900 font-medium dark:text-white"
                         >$100.00</span
                       >
                     </div>
                     <div class="flex justify-between">
-                      <span class="text-xl text-gray-700 font-medium"
+                      <span
+                        class="text-xl text-gray-700 font-medium dark:text-gray-200"
                         >Shipping</span
                       >
-                      <span class="block text-xl text-gray-900 font-medium"
+                      <span
+                        class="block text-xl text-gray-900 font-medium dark:text-white"
                         >$5.00</span
                       >
                     </div>
                     <div class="flex justify-between">
-                      <span class="text-xl text-gray-700 font-medium"
+                      <span
+                        class="text-xl text-gray-700 font-medium dark:text-gray-200"
                         >Taxes</span
                       >
-                      <span class="block text-xl text-gray-900 font-medium"
+                      <span
+                        class="block text-xl text-gray-900 font-medium dark:text-white"
                         >$3.30</span
                       >
                     </div>
                     <div class="flex justify-between py-2 border-y-2">
-                      <span class="text-xl text-gray-700 font-bold">Total</span>
-                      <span class="block text-xl text-gray-900 font-bold"
+                      <span
+                        class="text-xl text-gray-700 font-bold dark:text-gray-200"
+                        >Total</span
+                      >
+                      <span
+                        class="block text-xl text-gray-900 font-bold dark:text-white"
                         >$108.30</span
                       >
                     </div>
@@ -1434,67 +1474,22 @@
           </div>
         </div>
       </section>
-      <!-- You may also like.. -->
+      <!-- Customer Also Bought -->
       <section class="my-10">
         <div class="container mx-auto px-4">
           <div class="mx-2 flex justify-center py-10">
-            <h1 class="text-2xl font-bold">You may also like..</h1>
+            <h1 class="text-2xl font-bold dark:text-gray-200">
+              Customer also bought
+            </h1>
           </div>
           <!-- Products -->
           <div
+            id="customer-container"
             class="flex flex-col gap-8 md:grid md:grid-cols-2 lg:grid-cols-3"
           >
             <div class="flex flex-col gap-4 mx-2">
               <div class="shadow-lg relative pb-10 rounded-lg">
-                <img src="./src/asset/img/product-1-1.jpg" alt="Shoe Image" />
-                <div
-                  class="absolute bottom-0 flex items-end justify-end right-0 rounded-lg w-full bg-gradient-to-b from-transparent to-black/80 h-40"
-                >
-                  <span
-                    class="inline-block mr-5 mb-5 text-white text-xl font-bold"
-                    >$140</span
-                  >
-                </div>
-              </div>
-              <div class="flex flex-col">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Zip Tote Basket
-                </h2>
-                <p class="text-lg font-medium text-gray-600">White and black</p>
-              </div>
-              <a
-                class="bg-indigo-600 py-2 w-full rounded-lg text-center text-xl text-white hover:bg-indigo-500 active:bg-indigo-700 transition-all duration-300"
-                href="#"
-                >Add to bag</a
-              >
-            </div>
-            <div class="flex flex-col gap-4 mx-2">
-              <div class="shadow-lg relative pb-10 rounded-lg">
-                <img src="./src/asset/img/product-2-1.jpg" alt="Shoe Image" />
-                <div
-                  class="absolute bottom-0 flex items-end justify-end right-0 rounded-lg w-full bg-gradient-to-b from-transparent to-black/80 h-40"
-                >
-                  <span
-                    class="inline-block text-white mr-5 mb-5 text-xl font-bold"
-                    >$120</span
-                  >
-                </div>
-              </div>
-              <div class="flex flex-col">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Zip Tote Basket
-                </h2>
-                <p class="text-lg font-medium text-gray-600">White and black</p>
-              </div>
-              <a
-                class="bg-indigo-600 py-2 w-full rounded-lg text-center text-xl text-white hover:bg-indigo-500 active:bg-indigo-700 transition-all duration-300"
-                href="#"
-                >Add to bag</a
-              >
-            </div>
-            <div class="flex flex-col gap-4 mx-2">
-              <div class="shadow-lg relative pb-10 rounded-lg">
-                <img src="./src/asset/img/product-3-1.jpg" alt="Shoe Image" />
+                <img src="./src/asset/img/product-3-2.jpg" alt="Shoe Image" />
                 <div
                   class="absolute bottom-0 flex items-end justify-end right-0 rounded-lg w-full bg-gradient-to-b from-transparent to-black/80 h-40"
                 >
@@ -1520,28 +1515,39 @@
         </div>
       </section>
       <!-- Call to action -->
-      <section class="my-10 py-20 bg-white">
+      <section class="my-10 py-20 bg-white dark:bg-darkcolor">
         <div class="container mx-auto">
           <div
             class="flex flex-col gap-8 px-5 md:px-10 lg:grid lg:grid-cols-2 xl:gap-16"
           >
             <!-- Card 1 -->
-            <div class="bg-slate-100 px-5 py-8 rounded-lg flex flex-col gap-2">
-              <h1 class="text-2xl text-gray-900 font-bold">
+            <div
+              class="bg-slate-100 dark:bg-slate-800 px-5 py-8 rounded-lg flex flex-col gap-2"
+            >
+              <h1
+                class="text-2xl text-center text-gray-900 font-bold dark:text-gray-200"
+              >
                 Sign up for our newsletter
               </h1>
-              <p class="text-lg text-gray-600">
+              <p class="text-lg text-gray-600 text-center dark:text-gray-400">
                 The latest news, articles, and resources, sent to your inbox
                 weekly.
               </p>
               <form
                 class="flex flex-col gap-4"
-                action="#"
+                action="https://api.web3forms.com/submit"
                 name="Newsletter Form"
+                method="POST"
               >
                 <div>
+                  <!-- Replace with your Access Key -->
                   <input
-                    class="peer w-full rounded-lg border border-slate-300 placeholder:text-gray-600 placeholder:text-base focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-indigo-500 focus:ring-offset-indigo-700"
+                    type="hidden"
+                    name="access_key"
+                    value="2ca7ccc6-1156-42dc-9f92-93594a22210c"
+                  />
+                  <input
+                    class="peer w-full rounded-md border border-slate-300 dark:border-gray-600 placeholder:text-gray-600 placeholder:text-base focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-indigo-500 focus:ring-offset-indigo-700"
                     type="email"
                     name="Email"
                     placeholder="Enter email"
@@ -1549,6 +1555,11 @@
                   />
                   <!-- <span class="invisible peer-invalid:visible text-pink-700 -mb-2">Invalid Email!! Please try again</span> -->
                 </div>
+                <div class="flex items-center justify-center">
+                  <!-- hCaptcha Spam Protection -->
+                  <div class="h-captcha" data-captcha="true"></div>
+                </div>
+
                 <input
                   class="bg-indigo-600 rounded-lg py-2 text-xl cursor-pointer text-white focus:outline-none focus:ring-1 focus:ring-indigo-700 focus:ring-offset-indigo-500 focus:ring-offset-2 active:bg-indigo-800 transition-all duration-200"
                   type="submit"
@@ -1569,7 +1580,7 @@
               <div class="text-center">
                 <a
                   class="text-xl text-white font-medium flex items-center hover:text-white/85"
-                  href="#"
+                  href="store.html"
                   ><span>Go now</span>
                   <!-- Icon -->
                 </a>
@@ -1579,65 +1590,76 @@
         </div>
       </section>
       <!-- Footer  -->
-      <footer class="bg-white rounded-t-2xl">
+      <footer class="bg-white dark:bg-slate-800 rounded-t-2xl">
         <!-- Top Footer -->
         <div class="container mx-auto">
           <div class="flex flex-col gap-3 py-5">
             <div
-              class="flex justify-center border-b-[1px] border-b-gray-200 py-1"
+              class="flex justify-center border-b-[1px] border-b-gray-200 py-1 dark:border-gray-500"
             >
-              <img
-                class=""
-                src="./src/asset/images/logo.jpg"
-                alt="logo"
-                height="60"
-                width="60"
-              />
+              <a href="#nav">
+                <img
+                  class="transform scale-150"
+                  src="./src/asset/img/logo-main.png"
+                  alt="logo"
+                  height="60"
+                  width="60"
+                />
+              </a>
             </div>
             <!-- Links -->
             <div class="grid grid-cols-2 gap-3 lg:grid-cols-4">
               <div class="flex flex-col items-center gap-1">
-                <h1 class="text-2xl text-gray-900 font-semibold">Products</h1>
+                <h1
+                  class="text-2xl text-gray-900 dark:text-gray-200 font-semibold"
+                >
+                  Shop
+                </h1>
                 <div class="flex flex-col gap-3 items-center">
-                  <a class="link" href="#">Bags</a>
-                  <a class="link" href="#">Tees</a>
-                  <a class="link" href="#">Objects</a>
-                  <a class="link" href="#">Home Goods</a>
-                  <a class="link" href="#">Accessories</a>
-                  <a class="link" href="#">FAQ</a>
+                  <a class="link" href="store.html">All Products</a>
+                  <a class="link" href="store.html">New Arrivals</a>
+                  <a class="link" href="store.html">Best Sellers</a>
+                  <a class="link" href="store.html">Special Offers</a>
                 </div>
               </div>
               <div class="flex flex-col items-center gap-1">
-                <h1 class="text-2xl text-gray-900 font-semibold">Company</h1>
+                <h1
+                  class="text-2xl text-gray-900 font-semibold dark:text-gray-200"
+                >
+                  Customer Service
+                </h1>
                 <div class="flex flex-col gap-3 items-center">
-                  <a class="link" href="#">Who we are</a>
-                  <a class="link" href="#">Contact</a>
-                  <a class="link" href="#">Shipping</a>
-                  <a class="link" href="#">Returns</a>
-                  <a class="link" href="#">Secure Payment</a>
-                  <a class="link" href="#">Find a Store</a>
+                  <a class="link" href="store.html">FAQ</a>
+                  <a class="link" href="store.html">Shipping & Delivery</a>
+                  <a class="link" href="store.html">Returns & Exchanges</a>
+                  <a class="link" href="store.html">Terms & Conditions</a>
+                </div>
+              </div>
+
+              <div class="flex flex-col items-center gap-1">
+                <h1
+                  class="text-2xl text-gray-900 font-semibold dark:text-gray-200"
+                >
+                  About us
+                </h1>
+                <div class="flex flex-col gap-3 items-center">
+                  <a class="link" href="#">About Our Company</a>
+                  <a class="link" href="#">Our Team</a>
+                  <a class="link" href="#">Careers</a>
+                  <a class="link" href="#">Contact Us</a>
                 </div>
               </div>
               <div class="flex flex-col items-center gap-1">
-                <h1 class="text-2xl text-gray-900 font-semibold">Company</h1>
+                <h1
+                  class="text-2xl text-gray-900 font-semibold dark:text-gray-200"
+                >
+                  Connect With Us
+                </h1>
                 <div class="flex flex-col gap-3 items-center">
-                  <a class="link" href="#">Who we are</a>
-                  <a class="link" href="#">Contact</a>
-                  <a class="link" href="#">Shipping</a>
-                  <a class="link" href="#">Returns</a>
-                  <a class="link" href="#">Secure Payment</a>
-                  <a class="link" href="#">Find a Store</a>
-                </div>
-              </div>
-              <div class="flex flex-col items-center gap-1">
-                <h1 class="text-2xl text-gray-900 font-semibold">Company</h1>
-                <div class="flex flex-col gap-3 items-center">
-                  <a class="link" href="#">Who we are</a>
-                  <a class="link" href="#">Contact</a>
-                  <a class="link" href="#">Shipping</a>
-                  <a class="link" href="#">Returns</a>
-                  <a class="link" href="#">Secure Payment</a>
-                  <a class="link" href="#">Find a Store</a>
+                  <a class="link" href="#">Facebook</a>
+                  <a class="link" href="#">Instagram</a>
+                  <a class="link" href="#">Twitter</a>
+                  <a class="link" href="#">Whatsapp</a>
                 </div>
               </div>
             </div>
@@ -1647,7 +1669,8 @@
             <div
               class="flex gap-4 flex-col lg:justify-between lg:flex-row items-center flex-wrap"
             >
-              <span class="text-center font-medium text-base text-gray-500"
+              <span
+                class="text-center font-medium text-base text-gray-500 dark:text-gray-300"
                 >© 2021 All Rights Reserved</span
               >
               <div class="flex gap-2">
@@ -1656,7 +1679,7 @@
                 <a class="link" href="#">Terms</a>
               </div>
               <div class="flex">
-                <a class="link flex gap-2" href="#">
+                <a class="link flex gap-2" href="checkout.html">
                   <img src="./src/asset/img/pay.png" alt="Footer Logo" />
                 </a>
               </div>
@@ -1665,5 +1688,8 @@
         </div>
       </footer>
     </main>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script type="module" src="./src/js/main.js"></script>
+    <script type="module" src="./src/js/checkout.js"></script>
   </body>
 </html>

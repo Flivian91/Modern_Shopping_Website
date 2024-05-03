@@ -7,11 +7,11 @@
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link href="src/css/output.css" rel="stylesheet" />
   </head>
-  <body class="bg-gray-100">
-    <main class="relative">
+  <body class="bg-gray-100 dark:bg-darkcolor">
+    <main class="relative dark:bg-darkcolor">
       <!-- Success Dialog Box -->
       <section
-        class="shadow-lg hidden fixed bottom-2 sm:w-[600px] sm:px-5 left-0 right-0 mx-auto bg-neutral z-50 rounded-lg"
+        class="shadow-lg hidden fixed bottom-2 sm:w-[600px] sm:px-5 left-0 right-0 mx-auto dark:bg-slate-800 bg-neutral z-50 rounded-lg"
       >
         <div class="flex flex-col gap-4 items-center py-10 px-2">
           <span
@@ -32,10 +32,14 @@
               />
             </svg>
           </span>
-          <h1 class="text-2xl text-gray-900 font-mono font-bold">
+          <h1
+            class="text-2xl text-gray-900 font-mono font-bold dark:text-gray-200"
+          >
             Login successful!!
           </h1>
-          <p class="text-xl text-gray-600 font-medium text-center">
+          <p
+            class="text-xl text-gray-600 font-medium text-center dark:text-gray-400"
+          >
             Thanks for choosing COMlection Lorem ipsum dolor sit amet sit amet.
           </p>
           <a
@@ -46,16 +50,20 @@
           </a>
         </div>
       </section>
-<!-- Shopping Cart Section -->
+      <!-- Shopping Cart Section -->
       <!-- By deafult hidden -->
       <section
         id="cart"
-        class="w-full hidden sm:w-[500px] h-full fixed right-0 top-0 z-50 bg-neutral overflow-y-auto"
+        class="w-full hidden sm:w-[500px] h-full fixed right-0 top-0 z-50 bg-neutral dark:bg-slate-800 overflow-y-auto"
       >
         <div class="px-2">
           <!-- Top  -->
-          <div class="flex items-center justify-between py-4 mx-3 border-b-2">
-            <span class="text-xl text-gray-700 font-bold">Shopping cart</span>
+          <div
+            class="flex items-center justify-between py-4 mx-3 border-b-2 dark:border-gray-500"
+          >
+            <span class="text-xl text-gray-700 font-bold dark:text-gray-200"
+              >Shopping cart</span
+            >
             <span
               title="ctrl + x"
               id="cart-close"
@@ -80,7 +88,7 @@
           <!-- More cart inserted Here -->
           <div class="flex flex-col gap-3 px-1">
             <!-- Cart Items -->
-            <a href="#" class="flex py-2 gap-4 border-b-2">
+            <a href="#" class="flex py-2 gap-4 border-b-2 dark:border-gray-500">
               <div
                 class="flex justify-center items-center w-22 h-22 border-2 border-indigo-600 rounded"
               >
@@ -92,10 +100,16 @@
               </div>
               <div class="flex-1">
                 <div class="flex flex-col">
-                  <h1 class="text-xl text-gray-700 font-bold">
+                  <h1
+                    class="text-xl text-gray-700 font-bold dark:text-gray-200"
+                  >
                     Throwback Hip Bag
                   </h1>
-                  <p class="text-base text-gray-500 font-medium">Salmon</p>
+                  <p
+                    class="text-base text-gray-500 font-medium dark:text-gray-400"
+                  >
+                    Salmon
+                  </p>
                   <div class="flex gap-2 items-center mt-5">
                     <span class="inline-block cursor-pointer">
                       <svg
@@ -114,7 +128,7 @@
                       </svg>
                     </span>
                     <span
-                      class="py-[1px] px-5 bg-white text-gray-950 text-center text-xl font-mono"
+                      class="py-[1px] px-5 bg-white dark:bg-gray-600 text-gray-950 text-center text-xl font-mono dark:text-white"
                       >2</span
                     >
                     <span class="inline-block cursor-pointer">
@@ -138,7 +152,8 @@
               </div>
               <div class="flex-none w-20">
                 <div class="flex flex-col justify-between h-full">
-                  <span class="block text-xl text-gray-900 font-bold"
+                  <span
+                    class="block text-xl text-gray-900 font-bold dark:text-white"
                     >$90.00</span
                   >
                   <span
@@ -283,10 +298,17 @@
           </div>
           <div class="flex flex-col gap-2 mx-2 my-5">
             <div class="flex justify-between">
-              <span class="text-xl text-gray-700 font-bold">Subtotal</span>
-              <span class="block text-xl text-gray-900 font-bold">$260.00</span>
+              <span class="text-xl text-gray-700 font-bold dark:text-gray-200"
+                >Subtotal</span
+              >
+              <span
+                class="block text-xl text-gray-900 font-bold dark:text-white"
+                >$260.00</span
+              >
             </div>
-            <p class="text-base text-gray-500 font-medium mb-2">
+            <p
+              class="text-base text-gray-500 font-medium mb-2 dark:text-gray-200"
+            >
               Shipping and taxes calculated at checkout.
             </p>
             <a
@@ -295,10 +317,13 @@
               >Checkout</a
             >
             <div class="flex justify-center items-center gap-1">
-              <span class="inline-block text-gray-700 text-lg">or</span>
+              <span
+                class="inline-block text-gray-700 text-lg dark:text-gray-200"
+                >or</span
+              >
               <a
                 class="text-indigo-600 underline underline-offset-1 text-lg font-medium hover:text-indigo-500"
-                href="#"
+                href="store.html"
               >
                 Continue Shopping
               </a>
@@ -521,7 +546,7 @@
       <!-- Hidden By default Show Only after Click -->
       <section
         id="menu"
-        class="absolute hidden lg:hidden top-0 left-0 z-50 shadow-xl h-full w-[350px] bg-neutral px-5 py-10"
+        class="absolute hidden lg:hidden top-0 left-0 z-50 shadow-xl h-full w-[350px] bg-neutral dark:bg-slate-800 px-5 py-10"
       >
         <div class="flex flex-col gap-3">
           <span id="menu-close" class="inline-block cursor-pointer py-2">
@@ -530,69 +555,37 @@
           <!-- Nav Link -->
           <div class="flex gap-4 py-2">
             <div
-              class="text-2xl font-semibold cursor-pointer py-2 px-5 border-b-2 border-b-indigo-700 text-indigo-600"
+              class="text-2xl font-semibold cursor-pointer py-2 border-b-2 pr-3 border-b-indigo-700 dark:border-b-gray-500 text-indigo-600 dark:text-gray-100"
             >
-              Women
-            </div>
-            <div class="text-2xl font-semibold cursor-pointer py-2 px-5">
-              Men
+              Popular categories
             </div>
           </div>
           <!-- All links -->
-          <div class="flex flex-col gap-4 mt-3">
-            <!-- Link 1 -->
-            <div class="flex flex-col gap-5">
-              <h1 class="text-2xl text-gray-900 font-bold">Featured</h1>
-              <div class="flex flex-col gap-4">
-                <a class="side-nav-link" href="store.html">Sleep</a>
-                <a class="side-nav-link" href="store.html">Swimwear</a>
-                <a class="side-nav-link" href="store.html">Underwear</a>
-              </div>
-            </div>
-            <!-- Link 2 -->
-            <div class="flex flex-col gap-5">
-              <h1 class="text-2xl text-gray-900 font-bold">Categories</h1>
-              <div class="flex flex-col gap-4">
-                <a class="side-nav-link" href="store.html">Basic Tees</a>
-                <a class="side-nav-link" href="store.html">Artwork Tees</a>
-                <a class="side-nav-link" href="store.html">Bottoms</a>
-                <a class="side-nav-link" href="store.html">Underwear</a>
-                <a class="side-nav-link" href="store.html">Accessories</a>
-              </div>
-            </div>
-            <!-- Link 1 -->
-            <div class="flex flex-col gap-5">
-              <h1 class="text-2xl text-gray-900 font-bold">Collection</h1>
-              <div class="flex flex-col gap-4">
-                <a class="side-nav-link" href="store.html">Everything</a>
-                <a class="side-nav-link" href="store.html">Core</a>
-                <a class="side-nav-link" href="store.html">New Arrivals</a>
-                <a class="side-nav-link" href="store.html">Sales</a>
-              </div>
-            </div>
-            <!-- Link 1 -->
-            <div class="flex flex-col gap-5">
-              <h1 class="text-2xl text-gray-900 font-bold">Brands</h1>
-              <div class="flex flex-col gap-4">
-                <a class="side-nav-link" href="store.html">Full Nelson</a>
-                <a class="side-nav-link" href="store.html">My Way</a>
-                <a class="side-nav-link" href="store.html">Re-Arranged</a>
-                <a class="side-nav-link" href="store.html">Counterfeit</a>
-                <a class="side-nav-link" href="store.html">Significant Other</a>
-              </div>
+          <div class="flex flex-col gap-4 mt-1">
+            <div id="side-menu-container" class="flex flex-col gap-4">
+              <!-- Add all the Popular Categories Using JS -->
             </div>
           </div>
           <!-- CoMpany And stores -->
-          <div class="flex flex-col gap-2 py-4 border-y-2">
-            <a class="text-gray-950 hover:text-gray-700 side-nav-link" href="#"
-              >Company</a
+          <div class="flex flex-col gap-2 py-4 border-y-2 dark:border-gray-700">
+            <a
+              class="text-gray-950 hover:text-gray-700 side-nav-link"
+              href="#men"
+              >Men</a
             >
-            <a class="text-gray-950 hover:text-gray-700 side-nav-link" href="#"
+            <a
+              class="text-gray-950 hover:text-gray-700 side-nav-link"
+              href="#women"
+              >Women</a
+            >
+            <a
+              class="text-gray-950 hover:text-gray-700 side-nav-link"
+              href="store.html"
               >Stores</a
             >
           </div>
           <!-- CoMpany And stores -->
-          <div class="flex flex-col gap-2 py-4 border-b-2">
+          <div class="flex flex-col gap-2 py-4 border-b-2 dark:border-gray-700">
             <a
               class="text-gray-950 hover:text-gray-700 side-nav-link"
               href="account.html"
@@ -620,7 +613,7 @@
         </div>
       </section>
       <!-- Navigation -->
-      <nav class="flex flex-col 2xl:container 2xl:mx-auto">
+      <nav id="nav" class="flex flex-col 2xl:container 2xl:mx-auto">
         <header
           class="bg-primary py-2 flex items-center dark:bg-darkcolor lg:justify-between justify-center lg:px-3"
         >
@@ -660,17 +653,31 @@
           <div class="flex flex-row gap-4 items-center flex-none w-20">
             <!-- Menu Icon Hidden on 1024px-->
             <span id="menu-button" class="cursor-pointer lg:hidden">
-              <ion-icon name="menu-outline " class="w-8 h-8 svgs"></ion-icon>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-8 h-8 svgs"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+                />
+              </svg>
+
               <span class="sr-only">Menu Icon</span>
             </span>
             <!-- Logo Image Hidden normally Shown On 1024px -->
             <a
               href="#"
-              class="flex-1 items-center justify-center hidden lg:flex"
+              class="flex-1 gap-2 items-center justify-center hidden lg:flex px-4"
             >
               <img
-                class="max-w-full opacity-80 hover:opacity-100 transition-opacity"
-                src="./src/asset/images/logo.jpg"
+                class="max-w-full opacity-80 hover:opacity-100 transition-opacity transform scale-150"
+                src="./src/asset/img/logo-main.png"
                 width="60"
                 height="60"
                 alt="Comapny logo"
@@ -710,8 +717,8 @@
           <!-- Logo Image Hidden on Larger screen -->
           <a href="#" class="flex-1 flex items-center justify-center lg:hidden">
             <img
-              class="max-w-full opacity-80 hover:opacity-100 transition-opacity"
-              src="./src/asset/images/logo.jpg"
+              class="max-w-full opacity-80 hover:opacity-100 transition-opacity transform scale-150"
+              src="./src/asset/img/logo-main.png"
               width="60"
               height="60"
               alt="Comapny logo"
@@ -794,7 +801,7 @@
 
               <span class="sr-only">Cart Icon</span>
               <span
-                class="lining-nums flex text-gray-900 font-medium select-none p-1 w-7 h-7 items-center justify-center border border-indigo-600 rounded-full text-base"
+                class="lining-nums flex text-gray-900 dark:text-gray-200 font-medium select-none p-1 w-7 h-7 items-center justify-center border border-indigo-600 rounded-full text-base"
                 >4</span
               >
             </div>
@@ -804,7 +811,7 @@
 
       <!-- Breadcrumbs -->
       <section class="2xl:container 2xl:mx-auto">
-        <div class="bg-neutral py-3 px-5 mt-1 mb-2">
+        <div class="bg-neutral dark:bg-darkcolor py-3 px-5 mt-1 mb-2">
           <ul class="flex gap-2 text-center">
             <li>
               <a class="" href="index.html">
@@ -837,10 +844,12 @@
 
       <!-- Create Account Section -->
       <section
-        class="container mx-auto sm:w-[550px] bg-neutral border rounded-md border-gray-200 sm:px-3 py-5"
+        class="container mx-auto sm:w-[550px] bg-neutral dark:bg-slate-800 border rounded-md border-gray-200 sm:px-3 py-5"
       >
         <div class="w-full my-1 py-2 px-2 lg:-mb-5 lg:px-10">
-          <h1 class="text-2xl lg:text-3xl font-bold font-mono text-gray-800">
+          <h1
+            class="text-2xl lg:text-3xl font-bold font-mono text-gray-800 dark:text-gray-200"
+          >
             Create new account today
           </h1>
         </div>
@@ -878,7 +887,12 @@
                 <label for="country-check" class="check-label"
                   >Recovery question</label
                 >
-                <select class="check-input" name="country" id="country-check" required>
+                <select
+                  class="check-input"
+                  name="country"
+                  id="country-check"
+                  required
+                >
                   <option value="-1">--------Select-----------</option>
                   <option value="1">What city were you born in?</option>
                   <option value="2">
@@ -905,7 +919,9 @@
                 />
               </div>
               <div class="flex flex-col gap-2">
-                <label for="confirm-pass-check" class="check-label">Confirm password</label>
+                <label for="confirm-pass-check" class="check-label"
+                  >Confirm password</label
+                >
                 <input
                   type="password"
                   id="confirm-pass-check"
@@ -933,24 +949,28 @@
                 Create account
               </button>
             </div>
-            <div class="flex items-center justify-center my-4">
+            <div
+              class="flex items-center justify-center my-4 dark:text-gray-200"
+            >
               -Or Continue with-
             </div>
             <div class="flex gap-2 px-2">
               <a
                 href="https://www.google.com/"
-                class="py-2 px-5 w-full rounded-lg text-center text-black text-lg font-medium hover:border-indigo-500 active:border-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 border border-gray-400"
+                class="py-2 px-5 w-full rounded-lg text-center text-black dark:text-gray-200 text-lg font-medium hover:border-indigo-500 active:border-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 border border-gray-400"
               >
                 Google
               </a>
               <a
                 href="https://www.github.com/"
-                class="py-2 px-5 w-full rounded-lg text-center text-black text-lg font-medium hover:border-indigo-500 active:border-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 border border-gray-400"
+                class="py-2 px-5 w-full rounded-lg text-center text-black dark:text-gray-200 text-lg font-medium hover:border-indigo-500 active:border-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 border border-gray-400"
               >
                 Github
               </a>
             </div>
-            <div class="py-5 flex gap-2 justify-center items-center">
+            <div
+              class="py-5 flex gap-2 justify-center items-center dark:text-gray-200"
+            >
               <span class="check-label">Still a member?</span>
               <a
                 class="text-indigo-600 check-label hover:underline hover:text-indigo-500 transition-all duration-300"
@@ -962,28 +982,39 @@
         </div>
       </section>
       <!-- Call to action -->
-      <section class="my-10 py-20 bg-white">
+      <section class="my-10 py-20 bg-white dark:bg-darkcolor">
         <div class="container mx-auto">
           <div
             class="flex flex-col gap-8 px-5 md:px-10 lg:grid lg:grid-cols-2 xl:gap-16"
           >
             <!-- Card 1 -->
-            <div class="bg-slate-100 px-5 py-8 rounded-lg flex flex-col gap-2">
-              <h1 class="text-2xl text-gray-900 font-bold">
+            <div
+              class="bg-slate-100 dark:bg-slate-800 px-5 py-8 rounded-lg flex flex-col gap-2"
+            >
+              <h1
+                class="text-2xl text-center text-gray-900 font-bold dark:text-gray-200"
+              >
                 Sign up for our newsletter
               </h1>
-              <p class="text-lg text-gray-600">
+              <p class="text-lg text-gray-600 text-center dark:text-gray-400">
                 The latest news, articles, and resources, sent to your inbox
                 weekly.
               </p>
               <form
                 class="flex flex-col gap-4"
-                action="#"
+                action="https://api.web3forms.com/submit"
                 name="Newsletter Form"
+                method="POST"
               >
                 <div>
+                  <!-- Replace with your Access Key -->
                   <input
-                    class="peer w-full rounded-lg border border-slate-300 placeholder:text-gray-600 placeholder:text-base focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-indigo-500 focus:ring-offset-indigo-700"
+                    type="hidden"
+                    name="access_key"
+                    value="2ca7ccc6-1156-42dc-9f92-93594a22210c"
+                  />
+                  <input
+                    class="peer w-full rounded-md border border-slate-300 dark:border-gray-600 placeholder:text-gray-600 placeholder:text-base focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-indigo-500 focus:ring-offset-indigo-700"
                     type="email"
                     name="Email"
                     placeholder="Enter email"
@@ -991,6 +1022,11 @@
                   />
                   <!-- <span class="invisible peer-invalid:visible text-pink-700 -mb-2">Invalid Email!! Please try again</span> -->
                 </div>
+                <div class="flex items-center justify-center">
+                  <!-- hCaptcha Spam Protection -->
+                  <div class="h-captcha" data-captcha="true"></div>
+                </div>
+
                 <input
                   class="bg-indigo-600 rounded-lg py-2 text-xl cursor-pointer text-white focus:outline-none focus:ring-1 focus:ring-indigo-700 focus:ring-offset-indigo-500 focus:ring-offset-2 active:bg-indigo-800 transition-all duration-200"
                   type="submit"
@@ -1011,7 +1047,7 @@
               <div class="text-center">
                 <a
                   class="text-xl text-white font-medium flex items-center hover:text-white/85"
-                  href="#"
+                  href="store.html"
                   ><span>Go now</span>
                   <!-- Icon -->
                 </a>
@@ -1021,65 +1057,76 @@
         </div>
       </section>
       <!-- Footer  -->
-      <footer class="bg-white rounded-t-2xl">
+      <footer class="bg-white dark:bg-slate-800 rounded-t-2xl">
         <!-- Top Footer -->
         <div class="container mx-auto">
           <div class="flex flex-col gap-3 py-5">
             <div
-              class="flex justify-center border-b-[1px] border-b-gray-200 py-1"
+              class="flex justify-center border-b-[1px] border-b-gray-200 py-1 dark:border-gray-500"
             >
-              <img
-                class=""
-                src="./src/asset/images/logo.jpg"
-                alt="logo"
-                height="60"
-                width="60"
-              />
+              <a href="#nav">
+                <img
+                  class="transform scale-150"
+                  src="./src/asset/img/logo-main.png"
+                  alt="logo"
+                  height="60"
+                  width="60"
+                />
+              </a>
             </div>
             <!-- Links -->
             <div class="grid grid-cols-2 gap-3 lg:grid-cols-4">
               <div class="flex flex-col items-center gap-1">
-                <h1 class="text-2xl text-gray-900 font-semibold">Products</h1>
+                <h1
+                  class="text-2xl text-gray-900 dark:text-gray-200 font-semibold"
+                >
+                  Shop
+                </h1>
                 <div class="flex flex-col gap-3 items-center">
-                  <a class="link" href="#">Bags</a>
-                  <a class="link" href="#">Tees</a>
-                  <a class="link" href="#">Objects</a>
-                  <a class="link" href="#">Home Goods</a>
-                  <a class="link" href="#">Accessories</a>
-                  <a class="link" href="#">FAQ</a>
+                  <a class="link" href="store.html">All Products</a>
+                  <a class="link" href="store.html">New Arrivals</a>
+                  <a class="link" href="store.html">Best Sellers</a>
+                  <a class="link" href="store.html">Special Offers</a>
                 </div>
               </div>
               <div class="flex flex-col items-center gap-1">
-                <h1 class="text-2xl text-gray-900 font-semibold">Company</h1>
+                <h1
+                  class="text-2xl text-gray-900 font-semibold dark:text-gray-200"
+                >
+                  Customer Service
+                </h1>
                 <div class="flex flex-col gap-3 items-center">
-                  <a class="link" href="#">Who we are</a>
-                  <a class="link" href="#">Contact</a>
-                  <a class="link" href="#">Shipping</a>
-                  <a class="link" href="#">Returns</a>
-                  <a class="link" href="#">Secure Payment</a>
-                  <a class="link" href="#">Find a Store</a>
+                  <a class="link" href="store.html">FAQ</a>
+                  <a class="link" href="store.html">Shipping & Delivery</a>
+                  <a class="link" href="store.html">Returns & Exchanges</a>
+                  <a class="link" href="store.html">Terms & Conditions</a>
+                </div>
+              </div>
+
+              <div class="flex flex-col items-center gap-1">
+                <h1
+                  class="text-2xl text-gray-900 font-semibold dark:text-gray-200"
+                >
+                  About us
+                </h1>
+                <div class="flex flex-col gap-3 items-center">
+                  <a class="link" href="#">About Our Company</a>
+                  <a class="link" href="#">Our Team</a>
+                  <a class="link" href="#">Careers</a>
+                  <a class="link" href="#">Contact Us</a>
                 </div>
               </div>
               <div class="flex flex-col items-center gap-1">
-                <h1 class="text-2xl text-gray-900 font-semibold">Company</h1>
+                <h1
+                  class="text-2xl text-gray-900 font-semibold dark:text-gray-200"
+                >
+                  Connect With Us
+                </h1>
                 <div class="flex flex-col gap-3 items-center">
-                  <a class="link" href="#">Who we are</a>
-                  <a class="link" href="#">Contact</a>
-                  <a class="link" href="#">Shipping</a>
-                  <a class="link" href="#">Returns</a>
-                  <a class="link" href="#">Secure Payment</a>
-                  <a class="link" href="#">Find a Store</a>
-                </div>
-              </div>
-              <div class="flex flex-col items-center gap-1">
-                <h1 class="text-2xl text-gray-900 font-semibold">Company</h1>
-                <div class="flex flex-col gap-3 items-center">
-                  <a class="link" href="#">Who we are</a>
-                  <a class="link" href="#">Contact</a>
-                  <a class="link" href="#">Shipping</a>
-                  <a class="link" href="#">Returns</a>
-                  <a class="link" href="#">Secure Payment</a>
-                  <a class="link" href="#">Find a Store</a>
+                  <a class="link" href="#">Facebook</a>
+                  <a class="link" href="#">Instagram</a>
+                  <a class="link" href="#">Twitter</a>
+                  <a class="link" href="#">Whatsapp</a>
                 </div>
               </div>
             </div>
@@ -1089,7 +1136,8 @@
             <div
               class="flex gap-4 flex-col lg:justify-between lg:flex-row items-center flex-wrap"
             >
-              <span class="text-center font-medium text-base text-gray-500"
+              <span
+                class="text-center font-medium text-base text-gray-500 dark:text-gray-300"
                 >© 2021 All Rights Reserved</span
               >
               <div class="flex gap-2">
@@ -1098,7 +1146,7 @@
                 <a class="link" href="#">Terms</a>
               </div>
               <div class="flex">
-                <a class="link flex gap-2" href="#">
+                <a class="link flex gap-2" href="checkout.html">
                   <img src="./src/asset/img/pay.png" alt="Footer Logo" />
                 </a>
               </div>
@@ -1107,6 +1155,7 @@
         </div>
       </footer>
     </main>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>

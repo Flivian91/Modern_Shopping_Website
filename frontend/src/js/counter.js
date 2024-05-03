@@ -574,7 +574,7 @@ export const renderWomenCategory = async function () {
 export const customerLoadData = async function () {
   const res = await fetch("https://dummyjson.com/products/category/motorcycle");
   const items = await res.json();
-  console.log(items);
+  // console.log(items);
   items.products.forEach((data) => {
     const markUp = `
     <div  class="flex flex-col gap-4 mx-2 ">
