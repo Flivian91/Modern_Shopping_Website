@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <title>COMlection-Login</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link href="src/css/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-100">
+    <main class="relative">
+      <!-- Quick Overview Page  -->
+      <section
+        class="sm:fixed sm:shadow-2xl sm:rounded-lg sm:top-1/2 sm:-translate-y-1/2 md:w-[800px] md: backdrop-blur-[1.5px] sm:px-4 sm:left-1/2 sm:-translate-x-1/2"
+      >
+        <div
+          class="py-4 px-1 relative container mx-auto sm:grid sm:grid-cols-2 sm:gap-4"
+        >
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center justify-between px-2 sm:justify-end">
+              <a
+                href="#"
+                class="text-indigo-600 text-lg font-bold sm:hidden hover:text-indigo-500 active:text-indigo-700"
+                >View full details</a
+              >
+              <ion-icon
+                name="close-outline"
+                class="svgs text-indigo-600 cursor-pointer sm:absolute sm:top-4 sm:right-1"
+              ></ion-icon>
+            </div>
+            <div class="p-1">
+              <img
+                class="rounded-lg"
+                src="./src/asset/img/product-1-1.jpg"
+                alt="Product image"
+              />
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-1">
+              <h1 class="text-xl font-bold text-gray-800">
+                Lorem ipsum dolor sit.
+              </h1>
+              <span class="text-lg text-gray-600 font-medium">$20.00</span>
+            </div>
+            <div class="flex gap-2">
+              <span class="text-lg text-gray-600 font-medium">4.2</span>
+              <div class="flex gap-1 items-center">
+                <ion-icon
+                  name="star"
+                  class="svgs text-yellow-500 w-6 h-6"
+                ></ion-icon>
+                <ion-icon
+                  name="star"
+                  class="svgs text-yellow-500 w-6 h-6"
+                ></ion-icon>
+                <ion-icon
+                  name="star"
+                  class="svgs text-yellow-500 w-6 h-6"
+                ></ion-icon>
+                <ion-icon
+                  name="star"
+                  class="svgs text-yellow-500 w-6 h-6"
+                ></ion-icon>
+                <ion-icon
+                  name="star-outline"
+                  class="svgs text-yellow-500 w-6 h-6"
+                ></ion-icon>
+              </div>
+              <div class="hidden sm:block sm:ml-5">
+                <a
+                  href="#"
+                  class="text-indigo-600 text-lg font-bold hover:text-indigo-500 active:text-indigo-700"
+                  >See all reviews</a
+                >
+              </div>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h1 class="text-lg text-gray-600 font-medium">Color</h1>
+              <div class="flex gap-3 items-center">
+                <input
+                  class="w-8 h-8 checked:caret-indigo-700"
+                  type="radio"
+                  name="main-color"
+                  id="main-color"
+                  checked
+                />
+                <input
+                  class="w-8 h-8 checked:caret-indigo-700"
+                  type="radio"
+                  name="main-color"
+                  id="main-color"
+                />
+              </div>
+            </div>
+            <div>
+              <div class="flex flex-col gap-2">
+                <div class="flex justify-between px-2">
+                  <span class="text-lg text-gray-600 font-medium">Size</span>
+                  <a
+                    href="#"
+                    class="text-indigo-600 text-lg font-bold hover:text-indigo-500 active:text-indigo-700"
+                    >Size guide</a
+                  >
+                </div>
+                <div class="flex gap-4 px-2 justify-between sm:justify-start">
+                  <div class="overview-size">
+                    <span class="text-white text-xl font-mono font-bold"
+                      >XXl</span
+                    >
+                  </div>
+                  <div class="overview-size">
+                    <span class="text-white text-xl font-mono font-bold"
+                      >XS</span
+                    >
+                  </div>
+                  <div class="overview-size">
+                    <span class="text-white text-xl font-mono font-bold"
+                      >S</span
+                    >
+                  </div>
+                  <div class="overview-size">
+                    <span class="text-white text-xl font-mono font-bold"
+                      >M</span
+                    >
+                  </div>
+                  <div class="overview-size">
+                    <span class="text-white text-xl font-mono font-bold"
+                      >XL</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex px-1 py-4 gap-3 flex-col items-center">
+              <a
+                class="bg-indigo-600 py-2 w-full rounded-lg text-center text-xl text-white hover:bg-indigo-500 active:bg-indigo-700 transition-all duration-300"
+                href="#"
+                >Add to bag</a
+              >
+              <a
+                href="#"
+                class="text-indigo-600 hidden sm:block text-lg font-bold hover:text-indigo-500 active:text-indigo-700"
+                >View full details</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./src/js/quickView.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "testimonials": [
+    {
+      "quote": "My order arrived super quickly. The product is even better than I hoped it would be. Very happy customer over here!",
+      "name": "Sarah Peters",
+      "title": "Co-founder"
+    },
+    {
+      "quote": "I'm amazed by the quality of the products and the excellent customer service. Will definitely be recommending this website to friends and family!",
+      "name": "John Smith",
+      "title": "Customer"
+    },
+    {
+      "quote": "The shopping experience was smooth and hassle-free. The website is easy to navigate, and the delivery was prompt. 5 stars!",
+      "name": "Emily Johnson",
+      "title": "Marketing Manager"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "hero": {
+    "title": "Elevate Your Focus",
+    "subtitle": "Amidst the chaos of modern life, find clarity and productivity. Experience the satisfaction of ticking off tasks on a paper card.",
+    "buttonText": "Discover Productivity",
+    "buttonLink": "store.html",
+    "imageSrc": "./src/asset/images/hero-image.jpg"
+  }
+}
