@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Murchoid/COMlection-shopping-site/issues"
   },
-  "homepage": "https://github.com/Murchoid/COMlection-shopping-site#readme"
+  "homepage": "https://github.com/Murchoid/COMlection-shopping-site#readme",
+  "dependencies": {
+    "mongo": "^0.1.0"
+  }
 }
