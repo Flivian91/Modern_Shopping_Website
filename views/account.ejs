@@ -860,18 +860,32 @@
             method="post"
             autocomplete="on"
             class="flex flex-col gap-3 py-5 px-0"
+            action="account/create-account"
           >
             <!-- Contant info -->
             <div class="flex flex-col gap-3 px-2 py-5 border-b">
               <div class="flex flex-col gap-2">
-                <label for="email-check" class="check-label">Full name</label>
+                <label for="email-check" class="check-label">First name</label>
                 <input
                   type="text"
                   id="name-check"
+                  name="first-name"
                   class="check-input"
                   required
                 />
               </div>
+
+              <div class="flex flex-col gap-2">
+                <label for="email-check" class="check-label">Last name</label>
+                <input
+                  type="text"
+                  id="name-check"
+                  name="last-name"
+                  class="check-input"
+                  required
+                />
+              </div>
+
               <div class="flex flex-col gap-2">
                 <label for="name-check" class="check-label"
                   >Email Address</label
@@ -879,6 +893,7 @@
                 <input
                   type="email"
                   id="email-check"
+                  name="email"
                   class="check-input"
                   required
                 />
@@ -889,7 +904,7 @@
                 >
                 <select
                   class="check-input"
-                  name="country"
+                  name="recovery-quiz"
                   id="country-check"
                   required
                 >
@@ -910,10 +925,21 @@
                 </select>
               </div>
               <div class="flex flex-col gap-2">
+                <label for="Recovery-answer" class="check-label">Answer: </label>
+                <input
+                  type="text"
+                  name="recover-ans"
+                  id="recover-ans"
+                  class="check-input"
+                  required
+                />
+              </div>
+              <div class="flex flex-col gap-2">
                 <label for="password-check" class="check-label">Password</label>
                 <input
                   type="password"
                   id="password-check"
+                  name="password"
                   class="check-input"
                   required
                 />
@@ -925,6 +951,7 @@
                 <input
                   type="password"
                   id="confirm-pass-check"
+                  name="confirmPass"
                   class="check-input"
                   required
                 />
@@ -935,6 +962,7 @@
                     type="checkbox"
                     id="check-box"
                     class="focus:ring-2 rounded"
+                    name="remember-me"
                     required
                   />
                   <label for="check-box" class="check-label">Remember me</label>
