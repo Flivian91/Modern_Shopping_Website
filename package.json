@@ -4,7 +4,7 @@
   "description": "mordeen shopping website",
   "main": "app.js",
   "scripts": {
-    "test": "node app.js"
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,12 @@
   },
   "homepage": "https://github.com/Murchoid/COMlection-shopping-site#readme",
   "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
     "mongo": "^0.1.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.0"
   }
 }
