@@ -3,23 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
     <title>COMlection-Login</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link href="src/css/output.css" rel="stylesheet" />
   </head>
   <body class="bg-gray-100 dark:bg-primary">
-    <main class="relative">
+    <main class="relative dark:bg-darkcolor">
       <!-- Success Dialog Box -->
       <section
-        class="shadow-lg hidden fixed bottom-2 sm:w-[600px] sm:px-5 left-0 right-0 mx-auto bg-neutral dark:bg-slate-800 z-50 rounded-lg"
+        class="shadow-lg hidden fixed bottom-2 sm:w-[600px] sm:px-5 left-0 right-0 mx-auto dark:bg-slate-800 bg-neutral z-50 rounded-lg"
       >
         <div class="flex flex-col gap-4 items-center py-10 px-2">
           <span
@@ -40,102 +32,18 @@
               />
             </svg>
           </span>
-          <h1
-            class="text-2xl text-gray-900 font-mono font-bold dark:text-white"
-          >
+          <h1 class="text-2xl text-gray-900 font-mono font-bold dark:text-gray-200">
             Login successful!!
           </h1>
-          <p
-            class="text-xl text-gray-600 font-medium text-center dark:text-gray-500"
-          >
+          <p class="text-xl text-gray-600 font-medium text-center dark:text-gray-400">
             Thanks for choosing COMlection Lorem ipsum dolor sit amet sit amet.
           </p>
           <a
-            href="index.html"
+            href="/"
             class="inline-block text-center py-2 px-5 w-full rounded-lg text-white text-xl font-medium hover:bg-indigo-500 active:bg-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 bg-indigo-600"
           >
             Go back to store
           </a>
-        </div>
-      </section>
-      <!-- Dash board menu -->
-      <section
-        id="dash-phone-section"
-        class="fixed hidden top-0 left-0 bg-white dark:bg-slate-800 w-full z-50 backdrop-blur-[3px] sm:hidden"
-      >
-        <div id="dash-menu-container" class="flex flex-col px-1 my-5 gap-1">
-          <div class="py-3">
-            <ion-icon
-              id="dash-menu-close"
-              name="close-outline"
-              class="svgs float-right mr-3 cursor-pointer text-indigo-600"
-            ></ion-icon>
-          </div>
-          <!-- Item 1 -->
-          <div
-            id="dash-menu"
-            data-dash="1"
-            class="active-dash flex items-center gap-3 py-2 px-2 rounded-md cursor-pointer hover:bg-indigo-500/20 active:bg-indigo-500/40"
-          >
-            <ion-icon name="apps" class="svgs"></ion-icon>
-            <span class="head-text">Dashboard</span>
-          </div>
-          <div
-            id="dash-menu"
-            data-dash="2"
-            class="flex items-center gap-3 py-2 px-2 hover:bg-indigo-500/20 active:bg-indigo-500/40 rounded-md cursor-pointer"
-          >
-            <ion-icon name="bag-outline" class="svgs"></ion-icon>
-            <span class="head-text">Orders</span>
-          </div>
-          <div
-            id="dash-menu"
-            data-dash="3"
-            class="flex items-center gap-3 py-2 px-2 rounded-md cursor-pointer hover:bg-indigo-500/20 active:bg-indigo-500/40"
-          >
-            <ion-icon name="mail-outline" class="svgs"></ion-icon>
-            <span class="head-text">Inbox</span>
-          </div>
-          <div
-            id="dash-menu"
-            data-dash="4"
-            class="flex items-center gap-3 py-2 px-2 rounded-md cursor-pointer hover:bg-indigo-500/20 active:bg-indigo-500/40"
-          >
-            <ion-icon name="eye-outline" class="svgs"></ion-icon>
-            <span class="head-text">Pending views</span>
-          </div>
-          <div
-            id="dash-menu"
-            data-dash="5"
-            class="flex items-center gap-3 py-2 px-2 rounded-md cursor-pointer hover:bg-indigo-500/20 active:bg-indigo-500/40"
-          >
-            <ion-icon name="save-outline" class="svgs"></ion-icon>
-            <span class="head-text">Saved views</span>
-          </div>
-          <!-- end -->
-          <a
-            href="account-manage.html"
-            class="flex items-center justify-between gap-3 py-2 px-2 rounded-md cursor-pointer hover:bg-indigo-500/20 active:bg-indigo-500/40"
-          >
-            <div class="flex items-center gap-3">
-              <ion-icon name="settings-outline" class="svgs"></ion-icon>
-              <span class="head-text">Settings</span>
-            </div>
-            <ion-icon name="add-outline" class="svgs float-right"></ion-icon>
-          </a>
-          <a
-            href="account-manage.html"
-            class="flex items-center gap-3 py-2 px-2 rounded-md cursor-pointer hover:bg-indigo-500/20 active:bg-indigo-500/40"
-          >
-            <ion-icon name="trash-outline" class="svgs"></ion-icon>
-            <span class="head-text">Close account</span>
-          </a>
-          <span class="border dark:border-gray-500"> </span>
-          <button
-            class="py-2 mt-4 para-text uppercase text-indigo-600 hover:bg-indigo-600 rounded-md hover:text-white"
-          >
-            Logout
-          </button>
         </div>
       </section>
       <!-- Shopping Cart Section -->
@@ -401,7 +309,7 @@
             </p>
             <a
               class="bg-indigo-600 py-2 w-full rounded-lg text-center text-xl text-white hover:bg-indigo-500 active:bg-indigo-700 transition-all duration-300"
-              href="checkout.html"
+              href="/checkout"
               >Checkout</a
             >
             <div class="flex justify-center items-center gap-1">
@@ -411,7 +319,7 @@
               >
               <a
                 class="text-indigo-600 underline underline-offset-1 text-lg font-medium hover:text-indigo-500"
-                href="store.html"
+                href="/store"
               >
                 Continue Shopping
               </a>
@@ -668,7 +576,7 @@
             >
             <a
               class="text-gray-950 hover:text-gray-700 side-nav-link"
-              href="store.html"
+              href="/store"
               >Stores</a
             >
           </div>
@@ -676,12 +584,12 @@
           <div class="flex flex-col gap-2 py-4 border-b-2 dark:border-gray-700">
             <a
               class="text-gray-950 hover:text-gray-700 side-nav-link"
-              href="account.html"
+              href="/account"
               >Create an account</a
             >
             <a
               class="text-gray-950 hover:text-gray-700 side-nav-link"
-              href="login.html"
+              href="/login"
               >Sign in</a
             >
           </div>
@@ -716,7 +624,7 @@
             <option value="CAN">EUR</option>
             <option value="CAN">CAN</option>
           </select>
-          <a href="store.html" class="text-neutral text-base font-semibold">
+          <a href="/store" class="text-neutral text-base font-semibold">
             Get free delivery on orders over $100
           </a>
           <div
@@ -724,12 +632,12 @@
           >
             <a
               class="text-neutral/90 text-lg inline-block hover:underline transition-all hover:underline-offset-2 duration-300"
-              href="account.html"
+              href="/account"
               >Create an account</a
             >
             <a
               class="text-neutral/90 text-lg inline-block pl-4 hover:underline transition-all hover:underline-offset-2 duration-300"
-              href="login.html"
+              href="/login"
               >Sign in</a
             >
           </div>
@@ -795,12 +703,12 @@
           </div>
           <!-- Links -->
           <div class="gap-2 hidden lg:flex">
-            <a class="nav-link nav-link-active" href="index.html">Home</a>
-            <a class="nav-link" href="index.html#men">Men</a>
-            <a class="nav-link" href="index.html#women">Women</a>
-            <a class="nav-link" href="index.html#discover">Hot Deals</a>
-            <a class="nav-link" href="store.html">Store</a>
-            <a class="nav-link" href="dashboard.html">My Account</a>
+            <a class="nav-link nav-link-active" href="#">Home</a>
+            <a class="nav-link" href="#men">Men</a>
+            <a class="nav-link" href="#women">Women</a>
+            <a class="nav-link" href="#discover">Hot Deals</a>
+            <a class="nav-link" href="/store">Store</a>
+            <a class="nav-link" href="/dashboard">My Account</a>
           </div>
           <!-- Logo Image Hidden on Larger screen -->
           <a href="#" class="flex-1 flex items-center justify-center lg:hidden">
@@ -896,548 +804,127 @@
           </div>
         </div>
       </nav>
-
-      <!-- DashBoard Section -->
+      <!-- Breadcrumbs -->
       <section class="2xl:container 2xl:mx-auto">
-        <div class="flex flex-col gap-3 px-1">
-          <!-- Top Nav -->
-          <div
-            class="w-full relative bg-indigo-600/90 py-3 px-2 flex gap-2 items-center"
-          >
-            <div
-              id="dash-menu-button"
-              class="flex items-center justify-center p-2 border-[1.5px] rounded cursor-pointer md:hidden"
-            >
-              <ion-icon name="menu" class="svgs text-white"></ion-icon>
-            </div>
-            <span class="para-text text-white dark:text-gray-200"
-              >Welcome back, <strong>Flivian</strong>🙋</span
-            >
-          </div>
-          <!-- Append Corresponding Cmponent Here -->
-          <div
-            class="flex flex-col sm:grid sm:grid-cols-[300px_1fr] sm:gap-5 sm:px-5"
-          >
-            <div
-              class="hidden sm:block shadow-2xl rounded-md bg-white dark:bg-slate-800"
-            >
-              <div id="dashboard-links" class="flex flex-col px-1 mt-10 gap-2">
-                <!-- Item 1 -->
-                <div
-                  id="dash"
-                  data-dash="1"
-                  class="active-dash flex items-center gap-3 py-2 px-2 rounded-md cursor-pointer hover:bg-indigo-500/20 active:bg-indigo-500/40"
+        <div class="bg-neutral dark:bg-primary py-3 px-5 mt-1 mb-2">
+          <ul class="flex gap-2 text-center">
+            <li>
+              <a class="" href="/">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6 svgs"
                 >
-                  <ion-icon name="apps" class="svgs"></ion-icon>
-                  <span class="head-text">Dashboard</span>
-                </div>
-                <div
-                  id="dash"
-                  data-dash="2"
-                  class="flex items-center gap-3 py-2 px-2 hover:bg-indigo-500/20 active:bg-indigo-500/40 rounded-md cursor-pointer"
-                >
-                  <ion-icon name="bag-outline" class="svgs"></ion-icon>
-                  <span class="head-text">Orders</span>
-                </div>
-                <div
-                  id="dash"
-                  data-dash="3"
-                  class="flex items-center gap-3 py-2 px-2 rounded-md cursor-pointer hover:bg-indigo-500/20 active:bg-indigo-500/40"
-                >
-                  <ion-icon name="mail-outline" class="svgs"></ion-icon>
-                  <span class="head-text">Inbox</span>
-                </div>
-                <div
-                  id="dash"
-                  data-dash="4"
-                  class="flex items-center gap-3 py-2 px-2 rounded-md cursor-pointer hover:bg-indigo-500/20 active:bg-indigo-500/40"
-                >
-                  <ion-icon name="eye-outline" class="svgs"></ion-icon>
-                  <span class="head-text">Pending views</span>
-                </div>
-                <div
-                  id="dash"
-                  data-dash="5"
-                  class="flex items-center gap-3 py-2 px-2 rounded-md cursor-pointer hover:bg-indigo-500/20 active:bg-indigo-500/40"
-                >
-                  <ion-icon name="save-outline" class="svgs"></ion-icon>
-                  <span class="head-text">Saved views</span>
-                </div>
-                <!-- end -->
-                <a
-                  href="account-manage.html"
-                  class="flex items-center justify-between gap-3 py-2 px-2 rounded-md cursor-pointer hover:bg-indigo-500/20 active:bg-indigo-500/40"
-                >
-                  <div class="flex items-center gap-3">
-                    <ion-icon name="settings-outline" class="svgs"></ion-icon>
-                    <span class="head-text">Settings</span>
-                  </div>
-                  <ion-icon
-                    name="add-outline"
-                    class="svgs float-right"
-                  ></ion-icon>
-                </a>
-                <a
-                  href="account-manage.html"
-                  class="flex items-center gap-3 py-2 px-2 rounded-md cursor-pointer hover:bg-indigo-500/20 active:bg-indigo-500/40"
-                >
-                  <ion-icon name="trash-outline" class="svgs"></ion-icon>
-                  <span class="head-text">Close account</span>
-                </a>
-                <span class="border dark:border-gray-500"> </span>
-                <button
-                  class="py-2 mt-4 para-text uppercase text-indigo-600 hover:bg-indigo-600 rounded-md hover:text-white"
-                >
-                  Logout
-                </button>
-              </div>
-            </div>
-
-            <div
-              class="bg-white dark:bg-slate-800 sm:shadow-2xl px-2 pb-5 sm:rounded-md"
-            >
-              <div id="progress-bar" class="w-full hidden">
-                <div
-                  class="animate-progressBar h-2 bg-indigo-600 rounded-2xl"
-                ></div>
-              </div>
-              <!-- Dashboard Section -->
-              <div id="dash-content" class="dash-1">
-                <div class="border-bdark:border-gray-500 py-2 mb-3">
-                  <h1 class="head-text text-2xl">Account Overview</h1>
-                </div>
-                <div
-                  class="flex flex-col gap-4 sm:grid sm:grid-cols-1 lg:grid-cols-2 lg:px-5"
-                >
-                  <div class="rounded-lg border border-indigo-600/60 pb-16">
-                    <h1
-                      class="border-b uppercase border-indigo-600/60 px-2 head-text py-2 text-lg"
-                    >
-                      Account Details
-                    </h1>
-                    <p class="para-text py-2 px-2">dflivo@gmail.com</p>
-                  </div>
-                  <div class="rounded-lg border border-indigo-600/60 pb-5">
-                    <div
-                      class="border-b border-indigo-600/60 px-2 py-2 flex justify-between items-center"
-                    >
-                      <h1 class="head-text text-lg uppercase">Address Book</h1>
-                      <a href="checkout.html">
-                        <ion-icon
-                          name="pencil"
-                          class="cursor-pointer svgs text-indigo-600 font-bold"
-                        ></ion-icon>
-                      </a>
-                    </div>
-                    <div class="flex flex-col gap-1">
-                      <p class="para-text my-3 px-2">
-                        Your default shipping address:
-                      </p>
-                      <p class="para-text px-2 uppercase">Flivian Mwirigi</p>
-                      <p class="para-text px-2">60200</p>
-                      <p class="para-text px-2">Kerugoya Town, Kirinyaga</p>
-                      <p class="para-text px-2">
-                        +254 718017191 / +254 745375064
-                      </p>
-                    </div>
-                  </div>
-                  <div class="rounded-lg border border-indigo-600/60 pb-16">
-                    <h1
-                      class="border-b border-indigo-600/60 px-2 uppercase head-text py-2 text-lg"
-                    >
-                      NEWSLETTER PREFERENCES
-                    </h1>
-                    <p class="para-text py-2 px-2">
-                      You are currently not subscribed to any of our
-                      newsletters.
-                    </p>
-                    <a
-                      href="#"
-                      class="inline-block px-2 mx-2 py-2 hover:bg-indigo-600 hover:text-white text-indigo-600 uppercase rounded-md"
-                    >
-                      Edit Newsletter preference
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- Order Section -->
-              <div id="dash-content" class="dash-2 hidden">
-                <div class="border-b dark:border-gray-500 py-2 mb-3">
-                  <h1 class="head-text text-2xl dark:text-gray-200">
-                    Order details
-                  </h1>
-                </div>
-                <!-- Order Navigation -->
-                <div class="flex gap-2 items-center">
-                  <div
-                    class="py-3 px-2 cursor-pointer shadow-md rounded-lg bg-white dark:bg-slate-900"
-                  >
-                    <span
-                      class="para-text dark:text-gray-200 text-sm uppercase"
-                    >
-                      Ongoing/Deliverd
-                    </span>
-                  </div>
-                  <div class="py-3 px-2 cursor-pointer">
-                    <span class="para-text text-sm uppercase">
-                      Canceled/Returned
-                    </span>
-                  </div>
-                </div>
-                <!-- Order Items -->
-                <div class="mt-5">
-                  <!-- Deliverd -->
-                  <div class="or-1">
-                    <div class="flex flex-col gap-3">
-                      <div
-                        class="grid border p-1 rounded-sm grid-cols-[100px_1fr] gap-3 sm:grid-cols-[200px_1fr]"
-                      >
-                        <div class="">
-                          <img
-                            src="./src/asset/img/product-07.jpg"
-                            class="w-28 sm:w-full sm:h-36"
-                            alt=""
-                          />
-                        </div>
-                        <div class="flex flex-col gap-1">
-                          <h1 class="head-text text-sm sm:text-lg">
-                            Lorem ipsum dolor sit amet.
-                          </h1>
-                          <p class="text-sm para-text">Order: 1253634528</p>
-                          <span class="text-sm para-text"
-                            >Qty: <strong>1</strong></span
-                          >
-                          <div>
-                            <button
-                              class="bg-indigo-500 text-sm text-white uppercase px-1 rounded-sm"
-                            >
-                              Deliverd
-                            </button>
-                          </div>
-                          <div
-                            class="flex justify-between items-center sm:pr-3"
-                          >
-                            <date class="text-sm">March 23, 2024</date>
-                            <a class="text-indigo-600" href="#">View invoice</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="grid border p-1 rounded-sm grid-cols-[100px_1fr] gap-3 sm:grid-cols-[200px_1fr]"
-                      >
-                        <div class="">
-                          <img
-                            src="./src/asset/img/product-07.jpg"
-                            class="w-28 sm:w-full sm:h-36"
-                            alt=""
-                          />
-                        </div>
-                        <div class="flex flex-col gap-1">
-                          <h1 class="head-text text-sm sm:text-lg">
-                            Lorem ipsum dolor sit amet.
-                          </h1>
-                          <p class="text-sm para-text">Order: 1253634528</p>
-                          <span class="text-sm para-text"
-                            >Qty: <strong>1</strong></span
-                          >
-                          <div>
-                            <button
-                              class="bg-indigo-500 text-sm text-white uppercase px-1 rounded-sm"
-                            >
-                              Deliverd
-                            </button>
-                          </div>
-                          <div
-                            class="flex justify-between items-center sm:pr-3"
-                          >
-                            <date class="text-sm">March 23, 2024</date>
-                            <a class="text-indigo-600" href="#">View invoice</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="grid border p-1 rounded-sm grid-cols-[100px_1fr] gap-3 sm:grid-cols-[200px_1fr]"
-                      >
-                        <div class="">
-                          <img
-                            src="./src/asset/img/product-07.jpg"
-                            class="w-28 sm:w-full sm:h-36"
-                            alt=""
-                          />
-                        </div>
-                        <div class="flex flex-col gap-1">
-                          <h1 class="head-text text-sm sm:text-lg">
-                            Lorem ipsum dolor sit amet.
-                          </h1>
-                          <p class="text-sm para-text">Order: 1253634528</p>
-                          <span class="text-sm para-text"
-                            >Qty: <strong>1</strong></span
-                          >
-                          <div>
-                            <button
-                              class="bg-indigo-500 text-sm text-white uppercase px-1 rounded-sm"
-                            >
-                              Deliverd
-                            </button>
-                          </div>
-                          <div
-                            class="flex justify-between items-center sm:pr-3"
-                          >
-                            <date class="text-sm">March 23, 2024</date>
-                            <a class="text-indigo-600" href="#">View invoice</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Returned -->
-                  <div class="or-2 hidden">
-                    <div class="flex flex-col gap-3">
-                      <div
-                        class="grid border p-1 rounded-sm grid-cols-[100px_1fr] gap-3 sm:grid-cols-[200px_1fr]"
-                      >
-                        <div class="">
-                          <img
-                            src="./src/asset/img/product-07.jpg"
-                            class="w-28 sm:w-full sm:h-36"
-                            alt=""
-                          />
-                        </div>
-                        <div class="flex flex-col gap-1">
-                          <h1 class="head-text text-sm sm:text-lg">
-                            Lorem ipsum dolor sit amet.
-                          </h1>
-                          <p class="text-sm para-text">Order: 1253634528</p>
-                          <span class="text-sm para-text"
-                            >Qty: <strong>1</strong></span
-                          >
-                          <div>
-                            <button
-                              class="bg-indigo-500 text-sm text-white uppercase px-1 rounded-sm"
-                            >
-                              Deliverd
-                            </button>
-                          </div>
-                          <div
-                            class="flex justify-between items-center sm:pr-3"
-                          >
-                            <date class="text-sm">March 23, 2024</date>
-                            <a class="text-indigo-600" href="#">View invoice</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="grid border p-1 rounded-sm grid-cols-[100px_1fr] gap-3 sm:grid-cols-[200px_1fr]"
-                      >
-                        <div class="">
-                          <img
-                            src="./src/asset/img/product-07.jpg"
-                            class="w-28 sm:w-full sm:h-36"
-                            alt=""
-                          />
-                        </div>
-                        <div class="flex flex-col gap-1">
-                          <h1 class="head-text text-sm sm:text-lg">
-                            Lorem ipsum dolor sit amet.
-                          </h1>
-                          <p class="text-sm para-text">Order: 1253634528</p>
-                          <span class="text-sm para-text"
-                            >Qty: <strong>1</strong></span
-                          >
-                          <div>
-                            <button
-                              class="bg-indigo-500 text-sm text-white uppercase px-1 rounded-sm"
-                            >
-                              Deliverd
-                            </button>
-                          </div>
-                          <div
-                            class="flex justify-between items-center sm:pr-3"
-                          >
-                            <date class="text-sm">March 23, 2024</date>
-                            <a class="text-indigo-600" href="#">View invoice</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="grid border p-1 rounded-sm grid-cols-[100px_1fr] gap-3 sm:grid-cols-[200px_1fr]"
-                      >
-                        <div class="">
-                          <img
-                            src="./src/asset/img/product-07.jpg"
-                            class="w-28 sm:w-full sm:h-36"
-                            alt=""
-                          />
-                        </div>
-                        <div class="flex flex-col gap-1">
-                          <h1 class="head-text text-sm sm:text-lg">
-                            Lorem ipsum dolor sit amet.
-                          </h1>
-                          <p class="text-sm para-text">Order: 1253634528</p>
-                          <span class="text-sm para-text"
-                            >Qty: <strong>1</strong></span
-                          >
-                          <div>
-                            <button
-                              class="bg-indigo-500 text-sm text-white uppercase px-1 rounded-sm"
-                            >
-                              Deliverd
-                            </button>
-                          </div>
-                          <div
-                            class="flex justify-between items-center sm:pr-3"
-                          >
-                            <date class="text-sm">March 23, 2024</date>
-                            <a class="text-indigo-600" href="#">View invoice</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Inbox Section -->
-              <div id="dash-content" class="dash-3 hidden">
-                <div class="">
-                  <div class="border-b dark:border-gray-500 py-2 mb-3">
-                    <h1 class="head-text text-2xl dark:text-gray-200">
-                      Inbox messages
-                    </h1>
-                  </div>
-                  <div class="flex flex-col items-center">
-                    <div class="flex">
-                      <div class="relative w-[260px] h-[250px]">
-                        <img src="./src/asset/img/mes-1.png" alt="" />
-                        <span
-                          class="absolute top-7 right-5 bg-gray-200 w-10 h-10 border-4 border-white rounded-full text-indigo-600 flex items-center justify-center text-2xl font-mono"
-                          >0</span
-                        >
-                      </div>
-                    </div>
-                    <div class="flex flex-col items-center gap-2">
-                      <h1 class="head-text">You don`t have any messages</h1>
-                      <p class="para-text text-center">
-                        Here you will be able to see all the messages that we
-                        will be able to send you
-                      </p>
-                      <p class="para-text">Stay tunned!!</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Inbox Section -->
-              <div id="dash-content" class="dash-4 hidden">
-                <div class="">
-                  <div class="border-b dark:border-gray-500 py-2 mb-3">
-                    <h1 class="head-text text-2xl dark:text-gray-200">
-                      Order Reviews
-                    </h1>
-                  </div>
-                  <div class="flex flex-col items-center">
-                    <div class="flex">
-                      <div class="relative w-[260px] h-[250px]">
-                        <img src="./src/asset/img/order.png" alt="" />
-                        <span
-                          class="absolute top-7 right-5 bg-gray-200 w-10 h-10 border-4 border-white rounded-full text-indigo-600 flex items-center justify-center text-2xl font-mono"
-                          >0</span
-                        >
-                      </div>
-                    </div>
-                    <div class="flex flex-col items-center gap-2 sm:gap-5">
-                      <h1 class="head-text">You don`t have any active order</h1>
-                      <p class="para-text text-center">
-                        Here you will be able to see all the messages that we
-                        will be able to send you
-                      </p>
-                      <a
-                        href="store.html"
-                        class="head-text w-full text-center text-white bg-indigo-600 px-5 py-3"
-                        >Continue shopping</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Inbox Section -->
-              <div id="dash-content" class="dash-5 hidden">
-                <div class="">
-                  <div class="border-b dark:border-gray-500 py-2 mb-3">
-                    <h1 class="head-text text-2xl dark:text-gray-200">
-                      Saved Items
-                    </h1>
-                  </div>
-                  <div class="flex flex-col items-center">
-                    <div class="flex">
-                      <div class="relative w-[260px] h-[250px] overflow-hidden">
-                        <img src="./src/asset/img/saved.jpg" alt="" />
-                        <span
-                          class="absolute top-7 right-5 bg-gray-200 w-10 h-10 border-4 border-white rounded-full text-indigo-600 flex items-center justify-center text-2xl font-mono"
-                          >0</span
-                        >
-                      </div>
-                    </div>
-                    <div class="flex flex-col items-center gap-2 sm:gap-5 mt-3">
-                      <h1 class="head-text">You don`t have any saved item</h1>
-                      <p class="para-text text-center">
-                        Here you will be able to see all the messages that we
-                        will be able to send you
-                      </p>
-                      <a
-                        href="store.html"
-                        class="head-text w-full text-center text-white bg-indigo-600 px-5 py-3"
-                        >Continue shopping</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                  />
+                </svg>
+                <span class="sr-only">Home Icon</span>
+              </a>
+            </li>
+            <li><span class="text-gray-700 dark:text-gray-200">/</span></li>
+            <li><a class="bread-link bread-active" href="#">Sign-in</a></li>
+          </ul>
         </div>
       </section>
 
-      <!-- Customer Also Bought -->
-      <section class="my-10">
-        <div class="container mx-auto px-4">
-          <div class="mx-2 flex justify-center py-10">
-            <h1 class="text-2xl font-bold dark:text-gray-200">
-              Customer also bought
-            </h1>
-          </div>
-          <!-- Products -->
-          <div
-            id="customer-container"
-            class="flex flex-col gap-8 md:grid md:grid-cols-2 lg:grid-cols-3"
+      <!-- Sign In Section -->
+      <section
+        class="container mx-auto sm:w-[550px] bg-neutral dark:bg-slate-800 border dark:border-gray-500 rounded-md border-gray-200 sm:px-3 py-5"
+      >
+        <div class="w-full my-3 py-2 px-2 lg:-mb-5 lg:px-10">
+          <h1 class="text-2xl lg:text-3xl font-bold font-mono text-gray-800 dark:text-gray-200">
+            Sign in to your account
+          </h1>
+        </div>
+        <div class="flex flex-col gap-3">
+          <!-- User Information -->
+          <form
+            name="User Information"
+            method="post"
+            autocomplete="on"
+            class="flex flex-col gap-3 py-5 px-0"
           >
-            <div class="flex flex-col gap-4 mx-2">
-              <div class="shadow-lg relative pb-10 rounded-lg">
-                <img src="./src/asset/img/product-3-2.jpg" alt="Shoe Image" />
-                <div
-                  class="absolute bottom-0 flex items-end justify-end right-0 rounded-lg w-full bg-gradient-to-b from-transparent to-black/80 h-40"
+            <!-- Contant info -->
+            <div class="flex flex-col gap-3 px-2 py-5 border-b">
+              <div class="flex flex-col gap-2">
+                <label for="email-check" class="check-label"
+                  >Email Address</label
                 >
-                  <span
-                    class="inline-block text-white mr-5 mb-5 text-xl font-bold"
-                    >$140</span
-                  >
+                <input
+                  type="email"
+                  id="email-check"
+                  class="check-input"
+                  required
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="password-check" class="check-label">Password</label>
+                <input
+                  type="password"
+                  id="password-check"
+                  class="check-input"
+                  required
+                />
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="flex gap-2 my-3 items-center">
+                  <input
+                    type="checkbox"
+                    id="check-box"
+                    class="focus:ring-2 rounded"
+                    required
+                  />
+                  <label for="check-box" class="check-label">Remember me</label>
                 </div>
+                <a
+                  class="text-indigo-600 check-label hover:underline hover:text-indigo-500 transition-all duration-300"
+                  href="forget-password.html"
+                  >Forget password?</a
+                >
               </div>
-              <div class="flex flex-col">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Zip Tote Basket
-                </h2>
-                <p class="text-lg font-medium text-gray-600">White and black</p>
-              </div>
+            </div>
+            <div class="flex items-center px-3">
+              <button
+                type="submit"
+                class="py-2 px-5 w-full rounded-lg text-white text-xl font-medium hover:bg-indigo-500 active:bg-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 bg-indigo-600"
+              >
+                Sign in
+              </button>
+            </div>
+            <div class="flex items-center justify-center my-4 dark:text-gray-300">
+              -Or Continue with-
+            </div>
+            <div class="flex gap-2 px-2">
               <a
-                class="bg-indigo-600 py-2 w-full rounded-lg text-center text-xl text-white hover:bg-indigo-500 active:bg-indigo-700 transition-all duration-300"
-                href="#"
-                >Add to bag</a
+                href="https://www.google.com/"
+                class="py-2 px-5 w-full rounded-lg text-center text-black text-lg dark:text-gray-200 font-medium hover:border-indigo-500 active:border-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 border border-gray-400"
+              >
+                Google
+              </a>
+              <a
+                href="https://www.github.com/"
+                class="py-2 px-5 w-full rounded-lg text-center text-black dark:text-gray-200 text-lg font-medium hover:border-indigo-500 active:border-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 border border-gray-400"
+              >
+                Github
+              </a>
+            </div>
+            <div class="py-5 flex gap-2 justify-center items-center dark:text-gray-300">
+              <span>Not a member?</span>
+              <a
+                class="text-lg font-bold hover:underline text-indigo-600  dark:text-indigo-600 hover:text-indigo-500 transition-all duration-300"
+                href="/account"
+                >Create a free account</a
               >
             </div>
-          </div>
+          </form>
         </div>
       </section>
-
       <!-- Call to action -->
       <section class="my-10 py-20 bg-white dark:bg-darkcolor">
         <div class="container mx-auto">
@@ -1504,7 +991,7 @@
               <div class="text-center">
                 <a
                   class="text-xl text-white font-medium flex items-center hover:text-white/85"
-                  href="store.html"
+                  href="/store"
                   ><span>Go now</span>
                   <!-- Icon -->
                 </a>
@@ -1534,38 +1021,26 @@
             <!-- Links -->
             <div class="grid grid-cols-2 gap-3 lg:grid-cols-4">
               <div class="flex flex-col items-center gap-1">
-                <h1
-                  class="text-2xl text-gray-900 dark:text-gray-200 font-semibold"
-                >
-                  Shop
-                </h1>
+                <h1 class="text-2xl text-gray-900 dark:text-gray-200 font-semibold">Shop</h1>
                 <div class="flex flex-col gap-3 items-center">
-                  <a class="link" href="store.html">All Products</a>
-                  <a class="link" href="store.html">New Arrivals</a>
-                  <a class="link" href="store.html">Best Sellers</a>
-                  <a class="link" href="store.html">Special Offers</a>
+                  <a class="link" href="/store">All Products</a>
+                  <a class="link" href="/store">New Arrivals</a>
+                  <a class="link" href="/store">Best Sellers</a>
+                  <a class="link" href="/store">Special Offers</a>
                 </div>
               </div>
               <div class="flex flex-col items-center gap-1">
-                <h1
-                  class="text-2xl text-gray-900 font-semibold dark:text-gray-200"
-                >
-                  Customer Service
-                </h1>
+                <h1 class="text-2xl text-gray-900 font-semibold dark:text-gray-200">Customer Service</h1>
                 <div class="flex flex-col gap-3 items-center">
-                  <a class="link" href="store.html">FAQ</a>
-                  <a class="link" href="store.html">Shipping & Delivery</a>
-                  <a class="link" href="store.html">Returns & Exchanges</a>
-                  <a class="link" href="store.html">Terms & Conditions</a>
+                  <a class="link" href="/store">FAQ</a>
+                  <a class="link" href="/store">Shipping & Delivery</a>
+                  <a class="link" href="/store">Returns & Exchanges</a>
+                  <a class="link" href="/store">Terms & Conditions</a>
                 </div>
               </div>
-
+              
               <div class="flex flex-col items-center gap-1">
-                <h1
-                  class="text-2xl text-gray-900 font-semibold dark:text-gray-200"
-                >
-                  About us
-                </h1>
+                <h1 class="text-2xl text-gray-900 font-semibold dark:text-gray-200">About us</h1>
                 <div class="flex flex-col gap-3 items-center">
                   <a class="link" href="#">About Our Company</a>
                   <a class="link" href="#">Our Team</a>
@@ -1574,11 +1049,7 @@
                 </div>
               </div>
               <div class="flex flex-col items-center gap-1">
-                <h1
-                  class="text-2xl text-gray-900 font-semibold dark:text-gray-200"
-                >
-                  Connect With Us
-                </h1>
+                <h1 class="text-2xl text-gray-900 font-semibold dark:text-gray-200">Connect With Us</h1>
                 <div class="flex flex-col gap-3 items-center">
                   <a class="link" href="#">Facebook</a>
                   <a class="link" href="#">Instagram</a>
@@ -1593,8 +1064,7 @@
             <div
               class="flex gap-4 flex-col lg:justify-between lg:flex-row items-center flex-wrap"
             >
-              <span
-                class="text-center font-medium text-base text-gray-500 dark:text-gray-300"
+              <span class="text-center font-medium text-base text-gray-500 dark:text-gray-300"
                 >© 2021 All Rights Reserved</span
               >
               <div class="flex gap-2">
@@ -1603,7 +1073,7 @@
                 <a class="link" href="#">Terms</a>
               </div>
               <div class="flex">
-                <a class="link flex gap-2" href="checkout.html">
+                <a class="link flex gap-2" href="/checkout">
                   <img src="./src/asset/img/pay.png" alt="Footer Logo" />
                 </a>
               </div>
@@ -1614,6 +1084,5 @@
     </main>
     <script src="https://web3forms.com/client/script.js" async defer></script>
     <script type="module" src="./src/js/main.js"></script>
-    <script type="module" src="./src/js/dashboard.js"></script>
   </body>
 </html>

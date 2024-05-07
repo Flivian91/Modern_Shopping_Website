@@ -3,53 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>COMlection-Create-account</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <title>COMlection-Login</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link href="src/css/output.css" rel="stylesheet" />
   </head>
-  <body class="bg-gray-100 dark:bg-darkcolor">
+  <body class="bg-gray-100">
     <main class="relative dark:bg-darkcolor">
-      <!-- Success Dialog Box -->
-      <section
-        class="shadow-lg hidden fixed bottom-2 sm:w-[600px] sm:px-5 left-0 right-0 mx-auto dark:bg-slate-800 bg-neutral z-50 rounded-lg"
-      >
-        <div class="flex flex-col gap-4 items-center py-10 px-2">
-          <span
-            class="p-2 bg-green-200 w-16 h-16 flex justify-center items-center rounded-full"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6 stroke-green-800"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m4.5 12.75 6 6 9-13.5"
-              />
-            </svg>
-          </span>
-          <h1
-            class="text-2xl text-gray-900 font-mono font-bold dark:text-gray-200"
-          >
-            Login successful!!
-          </h1>
-          <p
-            class="text-xl text-gray-600 font-medium text-center dark:text-gray-400"
-          >
-            Thanks for choosing COMlection Lorem ipsum dolor sit amet sit amet.
-          </p>
-          <a
-            href="index.html"
-            class="inline-block text-center py-2 px-5 w-full rounded-lg text-white text-xl font-medium hover:bg-indigo-500 active:bg-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 bg-indigo-600"
-          >
-            Go back to store
-          </a>
-        </div>
-      </section>
       <!-- Shopping Cart Section -->
       <!-- By deafult hidden -->
       <section
@@ -313,7 +280,7 @@
             </p>
             <a
               class="bg-indigo-600 py-2 w-full rounded-lg text-center text-xl text-white hover:bg-indigo-500 active:bg-indigo-700 transition-all duration-300"
-              href="checkout.html"
+              href="/account"
               >Checkout</a
             >
             <div class="flex justify-center items-center gap-1">
@@ -323,7 +290,7 @@
               >
               <a
                 class="text-indigo-600 underline underline-offset-1 text-lg font-medium hover:text-indigo-500"
-                href="store.html"
+                href="/store"
               >
                 Continue Shopping
               </a>
@@ -580,7 +547,7 @@
             >
             <a
               class="text-gray-950 hover:text-gray-700 side-nav-link"
-              href="store.html"
+              href="/store"
               >Stores</a
             >
           </div>
@@ -588,12 +555,12 @@
           <div class="flex flex-col gap-2 py-4 border-b-2 dark:border-gray-700">
             <a
               class="text-gray-950 hover:text-gray-700 side-nav-link"
-              href="account.html"
+              href="/account"
               >Create an account</a
             >
             <a
               class="text-gray-950 hover:text-gray-700 side-nav-link"
-              href="login.html"
+              href="/login"
               >Sign in</a
             >
           </div>
@@ -628,7 +595,7 @@
             <option value="CAN">EUR</option>
             <option value="CAN">CAN</option>
           </select>
-          <a href="store.html" class="text-neutral text-base font-semibold">
+          <a href="/store" class="text-neutral text-base font-semibold">
             Get free delivery on orders over $100
           </a>
           <div
@@ -636,12 +603,12 @@
           >
             <a
               class="text-neutral/90 text-lg inline-block hover:underline transition-all hover:underline-offset-2 duration-300"
-              href="account.html"
+              href="/account"
               >Create an account</a
             >
             <a
               class="text-neutral/90 text-lg inline-block pl-4 hover:underline transition-all hover:underline-offset-2 duration-300"
-              href="login.html"
+              href="/login"
               >Sign in</a
             >
           </div>
@@ -711,8 +678,8 @@
             <a class="nav-link" href="#men">Men</a>
             <a class="nav-link" href="#women">Women</a>
             <a class="nav-link" href="#discover">Hot Deals</a>
-            <a class="nav-link" href="store.html">Store</a>
-            <a class="nav-link" href="dashboard.html">My Account</a>
+            <a class="nav-link" href="/store">Store</a>
+            <a class="nav-link" href="/dashboard">My Account</a>
           </div>
           <!-- Logo Image Hidden on Larger screen -->
           <a href="#" class="flex-1 flex items-center justify-center lg:hidden">
@@ -810,175 +777,506 @@
       </nav>
 
       <!-- Breadcrumbs -->
-      <section class="2xl:container 2xl:mx-auto">
-        <div class="bg-neutral dark:bg-darkcolor py-3 px-5 mt-1 mb-2">
+      <section class="w-full">
+        <div class="py-1 px-1 mt-1 mb-2">
           <ul class="flex gap-2 text-center">
             <li>
-              <a class="" href="index.html">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-6 h-6 svgs"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-                  />
-                </svg>
-                <span class="sr-only">Home Icon</span>
-              </a>
-            </li>
-            <li><span class="text-gray-700">/</span></li>
-            <li>
-              <a class="bread-link bread-active" href="account.html"
-                >new-account</a
+              <a class="bread-link text-gray-600 dark:text-gray-200" href="#"
+                >Men</a
               >
+            </li>
+            <li><span class="text-gray-700 dark:text-gray-200">/</span></li>
+            <li>
+              <a class="bread-link text-gray-600 dark:text-gray-200" href="#"
+                >Clothing</a
+              >
+            </li>
+            <li><span class="text-gray-700 dark:text-gray-200">/</span></li>
+            <li>
+              <a class="bread-link bread-active" href="#">T-shirt</a>
             </li>
           </ul>
         </div>
       </section>
-
-      <!-- Create Account Section -->
-      <section
-        class="container mx-auto sm:w-[550px] bg-neutral dark:bg-slate-800 border rounded-md border-gray-200 sm:px-3 py-5"
-      >
-        <div class="w-full my-1 py-2 px-2 lg:-mb-5 lg:px-10">
-          <h1
-            class="text-2xl lg:text-3xl font-bold font-mono text-gray-800 dark:text-gray-200"
-          >
-            Create new account today
-          </h1>
-        </div>
-        <div class="flex flex-col gap-3">
-          <!-- User Information -->
-          <form
-            name="User Information"
-            method="post"
-            autocomplete="on"
-            class="flex flex-col gap-3 py-5 px-0"
-          >
-            <!-- Contant info -->
-            <div class="flex flex-col gap-3 px-2 py-5 border-b">
-              <div class="flex flex-col gap-2">
-                <label for="email-check" class="check-label">Full name</label>
-                <input
-                  type="text"
-                  id="name-check"
-                  class="check-input"
-                  required
-                />
-              </div>
-              <div class="flex flex-col gap-2">
-                <label for="name-check" class="check-label"
-                  >Email Address</label
+      <!-- Product View Section -->
+      <section class="container mx-auto sm:px-5">
+        <div
+          id="product-container"
+          class="py-4 px-1 relative container mx-auto sm:grid sm:grid-cols-2 sm:gap-4"
+        >
+          <div class="flex flex-col gap-2">
+            <div class="flex-col gap-2 flex sm:hidden">
+              <div class="flex justify-between gap-1 px-1">
+                <h1 class="text-xl font-bold text-gray-800 dark:text-gray-200">
+                  Lorem ipsum dolor sit.
+                </h1>
+                <span class="text-xl text-gray-700 font-bold dark:text-white"
+                  >$20.00</span
                 >
-                <input
-                  type="email"
-                  id="email-check"
-                  class="check-input"
-                  required
-                />
               </div>
-              <div class="flex flex-col gap-2">
-                <label for="country-check" class="check-label"
-                  >Recovery question</label
+              <div class="flex gap-2">
+                <span
+                  class="text-lg text-gray-600 font-medium dark:text-gray-200"
+                  >4.2</span
                 >
-                <select
-                  class="check-input"
-                  name="country"
-                  id="country-check"
-                  required
-                >
-                  <option value="-1">--------Select-----------</option>
-                  <option value="1">What city were you born in?</option>
-                  <option value="2">
-                    What is your oldest sibling’s middle name?
-                  </option>
-                  <option value="3">
-                    What was the first concert you attended?
-                  </option>
-                  <option value="4">
-                    What was the make and model of your first car?
-                  </option>
-                  <option value="5">
-                    In what city or town did your parents meet?
-                  </option>
-                </select>
-              </div>
-              <div class="flex flex-col gap-2">
-                <label for="password-check" class="check-label">Password</label>
-                <input
-                  type="password"
-                  id="password-check"
-                  class="check-input"
-                  required
-                />
-              </div>
-              <div class="flex flex-col gap-2">
-                <label for="confirm-pass-check" class="check-label"
-                  >Confirm password</label
-                >
-                <input
-                  type="password"
-                  id="confirm-pass-check"
-                  class="check-input"
-                  required
-                />
-              </div>
-              <div class="flex justify-between items-center">
-                <div class="flex gap-2 my-3 items-center">
-                  <input
-                    type="checkbox"
-                    id="check-box"
-                    class="focus:ring-2 rounded"
-                    required
-                  />
-                  <label for="check-box" class="check-label">Remember me</label>
+                <div class="flex gap-1 items-center">
+                  <ion-icon
+                    name="star"
+                    class="svgs text-yellow-500 w-6 h-6"
+                  ></ion-icon>
+                  <ion-icon
+                    name="star"
+                    class="svgs text-yellow-500 w-6 h-6"
+                  ></ion-icon>
+                  <ion-icon
+                    name="star"
+                    class="svgs text-yellow-500 w-6 h-6"
+                  ></ion-icon>
+                  <ion-icon
+                    name="star"
+                    class="svgs text-yellow-500 w-6 h-6"
+                  ></ion-icon>
+                  <ion-icon
+                    name="star-outline"
+                    class="svgs text-yellow-500 w-6 h-6"
+                  ></ion-icon>
+                </div>
+                <div class="block ml-3">
+                  <a
+                    href="#"
+                    class="text-indigo-600 text-lg font-bold hover:text-indigo-500 active:text-indigo-700"
+                    >See all reviews</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="flex items-center px-3">
-              <button
-                type="submit"
-                class="py-2 px-5 w-full rounded-lg text-white text-xl font-medium hover:bg-indigo-500 active:bg-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 bg-indigo-600"
-              >
-                Create account
-              </button>
+            <div class="p-1 flex flex-col gap-2">
+              <img
+                id="display-image"
+                class="rounded-lg"
+                src="./src/asset/img/product-1-1.jpg"
+                alt="Product image"
+              />
+              <div id="images-container" class="grid grid-cols-3 gap-2">
+                <img
+                  id="image"
+                  class="rounded-lg active-image"
+                  src="./src/asset/img/product-10-2.jpg"
+                  alt="Product image"
+                />
+                <img
+                  id="image"
+                  class="rounded-lg"
+                  src="./src/asset/img/product-12-1.jpg"
+                  alt="Product image"
+                />
+                <img
+                  id="image"
+                  class="rounded-lg"
+                  src="./src/asset/img/product-13-2.jpg"
+                  alt="Product image"
+                />
+              </div>
             </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div class="flex-col gap-2 hidden sm:flex">
+              <div class="flex flex-col gap-1">
+                <h1 class="text-xl font-bold text-gray-800 dark:text-gray-200">
+                  Lorem ipsum dolor sit.
+                </h1>
+                <span
+                  class="text-lg text-gray-600 font-medium dark:text-gray-200"
+                  >$20.00</span
+                >
+              </div>
+              <div class="flex gap-2">
+                <span
+                  class="text-lg text-gray-600 font-medium dark:text-gray-400"
+                  >4.2</span
+                >
+                <div class="flex gap-1 items-center">
+                  <ion-icon
+                    name="star"
+                    class="svgs text-yellow-500 w-6 h-6"
+                  ></ion-icon>
+                  <ion-icon
+                    name="star"
+                    class="svgs text-yellow-500 w-6 h-6"
+                  ></ion-icon>
+                  <ion-icon
+                    name="star"
+                    class="svgs text-yellow-500 w-6 h-6"
+                  ></ion-icon>
+                  <ion-icon
+                    name="star"
+                    class="svgs text-yellow-500 w-6 h-6"
+                  ></ion-icon>
+                  <ion-icon
+                    name="star-outline"
+                    class="svgs text-yellow-500 w-6 h-6"
+                  ></ion-icon>
+                </div>
+                <div class="hidden sm:block sm:ml-5">
+                  <a
+                    href="#"
+                    class="text-indigo-600 text-lg font-bold hover:text-indigo-500 active:text-indigo-700"
+                    >See all reviews</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h1 class="text-lg text-gray-600 font-medium dark:text-gray-200">
+                Color
+              </h1>
+              <div class="flex gap-3 items-center">
+                <input
+                  class="w-8 h-8 checked:caret-indigo-700"
+                  type="radio"
+                  name="main-color"
+                  id="main-color"
+                  checked
+                />
+                <input
+                  class="w-8 h-8 checked:caret-indigo-700"
+                  type="radio"
+                  name="main-color"
+                  id="main-color"
+                />
+              </div>
+            </div>
+            <div>
+              <div class="flex flex-col gap-2">
+                <div class="flex justify-between px-2">
+                  <span
+                    class="text-lg text-gray-600 font-medium dark:text-gray-200"
+                    >Size</span
+                  >
+                  <a
+                    href="#"
+                    class="text-indigo-600 text-lg font-bold hover:text-indigo-500 active:text-indigo-700"
+                    >Size guide</a
+                  >
+                </div>
+                <div class="flex gap-4 px-2 justify-between sm:justify-start">
+                  <div class="overview-size">
+                    <span class="text-white text-xl font-mono font-bold"
+                      >XXl</span
+                    >
+                  </div>
+                  <div class="overview-size">
+                    <span class="text-white text-xl font-mono font-bold"
+                      >XS</span
+                    >
+                  </div>
+                  <div class="overview-size">
+                    <span class="text-white text-xl font-mono font-bold"
+                      >S</span
+                    >
+                  </div>
+                  <div class="overview-size">
+                    <span class="text-white text-xl font-mono font-bold"
+                      >M</span
+                    >
+                  </div>
+                  <div class="overview-size">
+                    <span class="text-white text-xl font-mono font-bold"
+                      >XL</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex px-1 py-4 gap-3">
+              <a
+                class="bg-indigo-600 py-2 w-full rounded-lg text-center text-xl text-white hover:bg-indigo-500 active:bg-indigo-700 transition-all duration-300"
+                href="#"
+                >Add to bag</a
+              >
+              <div
+                class="group flex w-16 items-center cursor-pointer justify-center rounded-lg hover:bg-gray-200"
+              >
+                <ion-icon
+                  name="heart-outline"
+                  class="w-8 h-8 group-hover:text-pink-600"
+                ></ion-icon>
+              </div>
+            </div>
+            <!-- Description Section -->
+            <div class="mt-2 px-2">
+              <h1 class="text-xl font-bold text-gray-800 dark:text-gray-200">
+                Description
+              </h1>
+              <p
+                class="tracking-normal my-4 text-lg text-gray-600 dark:text-gray-400"
+              >
+                The Basic tee is an honest new take on a classic. The tee uses
+                super soft, pre-shrunk cotton for true comfort and a dependable
+                fit. They are hand cut and sewn locally, with a special dye
+                technique that gives each tee it's own look. Looking to stock
+                your closet? The Basic tee also comes in a 3-pack or 5-pack at a
+                bundle discount.
+              </p>
+            </div>
+            <!-- Share Part -->
+            <div class="flex flex-col gap-3 pb-10">
+              <h1 class="text-xl font-bold text-gray-800 dark:text-gray-200">
+                Share
+              </h1>
+              <div class="flex gap-2 items-center">
+                <ion-icon
+                  name="logo-facebook"
+                  class="svgs text-indigo-600 cursor-pointer"
+                ></ion-icon>
+                <ion-icon
+                  name="logo-instagram"
+                  class="svgs text-indigo-600 cursor-pointer"
+                ></ion-icon>
+                <ion-icon
+                  name="logo-whatsapp"
+                  class="svgs text-indigo-600 cursor-pointer"
+                ></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container mx-auto sm:w-[700px]">
+          <div>
             <div
-              class="flex items-center justify-center my-4 dark:text-gray-200"
+              id="product-tab-container"
+              class="flex gap-4 px-1 justify-between sm:justify-center items-center"
             >
-              -Or Continue with-
-            </div>
-            <div class="flex gap-2 px-2">
-              <a
-                href="https://www.google.com/"
-                class="py-2 px-5 w-full rounded-lg text-center text-black dark:text-gray-200 text-lg font-medium hover:border-indigo-500 active:border-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 border border-gray-400"
+              <div
+                id="product-tab"
+                data-tab="1"
+                class="active-product-tab py-2 w-28 rounded-md text-center cursor-pointer px-1"
               >
-                Google
-              </a>
-              <a
-                href="https://www.github.com/"
-                class="py-2 px-5 w-full rounded-lg text-center text-black dark:text-gray-200 text-lg font-medium hover:border-indigo-500 active:border-indigo-700 focus:ring-1 focus:ring-offset-2 focus:ring-offset-indigo-600 transition-all duration-300 border border-gray-400"
+                <span class="text-lg font-mono font-medium dark:text-gray-200"
+                  >Reviews</span
+                >
+              </div>
+              <div
+                id="product-tab"
+                data-tab="2"
+                class="py-2 w-28 text-center rounded-md cursor-pointer px-1"
               >
-                Github
-              </a>
+                <span class="text-lg font-mono font-medium dark:text-gray-200"
+                  >FAQ</span
+                >
+              </div>
+              <div
+                id="product-tab"
+                data-tab="3"
+                class="py-2 w-28 text-center rounded-md cursor-pointer px-1"
+              >
+                <span class="text-lg font-mono font-medium dark:text-gray-200"
+                  >Delivery</span
+                >
+              </div>
             </div>
-            <div
-              class="py-5 flex gap-2 justify-center items-center dark:text-gray-200"
-            >
-              <span class="check-label">Still a member?</span>
+            <!-- Content Area -->
+            <div class="mt-5">
+              <!--Review Area-->
+              <div
+                id="product-content"
+                class="product-cont-1 "
+              >
+                <div id="product-review" class="flex-col gap-2 flex">
+                  <!-- Render Reviews From Js -->
+                </div>
+              </div>
+              <!-- FAQ Area Hidden -->
+              <div id="product-content" class="product-cont-2 px-2 hidden">
+                <div class="flex flex-col gap-2">
+                  <h1
+                    class="tracking-normal my-4 font-medium text-xl text-gray-800 dark:text-gray-200"
+                  >
+                    What format are these icons?
+                  </h1>
+                  <p
+                    class="tracking-normal text-lg text-gray-600 dark:text-gray-400"
+                  >
+                    The icons are in SVG (Scalable Vector Graphic) format. They
+                    can be imported into your design tool of choice and used
+                    directly in code.
+                  </p>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h1
+                    class="tracking-normal font-medium my-4 text-xl text-gray-800 dark:text-gray-200"
+                  >
+                    Can I use the icons at different sizes?
+                  </h1>
+                  <p
+                    class="tracking-normal text-lg text-gray-600 dark:text-gray-400"
+                  >
+                    Yes. The icons are drawn on a 24 x 24 pixel grid, but the
+                    icons can be scaled to different sizes as needed. We don't
+                    recommend going smaller than 20 x 20 or larger than 64 x 64
+                    to retain legibility and visual balance.
+                  </p>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h1
+                    class="tracking-normal my-4 font-medium text-xl text-gray-800 dark:text-gray-200"
+                  >
+                    Do I have to add attribution to my projects?
+                  </h1>
+                  <p
+                    class="tracking-normal text-lg text-gray-600 dark:text-gray-400"
+                  >
+                    No. You are allowed to use these icons freely in your
+                    personal and professional work. If you enjoy the icon pack,
+                    feel free to tell others!
+                  </p>
+                </div>
+              </div>
+              <!-- Devlivery Terms -->
+              <div id="product-content" class="product-cont-3 hidden">
+                <div class="flex-col items-center gap-3 flex">
+                  <div>
+                    <h1
+                      class="tracking-normal my-4 font-medium text-xl text-gray-800 dark:text-gray-200"
+                    >
+                      Shipping
+                    </h1>
+                    <ul class="list-disc px-1">
+                      <li class="flex items-center gap-1">
+                        <ion-icon
+                          name="checkmark-done-outline"
+                          class="text-indigo-600"
+                        ></ion-icon>
+                        <span
+                          class="tracking-normal text-lg text-gray-600 dark:text-gray-400"
+                          >Free shipping on orders over $300</span
+                        >
+                      </li>
+                      <li class="flex items-center gap-1">
+                        <ion-icon
+                          name="checkmark-done-outline"
+                          class="text-indigo-600"
+                        ></ion-icon>
+                        <span
+                          class="tracking-normal text-lg text-gray-600 dark:text-gray-400"
+                          >Free shipping on orders over $300</span
+                        >
+                      </li>
+                      <li class="flex items-center gap-1">
+                        <ion-icon
+                          name="checkmark-done-outline"
+                          class="text-indigo-600"
+                        ></ion-icon>
+                        <span
+                          class="tracking-normal text-lg text-gray-600 dark:text-gray-400"
+                          >Free shipping on orders over $300</span
+                        >
+                      </li>
+                      <li class="flex items-center gap-1">
+                        <ion-icon
+                          name="checkmark-done-outline"
+                          class="text-indigo-600"
+                        ></ion-icon>
+                        <span
+                          class="tracking-normal text-lg text-gray-600 dark:text-gray-400"
+                          >Free shipping on orders over $300</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h1
+                      class="tracking-normal my-4 font-medium text-xl text-gray-800 dark:text-gray-200"
+                    >
+                      Delivery services
+                    </h1>
+                    <ul class="list-disc px-1">
+                      <li class="flex items-center gap-1">
+                        <ion-icon
+                          name="checkmark-done-outline"
+                          class="text-indigo-600"
+                        ></ion-icon>
+                        <span
+                          class="tracking-normal text-lg text-gray-600 dark:text-gray-400"
+                          >Free shipping on orders over $300</span
+                        >
+                      </li>
+                      <li class="flex items-center gap-1">
+                        <ion-icon
+                          name="checkmark-done-outline"
+                          class="text-indigo-600"
+                        ></ion-icon>
+                        <span
+                          class="tracking-normal text-lg text-gray-600 dark:text-gray-400"
+                          >Free shipping on orders over $300</span
+                        >
+                      </li>
+                      <li class="flex items-center gap-1">
+                        <ion-icon
+                          name="checkmark-done-outline"
+                          class="text-indigo-600"
+                        ></ion-icon>
+                        <span
+                          class="tracking-normal text-lg text-gray-600 dark:text-gray-400"
+                          >Free shipping on orders over $300</span
+                        >
+                      </li>
+                      <li class="flex items-center gap-1">
+                        <ion-icon
+                          name="checkmark-done-outline"
+                          class="text-indigo-600"
+                        ></ion-icon>
+                        <span
+                          class="tracking-normal text-lg text-gray-600 dark:text-gray-400"
+                          >Free shipping on orders over $300</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Customer Also Bought -->
+      <section class="my-10">
+        <div class="container mx-auto px-4">
+          <div class="mx-2 flex justify-center py-10">
+            <h1 class="text-2xl font-bold dark:text-gray-200">
+              Customer also bought
+            </h1>
+          </div>
+          <!-- Products -->
+          <div
+            id="customer-container"
+            class="flex flex-col gap-8 md:grid md:grid-cols-2 lg:grid-cols-3"
+          >
+            <div class="flex flex-col gap-4 mx-2">
+              <div class="shadow-lg relative pb-10 rounded-lg">
+                <img src="./src/asset/img/product-3-2.jpg" alt="Shoe Image" />
+                <div
+                  class="absolute bottom-0 flex items-end justify-end right-0 rounded-lg w-full bg-gradient-to-b from-transparent to-black/80 h-40"
+                >
+                  <span
+                    class="inline-block text-white mr-5 mb-5 text-xl font-bold"
+                    >$140</span
+                  >
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <h2 class="text-xl font-semibold text-gray-800">
+                  Zip Tote Basket
+                </h2>
+                <p class="text-lg font-medium text-gray-600">White and black</p>
+              </div>
               <a
-                class="text-indigo-600 check-label hover:underline hover:text-indigo-500 transition-all duration-300"
-                href="login.html"
-                >Sign in</a
+                class="bg-indigo-600 py-2 w-full rounded-lg text-center text-xl text-white hover:bg-indigo-500 active:bg-indigo-700 transition-all duration-300"
+                href="#"
+                >Add to bag</a
               >
             </div>
-          </form>
+          </div>
         </div>
       </section>
       <!-- Call to action -->
@@ -1047,7 +1345,7 @@
               <div class="text-center">
                 <a
                   class="text-xl text-white font-medium flex items-center hover:text-white/85"
-                  href="store.html"
+                  href="/store"
                   ><span>Go now</span>
                   <!-- Icon -->
                 </a>
@@ -1083,10 +1381,10 @@
                   Shop
                 </h1>
                 <div class="flex flex-col gap-3 items-center">
-                  <a class="link" href="store.html">All Products</a>
-                  <a class="link" href="store.html">New Arrivals</a>
-                  <a class="link" href="store.html">Best Sellers</a>
-                  <a class="link" href="store.html">Special Offers</a>
+                  <a class="link" href="/store">All Products</a>
+                  <a class="link" href="/store">New Arrivals</a>
+                  <a class="link" href="/store">Best Sellers</a>
+                  <a class="link" href="/store">Special Offers</a>
                 </div>
               </div>
               <div class="flex flex-col items-center gap-1">
@@ -1096,10 +1394,10 @@
                   Customer Service
                 </h1>
                 <div class="flex flex-col gap-3 items-center">
-                  <a class="link" href="store.html">FAQ</a>
-                  <a class="link" href="store.html">Shipping & Delivery</a>
-                  <a class="link" href="store.html">Returns & Exchanges</a>
-                  <a class="link" href="store.html">Terms & Conditions</a>
+                  <a class="link" href="/store">FAQ</a>
+                  <a class="link" href="/store">Shipping & Delivery</a>
+                  <a class="link" href="/store">Returns & Exchanges</a>
+                  <a class="link" href="/store">Terms & Conditions</a>
                 </div>
               </div>
 
@@ -1146,7 +1444,7 @@
                 <a class="link" href="#">Terms</a>
               </div>
               <div class="flex">
-                <a class="link flex gap-2" href="checkout.html">
+                <a class="link flex gap-2" href="/account">
                   <img src="./src/asset/img/pay.png" alt="Footer Logo" />
                 </a>
               </div>
@@ -1157,5 +1455,6 @@
     </main>
     <script src="https://web3forms.com/client/script.js" async defer></script>
     <script type="module" src="./src/js/main.js"></script>
+    <script type="module" src="./src/js/productview.js"></script>
   </body>
 </html>
