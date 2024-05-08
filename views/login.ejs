@@ -847,6 +847,7 @@
           <form
             name="User Information"
             method="post"
+            action="/auth/login"
             autocomplete="on"
             class="flex flex-col gap-3 py-5 px-0"
           >
@@ -859,6 +860,7 @@
                 <input
                   type="email"
                   id="email-check"
+                  name="email"
                   class="check-input"
                   required
                 />
@@ -868,6 +870,7 @@
                 <input
                   type="password"
                   id="password-check"
+                  name="password"
                   class="check-input"
                   required
                 />
@@ -877,6 +880,7 @@
                   <input
                     type="checkbox"
                     id="check-box"
+                    name="remember-me
                     class="focus:ring-2 rounded"
                     required
                   />
@@ -1065,7 +1069,7 @@
               class="flex gap-4 flex-col lg:justify-between lg:flex-row items-center flex-wrap"
             >
               <span class="text-center font-medium text-base text-gray-500 dark:text-gray-300"
-                >© 2021 All Rights Reserved</span
+                >© 2024 All Rights Reserved</span
               >
               <div class="flex gap-2">
                 <a class="link" href="#">Accessibility</a>

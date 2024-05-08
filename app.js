@@ -5,18 +5,20 @@ const port = process.env.port || 3000
 const {connectToMongoDB} = require('./config/connectToMongo')
 const {main} = require('./controllers/registerUser')
 const argon2 = require('argon2')
+const auth = require('./config/passport-config-login')
 
 // Serve static files from the 'public' folder
-app.use(express.static(path.join(__dirname, '/views/public')));
+app.use(express.static(path.join(__dirname, '/views/public')))
 // Middleware to parse url-encoded form data
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }))
 
 // Middleware to parse JSON bodies
-app.use(express.json());
+app.use(express.json())
+app.use('/auth/login', auth)
 
 
-app.get('/', (req, res) => {
-    res.render('index.ejs')
+app.get('/', async (req, res) => {
+     res.render('index.ejs')
 })
 
 app.get('/store', (req, res) => {
@@ -59,14 +61,18 @@ app.post('/account/create-account', async (req, res) =>{
     console.log("Password is:  " + password + "Confirm pass is: " + confirmPassword)
     if(password === confirmPassword){
         try{
-            const hashPass = await argon2.hash(password);
-            delete user.confirm-password
+            const hashPass = await argon2.hash(password)
+            delete user.confirmPass
+            user.password = hashPass
             await main(user)
             console.log("data inserted successfully")
+            res.redirect('/login')
         }
         catch(error){
             if (error.code === 11000 && error.keyPattern && error.keyPattern.email) {
                 // Duplicate email error
+                res.send('<h3>Email already exists</h3>')
+                res.redirect('/account')
                 console.error('Email already exists:', error.keyValue.email);
         }
         else{
