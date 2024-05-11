@@ -11,6 +11,12 @@ const dashMenuClose = document.querySelector("#dash-menu-close");
 const dashOverlay = document.querySelector("#overlay");
 const dashMenuContainer = document.querySelector("#dash-menu-container");
 const dashMenuTab = document.querySelectorAll("#dash-menu");
+//to load curretn user's name
+const currentUser = document.getElementById("currentUser");
+const userEmail = document.getElementById("userEmail");
+
+let firstName,email
+
 /**
  * DashBoard Functionalities
  */
@@ -77,4 +83,29 @@ function openDashMenu() {
 function closeDashMenu() {
   dashMenuSection.classList.add("hidden");
   dashOverlay.classList.add("hidden");
+}
+
+//fetch for the current user
+async function getUser(){
+  firstName = localStorage.getItem('user-name');
+  if(user==null){
+    try{
+      const res = await fetch('/users/current');
+      firstName = await res.json().firstName;
+      email = await res.json().email;
+    }
+    catch(error){
+      console.log("Error fetching for name: "+ error);
+    }
+  
+    localStorage.setItem('user-name', firstName);
+    firstName = localStorage.getItem('user-name') 
+    localStorage.setItem('user-email', email);
+    email = localStorage.getItem('user-email');
+  }
+
+  else{
+    currentUser.innerText = firstName;
+    userEmail.innerText = email;
+  }
 }
