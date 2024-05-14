@@ -157,9 +157,12 @@ app.post('/account/create-account', async (req, res) => {
     }
 });
 
-app.get('/logout', (req, res) => {
-    req.logout();
-    res.redirect('/');
+app.get('/logout', (req, res, done) => {
+    req.logout((err)=>{
+        if(err) return done(err)
+        res.redirect('/');
+    });
+    
 });
 
 function isLoggedIn(req, res, next) {
