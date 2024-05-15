@@ -855,6 +855,13 @@
         </div>
         <div class="flex flex-col gap-3">
           <!-- User Information -->
+          <br><br>
+          <h2 style="color: hsla(22, 22%, 90%, 0.801); font-size: large;"><% if (error && error.length > 0) { %>
+                <% error.forEach(function(message) { %>
+                   <i><%- message %><br></i> 
+                <% }); %>
+        <% } %>
+          </h2>
           <form
             name="User Information"
             method="post"

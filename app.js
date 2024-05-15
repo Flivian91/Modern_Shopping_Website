@@ -94,7 +94,8 @@ app.get('/store', (req, res) => {
 });
 
 app.get('/account', (req, res) => {
-    res.render('account.ejs');
+    const error = req.flash('error')
+    res.render('account.ejs',{error});
 });
 
 app.get('/checkout', (req, res) => {
@@ -107,6 +108,10 @@ app.get('/dashboard', isLoggedIn, (req, res) => {
 
 app.get('/product-overview', (req, res) => {
     res.render('product-quickviews.ejs');
+});
+
+app.get('/user/likedItems', (req, res) => {
+    res.send(res.body)
 });
 
 app.get('/login', isLoggedOut, (req, res) => {
@@ -124,7 +129,7 @@ app.post('/login', passport.authenticate('local', {
 }));
 
 app.get('/account-manage', isLoggedIn, (req, res) => {
-    res.render('account-manage.ejs', { user: req.user });
+    res.render('account-manage.ejs', { name: req.user.firstName });
 });
 
 app.post('/account/create-account', async (req, res) => {
@@ -139,22 +144,21 @@ app.post('/account/create-account', async (req, res) => {
     }
 
     try {
-        const hashPassword = await bcrypt.hash(password, 10);
-        console.log(user)
-        delete user.confirmPas
-        user.password = hashPassword
-        await Insert(user)
-        res.redirect('/login')
-    } catch (error) {
-        if (error.code === 11000 && error.keyPattern && error.keyPattern.email) {
-            req.flash('error', 'Email already exists. Please log in.');
-            return res.redirect('/login');
-            console.log(user)
-        }
+    const hashPassword = await bcrypt.hash(password, 10);
+    delete user.confirmPas
+    user.password = hashPassword
+    await Insert(user)
+    res.redirect('/login'); // Redirect only if registration is successful
+} catch (error) {
+    if (error && error.code === 11000) {
+        req.flash('error', 'Email already exists. Please log in.');
+        return res.redirect('/account');
+    } else {
         console.error('Error:', error);
         req.flash('error', 'An error occurred. Please try again.');
         res.redirect('/account');
     }
+}
 });
 
 app.get('/logout', (req, res, done) => {

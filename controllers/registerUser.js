@@ -1,15 +1,15 @@
-const User = require('../models/users')
+const User = require('../models/users');
+
 async function Insert(newUser) {
     try {
-        
-        // Get reference to the users collection
-       const newuser = await new User(newUser)
-       newuser.save()
-       console.log('User daved to db successfully')
-
+        const newuser = new User(newUser);
+        await newuser.save(); // Wait for the save operation to complete
+        console.log('User saved to db successfully');
+        return true; // Indicate success
     } catch (error) {
-        console.error('Error:', error)
-    } 
+        console.error('Error:', error);
+        throw error; // Propagate the error back to the caller
+    }
 }
 
-module.exports = { Insert }
+module.exports = {Insert}
