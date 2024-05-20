@@ -27,8 +27,9 @@ router.get('/product-overview', (req, res) => {
     res.render('product-quickviews.ejs');
 });
 
-router.get('/user/likedItems', (req, res) => {
-    res.send(res.body);
+router.get('/forgotPass', (req, res) => {
+    const error = req.flash('error')
+    res.render('forget-password.ejs', {error})
 });
 
 router.get('/account-manage', isLoggedIn, (req, res) => {

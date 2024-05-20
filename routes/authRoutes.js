@@ -4,11 +4,13 @@ const bcrypt = require('bcrypt');
 const { Insert } = require('../controllers/registerUser');
 const { isLoggedIn, isLoggedOut } = require('../middlewares/auth');
 const router = express.Router();
+const User = require('../models/users')
 
 router.get('/login', isLoggedOut, (req, res) => {
     const response = {
         title: 'Login',
-        error: req.flash('error')
+        error: req.flash('error'),
+        success: req.flash('success')
     };
     res.render('login.ejs', response);
 });
@@ -35,7 +37,10 @@ router.post('/account/create-account', async (req, res) => {
         req.flash('error', 'Passwords must match.');
         return res.redirect('/account');
     }
-
+    else if(password === confirmPassword && password.length < 8){
+        req.flash('error', 'Passwords must be at least 8 characters')
+        return res.redirect('/account')
+    } 
     try {
         const hashPassword = await bcrypt.hash(password, 10);
         delete user.confirmPass;
@@ -53,5 +58,49 @@ router.post('/account/create-account', async (req, res) => {
         }
     }
 });
+
+router.post('/resetpassword', async (req,res)=>{
+    console.log(req.body);
+    const newDet = req.body;
+
+    const userDoc = await User.findOne({email:newDet.email})
+    if(!userDoc){
+        req.flash('error', 'No user with that email found')
+        res.redirect('/forgotpass')
+    }
+    
+    const user = userDoc.toObject()
+    const password = newDet.newPassword
+    const confirmPass = newDet.confirmNewPass
+    const recoveryQuiz = newDet.recoveryQuiz
+    const recoveryAns = newDet.recoveryAns
+    const Email = newDet.email
+
+    if(recoveryQuiz === user.recoveryQuiz){
+        if(recoveryAns === user.recoveryAns){
+            if(password === confirmPass){
+                try{
+                    const newPass = await bcrypt.hash(password, 10)
+                    //change user password details
+                    await User.updateOne({email:Email}, {$set:{password: newPass}})
+                    req.flash('success', 'Password changed successfully')
+                    return res.redirect('/login')
+                }
+                catch(error){
+                    console.log('erro: '+ error)
+                }
+
+            }
+               else{
+                req.flash('error', 'Passwords must match ')
+                res.redirect('/forgotPass')
+               }
+        }
+    }
+    else{
+        req.flash('error', 'Incorrect recovery details')
+        res.redirect('/forgotpass')
+    }
+})
 
 module.exports = router;

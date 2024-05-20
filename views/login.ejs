@@ -851,6 +851,12 @@
                 <% }); %>
         <% } %>
           </h2>
+          <h2 style="color: hsla(64, 88%, 49%, 0.856); font-size: large;"><% if (success && success.length > 0) { %>
+                <% success.forEach(function(message) { %>
+                   <i><%- message %><br></i> 
+                <% }); %>
+        <% } %>
+          </h2>
           <form
             name="User Information"
             method="post"
@@ -895,7 +901,7 @@
                 </div>
                 <a
                   class="text-indigo-600 check-label hover:underline hover:text-indigo-500 transition-all duration-300"
-                  href="forget-password.html"
+                  href="/forgotPass"
                   >Forget password?</a
                 >
               </div>

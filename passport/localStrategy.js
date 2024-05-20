@@ -16,10 +16,7 @@ const configureLocalStrategy = (passport) => {
             const passwordMatch = await bcrypt.compare(password, user.password);
             if (!passwordMatch) {
                 return done(null, false, { message: 'Incorrect password.' });
-            } else if (passwordMatch && user.password < 6) {
-                return done(null, false, { message: 'Password must be more than 6 characters.' });
-            }
-
+            } 
             return done(null, user);
         } catch (error) {
             return done(error);

@@ -82,7 +82,7 @@ function openSearchModel() {
   searchInput.focus();
 }
 /**
- * Closw Search Model and Overlay
+ * Close Search Model and Overlay
  */
 function closeSearchModel() {
   searchSection.classList.add("hidden");
@@ -175,13 +175,15 @@ moonButton.addEventListener("click", () => {
 });
 
 // Loading Categories for Side Menu
+//here i should cahange the fethc end point to my backend
+
 const menuSideData = async function () {
   const res = await fetch("https://dummyjson.com/products/categories");
   const items = await res.json();
   sideMenuContainer.innerHTML = ""
   items.forEach((data) => {
     const html = `
-    <a class="side-nav-link" href="store.html">${data.at(0).toUpperCase()}${data.slice(1)}</a>
+    <a class="side-nav-link" href="/store">${data.at(0).toUpperCase()}${data.slice(1)}</a>
     `;
     sideMenuContainer.insertAdjacentHTML("beforeend", html)
   });
